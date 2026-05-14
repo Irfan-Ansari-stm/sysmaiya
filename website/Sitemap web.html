@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sitemap | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:110px 0;
+      text-align:center;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero h1{
+      font-size:58px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:760px;
+      margin:auto;
+      color:#cbd5e1;
+      font-size:18px;
+    }
+
+    /* Sitemap */
+
+    .sitemap-section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+    }
+
+    .sitemap-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .sitemap-card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:20px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .sitemap-card:hover{
+      transform:translateY(-5px);
+      border-color:#8b5cf6;
+    }
+
+    .sitemap-card h3{
+      margin-bottom:25px;
+      color:#8b5cf6;
+      font-size:28px;
+    }
+
+    .sitemap-links{
+      list-style:none;
+    }
+
+    .sitemap-links li{
+      margin-bottom:15px;
+    }
+
+    .sitemap-links li a{
+      color:#cbd5e1;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .sitemap-links li a:hover{
+      color:#8b5cf6;
+      transform:translateX(5px);
+    }
+
+    /* Search Box */
+
+    .search-box{
+      margin-top:80px;
+      background:#1e293b;
+      padding:40px;
+      border-radius:20px;
+      border:1px solid #334155;
+      text-align:center;
+    }
+
+    .search-box h2{
+      font-size:36px;
+      margin-bottom:20px;
+    }
+
+    .search-box p{
+      color:#cbd5e1;
+      margin-bottom:30px;
+    }
+
+    .search-form{
+      display:flex;
+      max-width:700px;
+      margin:auto;
+      gap:15px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .search-form input{
+      flex:1;
+      min-width:250px;
+      padding:15px;
+      border:none;
+      border-radius:10px;
+      background:#111827;
+      border:1px solid #334155;
+      color:#f8fafc;
+      outline:none;
+    }
+
+    .search-form button{
+      padding:15px 25px;
+      border:none;
+      border-radius:10px;
+      background:#8b5cf6;
+      color:white;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .search-form button:hover{
+      background:#7c3aed;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+      margin-top:80px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    /* Responsive */
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .search-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Book Consultation</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <h1>Website Sitemap</h1>
+
+      <p>
+        Explore all pages and sections available on the TechNova Solutions website.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Sitemap -->
+
+  <section class="sitemap-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Browse Website Pages</h2>
+
+        <p>
+          Quick access to all important website sections and resources.
+        </p>
+
+      </div>
+
+      <div class="sitemap-grid">
+
+        <!-- Main Pages -->
+
+        <div class="sitemap-card">
+
+          <h3>Main Pages</h3>
+
+          <ul class="sitemap-links">
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- Service Pages -->
+
+        <div class="sitemap-card">
+
+          <h3>Service Pages</h3>
+
+          <ul class="sitemap-links">
+
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Mobile App Development</a></li>
+            <li><a href="#">AI Solutions</a></li>
+            <li><a href="#">Cloud Services</a></li>
+            <li><a href="#">UI/UX Design</a></li>
+            <li><a href="#">Automation Services</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- Business Pages -->
+
+        <div class="sitemap-card">
+
+          <h3>Business Pages</h3>
+
+          <ul class="sitemap-links">
+
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Request Quote</a></li>
+            <li><a href="#">Book Consultation</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Partners</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- Support Pages -->
+
+        <div class="sitemap-card">
+
+          <h3>Support Pages</h3>
+
+          <ul class="sitemap-links">
+
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Support Tickets</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- Dashboard -->
+
+        <div class="sitemap-card">
+
+          <h3>Dashboard Pages</h3>
+
+          <ul class="sitemap-links">
+
+            <li><a href="#">Dashboard Home</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Team Management</a></li>
+            <li><a href="#">Billing & Payments</a></li>
+            <li><a href="#">Settings</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- Resources -->
+
+        <div class="sitemap-card">
+
+          <h3>Resources</h3>
+
+          <ul class="sitemap-links">
+
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Developer API</a></li>
+            <li><a href="#">Guides & Tutorials</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">News & Updates</a></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <!-- Search -->
+
+      <div class="search-box">
+
+        <h2>Looking for a Specific Page?</h2>
+
+        <p>
+          Search our website pages, services, and support resources.
+        </p>
+
+        <form class="search-form">
+
+          <input type="text" placeholder="Search website pages...">
+
+          <button type="submit">
+            Search
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            automation systems, and scalable digital platforms.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Services</h3>
+
+          <ul>
+            <li>Web Development</li>
+            <li>AI Solutions</li>
+            <li>Cloud Services</li>
+            <li>Mobile Apps</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>Cookie Policy</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

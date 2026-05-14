@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot Development Services | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:120px 0;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      margin-bottom:25px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      font-size:18px;
+      margin-bottom:35px;
+      max-width:620px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn-outline{
+      border:1px solid #475569;
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      border-color:#8b5cf6;
+      color:#8b5cf6;
+    }
+
+    .hero-image{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:28px;
+      padding:40px;
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:450px;
+    }
+
+    /* Sections */
+
+    .section{
+      padding:90px 0;
+    }
+
+    .dark-section{
+      background:#111827;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      max-width:720px;
+      margin:auto;
+    }
+
+    /* Grid */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:22px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:#8b5cf6;
+    }
+
+    .icon{
+      width:70px;
+      height:70px;
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      margin-bottom:25px;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#8b5cf6;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .card ul{
+      padding-left:20px;
+      color:#cbd5e1;
+    }
+
+    .card ul li{
+      margin-bottom:10px;
+    }
+
+    /* Process */
+
+    .step{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background:#8b5cf6;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:24px;
+      font-weight:bold;
+      margin-bottom:20px;
+    }
+
+    /* CTA */
+
+    .cta-box{
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      padding:70px 40px;
+      border-radius:28px;
+      text-align:center;
+    }
+
+    .cta-box h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .cta-box p{
+      max-width:750px;
+      margin:auto auto 30px;
+      font-size:18px;
+    }
+
+    .cta-box .btn{
+      background:white;
+      color:#111827;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    /* Responsive */
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          AI Chatbot Development Services
+        </h1>
+
+        <p>
+          Build intelligent AI-powered chatbots for websites,
+          mobile apps, WhatsApp, customer support, lead generation,
+          and business automation.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#" class="btn">
+            Request Quote
+          </a>
+
+          <a href="#" class="btn btn-outline">
+            View Demo
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" 
+          alt="AI Chatbot Development"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Chatbot Services -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>AI Chatbot Solutions</h2>
+
+        <p>
+          Smart conversational AI solutions designed to automate
+          support, sales, and customer interactions.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">💬</div>
+
+          <h3>Customer Support Chatbots</h3>
+
+          <p>
+            AI-powered support assistants that provide
+            instant responses and automated customer help.
+          </p>
+
+          <ul>
+            <li>24/7 Customer Support</li>
+            <li>Automated Ticket Handling</li>
+            <li>FAQ Automation</li>
+            <li>Live Chat Integration</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📱</div>
+
+          <h3>WhatsApp & Messenger Bots</h3>
+
+          <p>
+            Smart messaging bots integrated with
+            WhatsApp, Messenger, and Telegram.
+          </p>
+
+          <ul>
+            <li>WhatsApp Automation</li>
+            <li>Messenger Chatbots</li>
+            <li>Automated Replies</li>
+            <li>Order & Booking Bots</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🤖</div>
+
+          <h3>AI Virtual Assistants</h3>
+
+          <p>
+            Intelligent AI assistants for handling
+            complex workflows and business tasks.
+          </p>
+
+          <ul>
+            <li>AI Voice Assistants</li>
+            <li>Workflow Automation</li>
+            <li>Lead Qualification</li>
+            <li>CRM Integration</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Why Choose Our AI Chatbots?</h2>
+
+        <p>
+          Advanced conversational AI systems designed
+          for automation, engagement, and scalability.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">⚡</div>
+
+          <h3>Instant Responses</h3>
+
+          <p>
+            Deliver quick and accurate responses
+            to improve customer satisfaction.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📈</div>
+
+          <h3>Lead Generation</h3>
+
+          <p>
+            Capture leads automatically and improve
+            conversion rates using AI conversations.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🧠</div>
+
+          <h3>Natural Conversations</h3>
+
+          <p>
+            AI models capable of understanding
+            user intent and human-like interaction.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🔒</div>
+
+          <h3>Secure & Scalable</h3>
+
+          <p>
+            Enterprise-grade chatbot systems with
+            secure cloud infrastructure.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Platforms -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Platforms We Support</h2>
+
+        <p>
+          Multi-platform AI chatbot integrations for
+          websites, apps, and communication channels.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Website Chatbots</h3>
+          <p>Interactive website AI assistants and support bots.</p>
+        </div>
+
+        <div class="card">
+          <h3>WhatsApp Bots</h3>
+          <p>Automated WhatsApp business communication systems.</p>
+        </div>
+
+        <div class="card">
+          <h3>Facebook Messenger</h3>
+          <p>AI-powered Messenger automation and engagement.</p>
+        </div>
+
+        <div class="card">
+          <h3>Telegram Bots</h3>
+          <p>Smart Telegram bots for business automation.</p>
+        </div>
+
+        <div class="card">
+          <h3>Mobile Apps</h3>
+          <p>Embedded AI chatbot systems inside mobile apps.</p>
+        </div>
+
+        <div class="card">
+          <h3>CRM Integration</h3>
+          <p>Chatbots integrated with CRM and ERP platforms.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Process -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Our Development Process</h2>
+
+        <p>
+          Structured chatbot development workflow focused
+          on automation, intelligence, and scalability.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="step">1</div>
+
+          <h3>Requirement Analysis</h3>
+
+          <p>
+            Understanding business goals, customer needs,
+            and chatbot use cases.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="step">2</div>
+
+          <h3>Conversation Design</h3>
+
+          <p>
+            Designing intelligent conversation flows
+            and chatbot interaction experiences.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="step">3</div>
+
+          <h3>AI Development</h3>
+
+          <p>
+            Developing and integrating AI-powered
+            chatbot functionality and APIs.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="step">4</div>
+
+          <h3>Testing & Deployment</h3>
+
+          <p>
+            Testing chatbot performance and deploying
+            across selected platforms.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>Ready To Build Your AI Chatbot?</h2>
+
+        <p>
+          Partner with TechNova Solutions to create intelligent,
+          automated, and scalable AI chatbot systems for your business.
+        </p>
+
+        <a href="#" class="btn">
+          Schedule Free Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            automation systems, and scalable digital platforms.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Services</h3>
+
+          <ul>
+            <li>AI Chatbot Development</li>
+            <li>AI Integration</li>
+            <li>Automation Systems</li>
+            <li>Machine Learning</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

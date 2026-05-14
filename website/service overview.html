@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services Overview | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:120px 0;
+      text-align:center;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:780px;
+      margin:auto;
+      color:#cbd5e1;
+      font-size:18px;
+    }
+
+    /* Services Section */
+
+    .services{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      max-width:700px;
+      margin:auto;
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    .service-card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:22px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-8px);
+      border-color:#8b5cf6;
+    }
+
+    .service-icon{
+      width:70px;
+      height:70px;
+      border-radius:16px;
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:30px;
+      margin-bottom:25px;
+    }
+
+    .service-card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#8b5cf6;
+    }
+
+    .service-card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .service-card ul{
+      padding-left:20px;
+      color:#cbd5e1;
+      margin-bottom:25px;
+    }
+
+    .service-card ul li{
+      margin-bottom:10px;
+    }
+
+    .service-link{
+      color:#8b5cf6;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .service-link:hover{
+      color:#a78bfa;
+    }
+
+    /* Process Section */
+
+    .process{
+      padding:90px 0;
+      background:#111827;
+    }
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:25px;
+      margin-top:50px;
+    }
+
+    .process-card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:20px;
+      border:1px solid #334155;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .process-card:hover{
+      transform:translateY(-5px);
+      border-color:#8b5cf6;
+    }
+
+    .process-number{
+      width:60px;
+      height:60px;
+      margin:auto auto 20px;
+      border-radius:50%;
+      background:#8b5cf6;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:24px;
+      font-weight:bold;
+    }
+
+    .process-card h3{
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .process-card p{
+      color:#cbd5e1;
+    }
+
+    /* CTA */
+
+    .cta{
+      padding:100px 0;
+    }
+
+    .cta-box{
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      padding:70px 40px;
+      border-radius:28px;
+      text-align:center;
+    }
+
+    .cta-box h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .cta-box p{
+      max-width:750px;
+      margin:auto auto 30px;
+      font-size:18px;
+    }
+
+    .cta-box .btn{
+      background:white;
+      color:#111827;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    /* Responsive */
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <h1>Service Overview</h1>
+
+      <p>
+        TechNova Solutions delivers cutting-edge digital services,
+        enterprise software, AI-powered platforms, and scalable
+        technology solutions for modern businesses.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Services -->
+
+  <section class="services">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Our Core Services</h2>
+
+        <p>
+          We help startups, enterprises, and growing businesses
+          build secure, scalable, and innovative digital products.
+        </p>
+
+      </div>
+
+      <div class="service-grid">
+
+        <!-- Web Development -->
+
+        <div class="service-card">
+
+          <div class="service-icon">🌐</div>
+
+          <h3>Web Development</h3>
+
+          <p>
+            Modern responsive websites and enterprise web applications
+            designed for performance and scalability.
+          </p>
+
+          <ul>
+            <li>Business Websites</li>
+            <li>Custom Web Applications</li>
+            <li>E-Commerce Platforms</li>
+            <li>Admin Dashboards</li>
+          </ul>
+
+          <a href="#" class="service-link">
+            Learn More →
+          </a>
+
+        </div>
+
+        <!-- Mobile Apps -->
+
+        <div class="service-card">
+
+          <div class="service-icon">📱</div>
+
+          <h3>Mobile App Development</h3>
+
+          <p>
+            High-performance Android and iOS applications
+            tailored for startups and enterprises.
+          </p>
+
+          <ul>
+            <li>Cross-Platform Apps</li>
+            <li>Native Applications</li>
+            <li>UI/UX Optimization</li>
+            <li>App Maintenance</li>
+          </ul>
+
+          <a href="#" class="service-link">
+            Learn More →
+          </a>
+
+        </div>
+
+        <!-- AI Solutions -->
+
+        <div class="service-card">
+
+          <div class="service-icon">🤖</div>
+
+          <h3>AI Solutions</h3>
+
+          <p>
+            AI-powered automation systems and intelligent
+            digital experiences for modern businesses.
+          </p>
+
+          <ul>
+            <li>AI Chatbots</li>
+            <li>Workflow Automation</li>
+            <li>Machine Learning Integration</li>
+            <li>Business Intelligence</li>
+          </ul>
+
+          <a href="#" class="service-link">
+            Learn More →
+          </a>
+
+        </div>
+
+        <!-- Cloud Services -->
+
+        <div class="service-card">
+
+          <div class="service-icon">☁️</div>
+
+          <h3>Cloud & DevOps</h3>
+
+          <p>
+            Secure cloud infrastructure and DevOps solutions
+            for deployment, scaling, and optimization.
+          </p>
+
+          <ul>
+            <li>AWS & Azure Deployment</li>
+            <li>CI/CD Pipelines</li>
+            <li>Cloud Migration</li>
+            <li>Infrastructure Monitoring</li>
+          </ul>
+
+          <a href="#" class="service-link">
+            Learn More →
+          </a>
+
+        </div>
+
+        <!-- UI UX -->
+
+        <div class="service-card">
+
+          <div class="service-icon">🎨</div>
+
+          <h3>UI/UX Design</h3>
+
+          <p>
+            User-focused designs that improve engagement,
+            usability, and customer satisfaction.
+          </p>
+
+          <ul>
+            <li>Wireframing & Prototyping</li>
+            <li>User Research</li>
+            <li>Brand Identity Design</li>
+            <li>Interactive Interfaces</li>
+          </ul>
+
+          <a href="#" class="service-link">
+            Learn More →
+          </a>
+
+        </div>
+
+        <!-- Consulting -->
+
+        <div class="service-card">
+
+          <div class="service-icon">📊</div>
+
+          <h3>Technology Consulting</h3>
+
+          <p>
+            Strategic guidance to help businesses adopt
+            the right technologies and digital solutions.
+          </p>
+
+          <ul>
+            <li>Digital Transformation</li>
+            <li>Technology Roadmaps</li>
+            <li>System Architecture</li>
+            <li>Business Strategy</li>
+          </ul>
+
+          <a href="#" class="service-link">
+            Learn More →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Process -->
+
+  <section class="process">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Our Development Process</h2>
+
+        <p>
+          A streamlined workflow designed to deliver quality,
+          transparency, and business value.
+        </p>
+
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-card">
+
+          <div class="process-number">1</div>
+
+          <h3>Discovery</h3>
+
+          <p>
+            Understanding business goals, requirements,
+            and technical challenges.
+          </p>
+
+        </div>
+
+        <div class="process-card">
+
+          <div class="process-number">2</div>
+
+          <h3>Planning</h3>
+
+          <p>
+            Creating detailed roadmaps, timelines,
+            architecture, and project strategy.
+          </p>
+
+        </div>
+
+        <div class="process-card">
+
+          <div class="process-number">3</div>
+
+          <h3>Development</h3>
+
+          <p>
+            Building scalable and secure digital
+            products using modern technologies.
+          </p>
+
+        </div>
+
+        <div class="process-card">
+
+          <div class="process-number">4</div>
+
+          <h3>Launch & Support</h3>
+
+          <p>
+            Deployment, optimization, monitoring,
+            and ongoing maintenance support.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>Ready To Build Your Next Project?</h2>
+
+        <p>
+          Partner with TechNova Solutions to create scalable,
+          secure, and innovative digital experiences for your business.
+        </p>
+
+        <a href="#" class="btn">
+          Book Free Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            automation systems, and scalable digital platforms.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Services</h3>
+
+          <ul>
+            <li>Web Development</li>
+            <li>AI Solutions</li>
+            <li>Cloud Services</li>
+            <li>Mobile Apps</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

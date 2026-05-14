@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industry Portfolio | Enterprise Solutions</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #020617;
+      color: #f8fafc;
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #06b6d4, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg {
+      background-image:
+        radial-gradient(circle at top left, rgba(6,182,212,0.20), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(139,92,246,0.20), transparent 30%);
+    }
+
+    .portfolio-card {
+      transition: all 0.35s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(6,182,212,0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Industry<span class="gradient-text">Portfolio</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#industries" class="hover:text-white transition">Industries</a>
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#results" class="hover:text-white transition">Results</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Start Project
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+        Enterprise Industry Portfolio & Case Studies
+      </div>
+
+      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 max-w-5xl mx-auto">
+        Industry-Focused
+        <span class="gradient-text">Digital Transformation Portfolio</span>
+      </h1>
+
+      <p class="text-slate-300 text-lg leading-8 max-w-3xl mx-auto mb-10">
+        Explore enterprise platforms, SaaS ecosystems, AI solutions, and digital products
+        built across logistics, healthcare, travel, media, fintech, manufacturing, and more.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-5">
+        <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+          Explore Portfolio
+        </button>
+
+        <button class="border border-slate-700 hover:border-cyan-500 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+          View Case Studies
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Industries -->
+  <section id="industries" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <div class="text-cyan-400 font-semibold mb-4">Industries We Serve</div>
+        <h2 class="text-4xl font-bold mb-6">Enterprise Solutions Across Industries</h2>
+        <p class="text-slate-400 text-lg max-w-3xl mx-auto leading-8">
+          We engineer scalable digital ecosystems tailored for modern industries,
+          combining cloud infrastructure, AI automation, and enterprise-grade product engineering.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="portfolio-card glass rounded-3xl p-8 text-center">
+          <div class="text-6xl mb-6">🚚</div>
+          <h3 class="text-2xl font-bold mb-4">Logistics</h3>
+          <p class="text-slate-400 leading-7">
+            AI-powered logistics platforms, fleet tracking, and warehouse automation.
+          </p>
+        </div>
+
+        <div class="portfolio-card glass rounded-3xl p-8 text-center">
+          <div class="text-6xl mb-6">✈️</div>
+          <h3 class="text-2xl font-bold mb-4">Travel</h3>
+          <p class="text-slate-400 leading-7">
+            Travel booking ecosystems, tourism platforms, and hospitality solutions.
+          </p>
+        </div>
+
+        <div class="portfolio-card glass rounded-3xl p-8 text-center">
+          <div class="text-6xl mb-6">🎬</div>
+          <h3 class="text-2xl font-bold mb-4">Media & OTT</h3>
+          <p class="text-slate-400 leading-7">
+            Streaming platforms, subscription ecosystems, and audience analytics.
+          </p>
+        </div>
+
+        <div class="portfolio-card glass rounded-3xl p-8 text-center">
+          <div class="text-6xl mb-6">🏭</div>
+          <h3 class="text-2xl font-bold mb-4">Manufacturing</h3>
+          <p class="text-slate-400 leading-7">
+            Industry 4.0 platforms, IoT systems, and predictive automation.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Portfolio Projects -->
+  <section id="projects" class="py-24 bg-slate-950">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+
+        <div>
+          <div class="text-cyan-400 font-semibold mb-4">Industry Portfolio</div>
+          <h2 class="text-4xl font-bold">Featured Industry Projects</h2>
+        </div>
+
+        <div class="text-slate-400">
+          200+ Enterprise Solutions Delivered Worldwide
+        </div>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Logistics -->
+        <div class="portfolio-card glass rounded-[32px] overflow-hidden">
+
+          <div class="relative h-72 bg-gradient-to-br from-cyan-500/30 to-violet-500/20 flex items-center justify-center text-8xl">
+            🚚
+
+            <div class="absolute top-6 left-6 bg-cyan-500 text-white text-xs font-semibold px-4 py-2 rounded-full">
+              Logistics
+            </div>
+          </div>
+
+          <div class="p-8">
+
+            <h3 class="text-3xl font-bold mb-5">
+              AI Logistics Management Platform
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-8">
+              Built a cloud-native logistics ecosystem with AI route optimization,
+              warehouse automation, and real-time shipment visibility.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 mb-8 text-center">
+
+              <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                <div class="text-2xl font-bold gradient-text">45%</div>
+                <div class="text-xs text-slate-400 mt-1">Efficiency</div>
+              </div>
+
+              <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                <div class="text-2xl font-bold gradient-text">2M+</div>
+                <div class="text-xs text-slate-400 mt-1">Shipments</div>
+              </div>
+
+              <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                <div class="text-2xl font-bold gradient-text">99.9%</div>
+                <div class="text-xs text-slate-400 mt-1">Uptime</div>
+              </div>
+
+            </div>
+
+            <button class="w-full bg-cyan-500 hover:bg-cyan-600 transition py-4 rounded-2xl font-semibold text-lg">
+              View Case Study
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Travel -->
+        <div class="portfolio-card glass rounded-[32px] overflow-hidden">
+
+          <div class="relative h-72 bg-gradient-to-br from-sky-500/30 to-blue-500/20 flex items-center justify-center text-8xl">
+            ✈️
+
+            <div class="absolute top-6 left-6 bg-sky-500 text-white text-xs font-semibold px-4 py-2 rounded-full">
+              Travel
+            </div>
+          </div>
+
+          <div class="p-8">
+
+            <h3 class="text-3xl font-bold mb-5">
+              Smart Travel Booking Ecosystem
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-8">
+              Developed an intelligent travel platform with booking automation,
+              AI recommendations, and global payment integration.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 mb-8 text-center">
+
+              <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                <div class="text-2xl font-bold gradient-text">1M+</div>
+                <div class="text-xs text-slate-400 mt-1">Travelers</div>
+              </div>
+
+              <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                <div class="text-2xl font-bold gradient-text">65%</div>
+                <div class="text-xs text-slate-400 mt-1">Bookings ↑</div>
+              </div>
+
+              <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                <div class="text-2xl font-bold gradient-text">120+</div>
+                <div class="text-xs text-slate-400 mt-1">Countries</div>
+              </div>
+
+            </div>
+
+            <button class="w-full bg-sky-500 hover:bg-sky-600 transition py-4 rounded-2xl font-semibold text-lg">
+              View Case Study
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Media -->
+        <div class="portfolio-card glass rounded-[32px] overflow-hidden">
+
+          <div class="relative h-72 bg-gradient-to-br from-pink-500/30 to-violet-500/20 flex items-center justify-center text-8xl">
+            🎬
+
+            <div class="absolute top-6 left-6 bg-pink-500 text-white text-xs font-semibold px-4 py-2 rounded-full">
+              Media & OTT
+            </div>
+          </div>
+
+          <div class="p-8">
+
+            <h3 class="text-3xl font-bold mb-5">
+              Global OTT Streaming Platform
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-8">
+              Engineered a scalable OTT ecosystem with live streaming,
+              subscriptions, AI recommendations, and audience analytics.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 mb-8 text-center">
+
+              <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                <div class="text-2xl font-bold gradient-text">50M+</div>
+                <div class="text-xs text-slate-400 mt-1">Streams</div>
+              </div>
+
+              <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                <div class="text-2xl font-bold gradient-text">4x</div>
+                <div class="text-xs text-slate-400 mt-1">Growth</div>
+              </div>
+
+              <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                <div class="text-2xl font-bold gradient-text">98%</div>
+                <div class="text-xs text-slate-400 mt-1">Retention</div>
+              </div>
+
+            </div>
+
+            <button class="w-full bg-pink-500 hover:bg-pink-600 transition py-4 rounded-2xl font-semibold text-lg">
+              View Case Study
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="py-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <div class="text-cyan-400 font-semibold mb-4">Business Impact</div>
+        <h2 class="text-4xl font-bold mb-6">Delivering Measurable Results</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="glass rounded-3xl p-10 text-center">
+          <div class="text-5xl font-bold gradient-text mb-4">200+</div>
+          <div class="text-xl font-semibold mb-3">Projects Delivered</div>
+          <p class="text-slate-400 leading-7">
+            Enterprise digital products built globally.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-10 text-center">
+          <div class="text-5xl font-bold gradient-text mb-4">45%</div>
+          <div class="text-xl font-semibold mb-3">Efficiency Increase</div>
+          <p class="text-slate-400 leading-7">
+            AI automation and intelligent workflows.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-10 text-center">
+          <div class="text-5xl font-bold gradient-text mb-4">99.9%</div>
+          <div class="text-xl font-semibold mb-3">Platform Reliability</div>
+          <p class="text-slate-400 leading-7">
+            Scalable enterprise cloud infrastructure.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-10 text-center">
+          <div class="text-5xl font-bold gradient-text mb-4">20+</div>
+          <div class="text-xl font-semibold mb-3">Industries Served</div>
+          <p class="text-slate-400 leading-7">
+            Diverse enterprise transformation expertise.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="py-24 bg-slate-950">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <div class="glass rounded-[32px] p-14">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Build Your Industry Platform
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6 leading-tight">
+          Enterprise Solutions Tailored for Your Industry
+        </h2>
+
+        <p class="text-slate-400 text-lg leading-8 mb-10 max-w-3xl mx-auto">
+          From logistics and travel to media and manufacturing,
+          we help businesses build scalable digital ecosystems.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-5">
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Start Your Project
+          </button>
+
+          <button class="border border-slate-700 hover:border-cyan-500 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Schedule Consultation
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+        <div class="text-2xl font-bold mb-3">
+          Industry<span class="gradient-text">Portfolio</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Enterprise product engineering, AI platforms,
+          and scalable digital transformation solutions.
+        </p>
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 IndustryPortfolio Technologies. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

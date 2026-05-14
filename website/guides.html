@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guides Resources | Enterprise Knowledge Hub</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #020617;
+      color: #f8fafc;
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #06b6d4, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg {
+      background-image:
+        radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .guide-card {
+      transition: all 0.35s ease;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(6,182,212,0.4);
+    }
+
+    .category-pill {
+      transition: all 0.3s ease;
+    }
+
+    .category-pill:hover {
+      background: rgba(6,182,212,0.15);
+      border-color: rgba(6,182,212,0.4);
+      color: #67e8f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Resource<span class="gradient-text">Hub</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Guides</a>
+        <a href="#" class="hover:text-white transition">Resources</a>
+        <a href="#" class="hover:text-white transition">Tutorials</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Subscribe
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-24 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+        Enterprise Knowledge Base
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+        Professional Guides &
+        <span class="gradient-text">Learning Resources</span>
+      </h1>
+
+      <p class="text-slate-300 text-xl leading-9 max-w-4xl mx-auto mb-12">
+        Explore enterprise guides, AI automation tutorials, cloud engineering resources,
+        and technology documentation for scalable digital transformation.
+      </p>
+
+      <!-- Search -->
+      <div class="glass rounded-[32px] p-4 max-w-4xl mx-auto">
+
+        <div class="flex flex-col md:flex-row gap-4">
+
+          <input
+            type="text"
+            placeholder="Search guides, tutorials, resources..."
+            class="flex-1 bg-slate-900 border border-slate-700 rounded-2xl px-6 py-5 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 text-lg"
+          />
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+            Search Resources
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-5xl mx-auto">
+
+        <div>
+          <div class="text-4xl font-bold gradient-text">450+</div>
+          <div class="text-slate-400 mt-2">Guides</div>
+        </div>
+
+        <div>
+          <div class="text-4xl font-bold gradient-text">120K+</div>
+          <div class="text-slate-400 mt-2">Readers</div>
+        </div>
+
+        <div>
+          <div class="text-4xl font-bold gradient-text">80+</div>
+          <div class="text-slate-400 mt-2">Tutorials</div>
+        </div>
+
+        <div>
+          <div class="text-4xl font-bold gradient-text">24/7</div>
+          <div class="text-slate-400 mt-2">Knowledge Access</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Categories -->
+  <section class="py-14 border-y border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <div class="text-cyan-400 font-semibold mb-4">Browse Categories</div>
+
+      <h2 class="text-4xl font-bold mb-10">
+        Explore Resource Topics
+      </h2>
+
+      <div class="flex flex-wrap justify-center gap-4">
+
+        <button class="category-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          Artificial Intelligence
+        </button>
+
+        <button class="category-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          Cloud Engineering
+        </button>
+
+        <button class="category-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          Machine Learning
+        </button>
+
+        <button class="category-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          DevOps
+        </button>
+
+        <button class="category-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          SaaS Platforms
+        </button>
+
+        <button class="category-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          AI Automation
+        </button>
+
+        <button class="category-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          Enterprise Security
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Featured Guides -->
+  <section class="py-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="flex items-center justify-between mb-14">
+
+        <div>
+          <div class="text-cyan-400 font-semibold mb-2">Featured Resources</div>
+          <h2 class="text-5xl font-bold">Popular Enterprise Guides</h2>
+        </div>
+
+        <button class="hidden md:block border border-slate-700 hover:border-cyan-500 transition px-6 py-3 rounded-2xl font-semibold">
+          View All Guides
+        </button>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-10">
+
+        <!-- Guide Card -->
+        <article class="guide-card glass rounded-[36px] overflow-hidden">
+
+          <div class="h-72 bg-gradient-to-br from-cyan-500/30 to-violet-500/20 flex items-center justify-center text-7xl">
+            🤖
+          </div>
+
+          <div class="p-10">
+
+            <div class="flex items-center gap-4 text-sm mb-5">
+              <span class="text-cyan-400 font-semibold">AI Automation</span>
+              <span class="text-slate-500">•</span>
+              <span class="text-slate-400">15 Chapters</span>
+            </div>
+
+            <h3 class="text-3xl font-bold leading-tight mb-5">
+              Complete Enterprise AI Automation Guide
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-8">
+              Learn how organizations implement scalable AI automation systems,
+              predictive workflows, and enterprise intelligence platforms.
+            </p>
+
+            <div class="flex items-center justify-between">
+
+              <div>
+                <div class="font-semibold">12 Hours</div>
+                <div class="text-slate-400 text-sm mt-1">Beginner to Advanced</div>
+              </div>
+
+              <button class="bg-cyan-500 hover:bg-cyan-600 transition px-6 py-3 rounded-2xl font-semibold">
+                Read Guide
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- Guide Card -->
+        <article class="guide-card glass rounded-[36px] overflow-hidden">
+
+          <div class="h-72 bg-gradient-to-br from-pink-500/30 to-violet-500/20 flex items-center justify-center text-7xl">
+            ☁️
+          </div>
+
+          <div class="p-10">
+
+            <div class="flex items-center gap-4 text-sm mb-5">
+              <span class="text-pink-400 font-semibold">Cloud Engineering</span>
+              <span class="text-slate-500">•</span>
+              <span class="text-slate-400">11 Chapters</span>
+            </div>
+
+            <h3 class="text-3xl font-bold leading-tight mb-5">
+              Scalable Cloud Infrastructure Systems
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-8">
+              Explore Kubernetes, cloud-native infrastructure, microservices,
+              and DevOps systems for enterprise scalability.
+            </p>
+
+            <div class="flex items-center justify-between">
+
+              <div>
+                <div class="font-semibold">9 Hours</div>
+                <div class="text-slate-400 text-sm mt-1">Intermediate Level</div>
+              </div>
+
+              <button class="bg-pink-500 hover:bg-pink-600 transition px-6 py-3 rounded-2xl font-semibold">
+                Read Guide
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- Guide Card -->
+        <article class="guide-card glass rounded-[36px] overflow-hidden">
+
+          <div class="h-72 bg-gradient-to-br from-amber-500/30 to-red-500/20 flex items-center justify-center text-7xl">
+            📊
+          </div>
+
+          <div class="p-10">
+
+            <div class="flex items-center gap-4 text-sm mb-5">
+              <span class="text-amber-400 font-semibold">Machine Learning</span>
+              <span class="text-slate-500">•</span>
+              <span class="text-slate-400">18 Chapters</span>
+            </div>
+
+            <h3 class="text-3xl font-bold leading-tight mb-5">
+              Predictive Analytics & ML Systems
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-8">
+              Understand predictive AI, intelligent data systems,
+              machine learning pipelines, and enterprise analytics.
+            </p>
+
+            <div class="flex items-center justify-between">
+
+              <div>
+                <div class="font-semibold">14 Hours</div>
+                <div class="text-slate-400 text-sm mt-1">Advanced Level</div>
+              </div>
+
+              <button class="bg-amber-500 hover:bg-amber-600 transition px-6 py-3 rounded-2xl font-semibold text-slate-950">
+                Read Guide
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Resource Library -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="flex items-center justify-between mb-14">
+
+        <div>
+          <div class="text-cyan-400 font-semibold mb-2">Knowledge Library</div>
+          <h2 class="text-5xl font-bold">All Learning Resources</h2>
+        </div>
+
+        <select class="bg-slate-900 border border-slate-700 rounded-2xl px-5 py-3 text-white focus:outline-none focus:border-cyan-500">
+          <option>Latest Resources</option>
+          <option>Most Popular</option>
+          <option>Beginner Guides</option>
+          <option>Advanced Tutorials</option>
+        </select>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="glass rounded-[30px] p-8 guide-card">
+          <div class="text-5xl mb-6">⚙️</div>
+          <div class="text-cyan-400 font-semibold mb-3">DevOps</div>
+          <h3 class="text-2xl font-bold mb-4">CI/CD Pipeline Engineering</h3>
+          <p class="text-slate-400 leading-8 mb-6">
+            Modern DevOps systems and scalable deployment workflows.
+          </p>
+          <button class="text-cyan-400 font-semibold hover:text-cyan-300 transition">
+            Explore Resource →
+          </button>
+        </div>
+
+        <div class="glass rounded-[30px] p-8 guide-card">
+          <div class="text-5xl mb-6">🔐</div>
+          <div class="text-pink-400 font-semibold mb-3">Security</div>
+          <h3 class="text-2xl font-bold mb-4">Enterprise Security Frameworks</h3>
+          <p class="text-slate-400 leading-8 mb-6">
+            Security best practices for scalable enterprise platforms.
+          </p>
+          <button class="text-pink-400 font-semibold hover:text-pink-300 transition">
+            Explore Resource →
+          </button>
+        </div>
+
+        <div class="glass rounded-[30px] p-8 guide-card">
+          <div class="text-5xl mb-6">🚀</div>
+          <div class="text-amber-400 font-semibold mb-3">SaaS</div>
+          <h3 class="text-2xl font-bold mb-4">Scaling SaaS Platforms</h3>
+          <p class="text-slate-400 leading-8 mb-6">
+            Learn enterprise SaaS growth strategies and architecture.
+          </p>
+          <button class="text-amber-400 font-semibold hover:text-amber-300 transition">
+            Explore Resource →
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex items-center justify-center gap-4 mt-16">
+
+        <button class="glass px-5 py-3 rounded-2xl font-semibold text-slate-300 hover:border-cyan-500 transition">
+          Previous
+        </button>
+
+        <button class="bg-cyan-500 px-5 py-3 rounded-2xl font-semibold">
+          1
+        </button>
+
+        <button class="glass px-5 py-3 rounded-2xl font-semibold text-slate-300 hover:border-cyan-500 transition">
+          2
+        </button>
+
+        <button class="glass px-5 py-3 rounded-2xl font-semibold text-slate-300 hover:border-cyan-500 transition">
+          3
+        </button>
+
+        <button class="glass px-5 py-3 rounded-2xl font-semibold text-slate-300 hover:border-cyan-500 transition">
+          Next
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center overflow-hidden relative">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Resource Newsletter
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Stay Updated with Enterprise Technology Guides
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Subscribe to receive weekly tutorials, enterprise technology resources,
+            AI automation insights, and cloud engineering best practices.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 bg-slate-900 border border-slate-700 rounded-2xl px-6 py-5 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+            />
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Subscribe Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Resource<span class="gradient-text">Hub</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Enterprise resource platform for AI, cloud engineering,
+          SaaS architecture, DevOps, and digital transformation.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 ResourceHub Media. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

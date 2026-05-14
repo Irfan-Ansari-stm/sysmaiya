@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Consultation | Lead Generation</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .feature-card{
+      transition:all 0.35s ease;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .input-field{
+      background:#0f172a;
+      border:1px solid #334155;
+      transition:all 0.3s ease;
+    }
+
+    .input-field:focus{
+      outline:none;
+      border-color:#06b6d4;
+      box-shadow:0 0 0 3px rgba(6,182,212,0.15);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Growth<span class="gradient-text">Hub</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Services</a>
+        <a href="#" class="hover:text-white transition">Solutions</a>
+        <a href="#" class="hover:text-white transition">Case Studies</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Book Consultation
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left -->
+        <div>
+
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+            Free Business Consultation
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+            Get a
+            <span class="gradient-text">Free Consultation</span>
+          </h1>
+
+          <p class="text-slate-300 text-xl leading-9 mb-10">
+            Speak with our experts to discover growth opportunities,
+            improve business performance, and create a strategy tailored
+            to your goals.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-10">
+
+            <div class="glass rounded-3xl p-6">
+
+              <div class="text-cyan-400 text-4xl mb-4">✓</div>
+
+              <h3 class="text-2xl font-bold mb-3">
+                Strategy Session
+              </h3>
+
+              <p class="text-slate-400 leading-7">
+                Personalized recommendations for your business growth.
+              </p>
+
+            </div>
+
+            <div class="glass rounded-3xl p-6">
+
+              <div class="text-pink-400 text-4xl mb-4">✓</div>
+
+              <h3 class="text-2xl font-bold mb-3">
+                Expert Guidance
+              </h3>
+
+              <p class="text-slate-400 leading-7">
+                Consult with industry professionals and solution architects.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-5">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Schedule Free Call
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              View Success Stories
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Right Form -->
+        <div>
+
+          <div class="glass rounded-[40px] p-10">
+
+            <div class="mb-8">
+
+              <div class="text-cyan-400 font-semibold mb-3">
+                Consultation Form
+              </div>
+
+              <h2 class="text-4xl font-bold">
+                Book Your Free Session
+              </h2>
+
+            </div>
+
+            <form class="space-y-6">
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Enter your full name"
+                  class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                >
+              </div>
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Business Email
+                </label>
+
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                >
+              </div>
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Phone Number
+                </label>
+
+                <input
+                  type="tel"
+                  placeholder="Enter phone number"
+                  class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                >
+              </div>
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Company Name
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Enter company name"
+                  class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                >
+              </div>
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Services Interested In
+                </label>
+
+                <select
+                  class="input-field w-full rounded-2xl px-5 py-4 text-white"
+                >
+                  <option>Digital Transformation</option>
+                  <option>Cloud Solutions</option>
+                  <option>AI & Automation</option>
+                  <option>Web Development</option>
+                  <option>Marketing Strategy</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Project Details
+                </label>
+
+                <textarea
+                  rows="5"
+                  placeholder="Tell us about your goals and challenges..."
+                  class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="bg-cyan-500 hover:bg-cyan-600 transition w-full py-5 rounded-2xl font-semibold text-lg"
+              >
+                Book Free Consultation
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features -->
+  <section class="py-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Why Choose Us
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          Expert Business Consultation
+        </h2>
+
+        <p class="text-slate-400 text-xl leading-9 max-w-3xl mx-auto">
+          Our consultants help businesses accelerate growth,
+          optimize operations, and implement scalable solutions.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Card -->
+        <div class="feature-card glass rounded-[32px] p-8 border border-transparent text-center">
+
+          <div class="text-6xl mb-6">📈</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Growth Strategy
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Identify opportunities to scale your business faster.
+          </p>
+
+        </div>
+
+        <!-- Card -->
+        <div class="feature-card glass rounded-[32px] p-8 border border-transparent text-center">
+
+          <div class="text-6xl mb-6">☁️</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Cloud Solutions
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Build scalable cloud infrastructure and systems.
+          </p>
+
+        </div>
+
+        <!-- Card -->
+        <div class="feature-card glass rounded-[32px] p-8 border border-transparent text-center">
+
+          <div class="text-6xl mb-6">🤖</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            AI Automation
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Automate workflows and improve operational efficiency.
+          </p>
+
+        </div>
+
+        <!-- Card -->
+        <div class="feature-card glass rounded-[32px] p-8 border border-transparent text-center">
+
+          <div class="text-6xl mb-6">🚀</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Digital Innovation
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Transform customer experiences with modern technology.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Process -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16">
+
+        <div class="text-center mb-16">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Consultation Process
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            How It Works
+          </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-10">
+
+          <!-- Step -->
+          <div class="text-center">
+
+            <div class="w-20 h-20 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+              1
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Submit Form
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Share your business goals and project requirements.
+            </p>
+
+          </div>
+
+          <!-- Step -->
+          <div class="text-center">
+
+            <div class="w-20 h-20 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+              2
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Discovery Call
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Meet with experts to discuss challenges and solutions.
+            </p>
+
+          </div>
+
+          <!-- Step -->
+          <div class="text-center">
+
+            <div class="w-20 h-20 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+              3
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Strategy Plan
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Receive customized recommendations and roadmap.
+            </p>
+
+          </div>
+
+          <!-- Step -->
+          <div class="text-center">
+
+            <div class="w-20 h-20 rounded-full bg-violet-500/20 text-violet-400 flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+              4
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Implementation
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Execute strategies with expert support and guidance.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Testimonials -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Client Testimonials
+        </div>
+
+        <h2 class="text-5xl font-bold">
+          Trusted by Growing Businesses
+        </h2>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Testimonial -->
+        <div class="glass rounded-[32px] p-10">
+
+          <div class="text-cyan-400 text-5xl mb-6">“</div>
+
+          <p class="text-slate-300 leading-8 mb-8">
+            The consultation helped us streamline operations
+            and accelerate our digital transformation strategy.
+          </p>
+
+          <div>
+            <div class="font-bold text-xl">
+              Sarah Mitchell
+            </div>
+
+            <div class="text-slate-400 mt-2">
+              CEO, InnovateX
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Testimonial -->
+        <div class="glass rounded-[32px] p-10">
+
+          <div class="text-pink-400 text-5xl mb-6">“</div>
+
+          <p class="text-slate-300 leading-8 mb-8">
+            Their AI consultation identified automation opportunities
+            that improved our efficiency dramatically.
+          </p>
+
+          <div>
+            <div class="font-bold text-xl">
+              David Clark
+            </div>
+
+            <div class="text-slate-400 mt-2">
+              Operations Director
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Testimonial -->
+        <div class="glass rounded-[32px] p-10">
+
+          <div class="text-amber-400 text-5xl mb-6">“</div>
+
+          <p class="text-slate-300 leading-8 mb-8">
+            The growth strategy session gave us clear direction
+            and helped increase our conversion rates.
+          </p>
+
+          <div>
+            <div class="font-bold text-xl">
+              Priya Sharma
+            </div>
+
+            <div class="text-slate-400 mt-2">
+              Marketing Lead
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Ready to Grow?
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Schedule Your Free Consultation Today
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Connect with our experts and discover how technology,
+            strategy, and innovation can transform your business.
+          </p>
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-12 py-5 rounded-2xl font-semibold text-lg">
+            Book Free Consultation
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Growth<span class="gradient-text">Hub</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Helping businesses grow through technology,
+          digital transformation, and strategic consulting.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 GrowthHub. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

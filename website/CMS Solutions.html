@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CMS Solutions | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:120px 0;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      margin-bottom:25px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      font-size:18px;
+      margin-bottom:35px;
+      max-width:620px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn-outline{
+      border:1px solid #475569;
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      border-color:#8b5cf6;
+      color:#8b5cf6;
+    }
+
+    .hero-image{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:28px;
+      padding:40px;
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:450px;
+    }
+
+    /* Sections */
+
+    .section{
+      padding:90px 0;
+    }
+
+    .dark-section{
+      background:#111827;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      max-width:720px;
+      margin:auto;
+    }
+
+    /* Grid */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:22px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:#8b5cf6;
+    }
+
+    .icon{
+      width:70px;
+      height:70px;
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      margin-bottom:25px;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#8b5cf6;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .card ul{
+      padding-left:20px;
+      color:#cbd5e1;
+    }
+
+    .card ul li{
+      margin-bottom:10px;
+    }
+
+    /* CTA */
+
+    .cta-box{
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      padding:70px 40px;
+      border-radius:28px;
+      text-align:center;
+    }
+
+    .cta-box h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .cta-box p{
+      max-width:750px;
+      margin:auto auto 30px;
+      font-size:18px;
+    }
+
+    .cta-box .btn{
+      background:white;
+      color:#111827;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          CMS Solutions For Content Management & Publishing
+        </h1>
+
+        <p>
+          Build scalable content management systems with
+          advanced publishing workflows, media management,
+          SEO optimization, and multi-user collaboration.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#" class="btn">
+            Request Demo
+          </a>
+
+          <a href="#" class="btn btn-outline">
+            Book Consultation
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/2881/2881142.png" 
+          alt="CMS Solutions"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CMS Features -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>CMS Platform Features</h2>
+
+        <p>
+          Powerful content management systems designed
+          for publishing, collaboration, and digital growth.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">📝</div>
+
+          <h3>Content Management</h3>
+
+          <p>
+            Easily create, edit, organize,
+            and publish digital content.
+          </p>
+
+          <ul>
+            <li>Rich Text Editor</li>
+            <li>Content Scheduling</li>
+            <li>Draft Management</li>
+            <li>Version Control</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🖼️</div>
+
+          <h3>Media Library</h3>
+
+          <p>
+            Manage images, videos, documents,
+            and digital assets efficiently.
+          </p>
+
+          <ul>
+            <li>File Upload Management</li>
+            <li>Image Optimization</li>
+            <li>Media Organization</li>
+            <li>Cloud Storage Integration</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">👥</div>
+
+          <h3>User Roles & Permissions</h3>
+
+          <p>
+            Manage teams with role-based
+            access control and collaboration.
+          </p>
+
+          <ul>
+            <li>Admin & Editor Roles</li>
+            <li>Approval Workflows</li>
+            <li>Access Permissions</li>
+            <li>Team Collaboration</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Benefits -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Why Choose Our CMS Solutions?</h2>
+
+        <p>
+          Flexible content management systems designed
+          for scalability, performance, and SEO growth.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">⚡</div>
+
+          <h3>Easy Content Publishing</h3>
+
+          <p>
+            Publish and manage content quickly
+            without technical expertise.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📈</div>
+
+          <h3>SEO Optimization</h3>
+
+          <p>
+            Built-in SEO tools to improve
+            visibility and search rankings.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🤖</div>
+
+          <h3>AI-Powered Content Tools</h3>
+
+          <p>
+            Smart content recommendations,
+            tagging, and automation features.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🔒</div>
+
+          <h3>Secure Cloud Infrastructure</h3>
+
+          <p>
+            Enterprise-level security and
+            scalable hosting architecture.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CMS Types -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>CMS Solutions We Build</h2>
+
+        <p>
+          Custom content management systems tailored
+          for different industries and platforms.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Corporate CMS</h3>
+          <p>Enterprise content management systems for businesses.</p>
+        </div>
+
+        <div class="card">
+          <h3>News & Publishing Platforms</h3>
+          <p>Digital publishing systems for blogs and media companies.</p>
+        </div>
+
+        <div class="card">
+          <h3>E-Commerce CMS</h3>
+          <p>Content-driven online store management platforms.</p>
+        </div>
+
+        <div class="card">
+          <h3>Educational CMS</h3>
+          <p>Learning content management and course publishing systems.</p>
+        </div>
+
+        <div class="card">
+          <h3>Headless CMS</h3>
+          <p>API-driven content management for modern applications.</p>
+        </div>
+
+        <div class="card">
+          <h3>Custom CMS Platforms</h3>
+          <p>Tailored CMS solutions built for unique business workflows.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Business Benefits -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Business Benefits</h2>
+
+        <p>
+          Improve content workflows, boost digital engagement,
+          and manage publishing operations efficiently.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">🌍</div>
+
+          <h3>Multi-Channel Publishing</h3>
+
+          <p>
+            Publish content across websites,
+            mobile apps, and digital platforms.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">💰</div>
+
+          <h3>Reduce Operational Costs</h3>
+
+          <p>
+            Streamline content management
+            and reduce manual publishing work.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📊</div>
+
+          <h3>Advanced Analytics</h3>
+
+          <p>
+            Track user engagement, content
+            performance, and audience insights.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🚀</div>
+
+          <h3>Scalable CMS Architecture</h3>
+
+          <p>
+            Flexible systems designed to scale
+            with growing content demands.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>Ready To Build Your CMS Platform?</h2>
+
+        <p>
+          Partner with TechNova Solutions to create scalable,
+          AI-powered content management systems for digital success.
+        </p>
+
+        <a href="#" class="btn">
+          Schedule Free Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            CMS platforms, automation systems, and scalable digital solutions.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Solutions</h3>
+
+          <ul>
+            <li>CMS Solutions</li>
+            <li>ERP Solutions</li>
+            <li>CRM Solutions</li>
+            <li>Marketplace Solutions</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

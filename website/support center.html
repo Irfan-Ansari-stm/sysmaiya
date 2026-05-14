@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support Center | Help & Customer Support</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .support-card{
+      transition:all 0.35s ease;
+      background:linear-gradient(
+        135deg,
+        rgba(6,182,212,0.10),
+        rgba(139,92,246,0.10)
+      );
+    }
+
+    .support-card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .feature-card{
+      transition:all 0.3s ease;
+    }
+
+    .feature-card:hover{
+      transform:scale(1.04);
+    }
+
+    .faq-item{
+      transition:all 0.3s ease;
+    }
+
+    .faq-item:hover{
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .search-box{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .status-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:#22c55e;
+      display:inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Support<span class="gradient-text">Hub</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Support Center</a>
+        <a href="#" class="hover:text-white transition">Knowledge Base</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+        <a href="#" class="hover:text-white transition">Status</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Submit Ticket
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-8">
+        24/7 Customer Support
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+        Welcome to the
+        <span class="gradient-text">Support Center</span>
+      </h1>
+
+      <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-12">
+        Find answers, explore documentation, submit support tickets,
+        and get expert assistance for all your business needs.
+      </p>
+
+      <!-- Search -->
+      <div class="max-w-3xl mx-auto">
+
+        <div class="search-box rounded-3xl p-4 flex flex-col md:flex-row gap-4">
+
+          <input
+            type="text"
+            placeholder="Search help articles, tutorials, FAQs..."
+            class="flex-1 bg-transparent outline-none px-4 py-4 text-white placeholder-slate-500"
+          >
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold">
+            Search
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Quick Support -->
+  <section class="py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl mb-5">💬</div>
+
+          <h3 class="text-2xl font-bold mb-3">
+            Live Chat
+          </h3>
+
+          <p class="text-slate-400">
+            Talk instantly with support specialists.
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl mb-5">📧</div>
+
+          <h3 class="text-2xl font-bold mb-3">
+            Email Support
+          </h3>
+
+          <p class="text-slate-400">
+            Submit detailed support requests anytime.
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl mb-5">📚</div>
+
+          <h3 class="text-2xl font-bold mb-3">
+            Documentation
+          </h3>
+
+          <p class="text-slate-400">
+            Explore tutorials and technical guides.
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl mb-5">⚡</div>
+
+          <h3 class="text-2xl font-bold mb-3">
+            System Status
+          </h3>
+
+          <p class="text-slate-400">
+            Monitor service uptime and updates.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Support Categories -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Support Categories
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          How Can We Help?
+        </h2>
+
+        <p class="text-slate-400 text-xl leading-9 max-w-3xl mx-auto">
+          Browse support categories and resources designed
+          to help you solve issues quickly.
+        </p>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Category -->
+        <div class="support-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">🛠️</div>
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Technical Support
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Product & Platform Assistance
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Get expert help for troubleshooting,
+            integrations, bugs, and technical issues.
+          </p>
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-6 py-3 rounded-xl font-semibold">
+            View Articles
+          </button>
+
+        </div>
+
+        <!-- Category -->
+        <div class="support-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">📖</div>
+
+          <div class="text-pink-400 font-semibold mb-4">
+            Knowledge Base
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Tutorials & Documentation
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Access setup guides, FAQs,
+            onboarding tutorials, and technical documentation.
+          </p>
+
+          <button class="bg-pink-500 hover:bg-pink-600 transition px-6 py-3 rounded-xl font-semibold">
+            Explore Docs
+          </button>
+
+        </div>
+
+        <!-- Category -->
+        <div class="support-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">👨‍💼</div>
+
+          <div class="text-violet-400 font-semibold mb-4">
+            Account Support
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Billing & Account Management
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Manage subscriptions, invoices,
+            account settings, and user permissions.
+          </p>
+
+          <button class="bg-violet-500 hover:bg-violet-600 transition px-6 py-3 rounded-xl font-semibold">
+            Get Support
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Popular Articles -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16">
+
+        <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+
+          <div>
+
+            <div class="text-cyan-400 font-semibold mb-3">
+              Popular Resources
+            </div>
+
+            <h2 class="text-5xl font-bold">
+              Help Articles
+            </h2>
+
+          </div>
+
+          <button class="border border-slate-700 hover:border-cyan-500 transition px-6 py-3 rounded-xl font-semibold">
+            View All Articles
+          </button>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <div class="bg-slate-900 rounded-3xl p-8">
+
+            <div class="flex items-center justify-between mb-4">
+
+              <div class="text-cyan-400 font-semibold">
+                Getting Started
+              </div>
+
+              <div class="text-sm text-slate-500">
+                5 min read
+              </div>
+
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Platform Setup Guide
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-6">
+              Learn how to configure your account
+              and launch your first project successfully.
+            </p>
+
+            <a href="#" class="text-cyan-400 font-semibold hover:text-cyan-300">
+              Read Article →
+            </a>
+
+          </div>
+
+          <div class="bg-slate-900 rounded-3xl p-8">
+
+            <div class="flex items-center justify-between mb-4">
+
+              <div class="text-pink-400 font-semibold">
+                Integrations
+              </div>
+
+              <div class="text-sm text-slate-500">
+                8 min read
+              </div>
+
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              API Integration Tutorial
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-6">
+              Step-by-step instructions for integrating
+              APIs and third-party platforms.
+            </p>
+
+            <a href="#" class="text-pink-400 font-semibold hover:text-pink-300">
+              Read Article →
+            </a>
+
+          </div>
+
+          <div class="bg-slate-900 rounded-3xl p-8">
+
+            <div class="flex items-center justify-between mb-4">
+
+              <div class="text-violet-400 font-semibold">
+                Billing
+              </div>
+
+              <div class="text-sm text-slate-500">
+                4 min read
+              </div>
+
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Subscription & Invoices
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-6">
+              Manage plans, invoices,
+              payments, and billing preferences.
+            </p>
+
+            <a href="#" class="text-violet-400 font-semibold hover:text-violet-300">
+              Read Article →
+            </a>
+
+          </div>
+
+          <div class="bg-slate-900 rounded-3xl p-8">
+
+            <div class="flex items-center justify-between mb-4">
+
+              <div class="text-amber-400 font-semibold">
+                Security
+              </div>
+
+              <div class="text-sm text-slate-500">
+                6 min read
+              </div>
+
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Security Best Practices
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-6">
+              Learn how to secure accounts,
+              data, and enterprise systems effectively.
+            </p>
+
+            <a href="#" class="text-amber-400 font-semibold hover:text-amber-300">
+              Read Article →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FAQ -->
+  <section class="pb-24">
+
+    <div class="max-w-5xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Frequently Asked Questions
+        </div>
+
+        <h2 class="text-5xl font-bold">
+          Common Questions
+        </h2>
+
+      </div>
+
+      <div class="space-y-6">
+
+        <div class="faq-item glass rounded-3xl p-8 border border-transparent">
+
+          <h3 class="text-2xl font-bold mb-4">
+            How do I contact technical support?
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            You can contact support through live chat,
+            email support, or by submitting a ticket directly.
+          </p>
+
+        </div>
+
+        <div class="faq-item glass rounded-3xl p-8 border border-transparent">
+
+          <h3 class="text-2xl font-bold mb-4">
+            Where can I find API documentation?
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            API documentation is available in the documentation
+            and developer resources section.
+          </p>
+
+        </div>
+
+        <div class="faq-item glass rounded-3xl p-8 border border-transparent">
+
+          <h3 class="text-2xl font-bold mb-4">
+            How quickly will I receive a response?
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Standard response times range from 1–24 hours
+            depending on support plan and ticket priority.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- System Status -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16">
+
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
+
+          <div>
+
+            <div class="text-cyan-400 font-semibold mb-3">
+              Service Monitoring
+            </div>
+
+            <h2 class="text-5xl font-bold">
+              System Status
+            </h2>
+
+          </div>
+
+          <div class="flex items-center gap-3 text-green-400 font-semibold">
+            <span class="status-dot"></span>
+            All Systems Operational
+          </div>
+
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <div class="bg-slate-900 rounded-3xl p-8">
+
+            <div class="flex justify-between items-center mb-4">
+
+              <h3 class="text-2xl font-bold">
+                API Services
+              </h3>
+
+              <span class="status-dot"></span>
+
+            </div>
+
+            <p class="text-slate-400">
+              Operational with 99.99% uptime.
+            </p>
+
+          </div>
+
+          <div class="bg-slate-900 rounded-3xl p-8">
+
+            <div class="flex justify-between items-center mb-4">
+
+              <h3 class="text-2xl font-bold">
+                Cloud Platform
+              </h3>
+
+              <span class="status-dot"></span>
+
+            </div>
+
+            <p class="text-slate-400">
+              All cloud services are functioning normally.
+            </p>
+
+          </div>
+
+          <div class="bg-slate-900 rounded-3xl p-8">
+
+            <div class="flex justify-between items-center mb-4">
+
+              <h3 class="text-2xl font-bold">
+                Support Services
+              </h3>
+
+              <span class="status-dot"></span>
+
+            </div>
+
+            <p class="text-slate-400">
+              Customer support systems are active.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Need Additional Help?
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Contact Our Support Team
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Our support specialists are available 24/7
+            to help resolve issues and answer questions.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Open Support Ticket
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Start Live Chat
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Support<span class="gradient-text">Hub</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Delivering reliable customer support,
+          technical assistance, and knowledge resources.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 SupportHub. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

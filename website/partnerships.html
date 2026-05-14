@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Partnerships | Strategic Alliances</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .partner-card{
+      transition:all 0.35s ease;
+      background:linear-gradient(
+        135deg,
+        rgba(6,182,212,0.10),
+        rgba(139,92,246,0.10)
+      );
+    }
+
+    .partner-card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .benefit-card{
+      transition:all 0.3s ease;
+    }
+
+    .benefit-card:hover{
+      transform:scale(1.04);
+    }
+
+    .timeline-line{
+      position:absolute;
+      left:22px;
+      top:0;
+      bottom:0;
+      width:2px;
+      background:rgba(255,255,255,0.1);
+    }
+
+    .timeline-item{
+      position:relative;
+    }
+
+    .timeline-item::before{
+      content:'';
+      position:absolute;
+      left:-34px;
+      top:18px;
+      width:14px;
+      height:14px;
+      border-radius:50%;
+      background:#06b6d4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Partner<span class="gradient-text">Sphere</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Partnerships</a>
+        <a href="#" class="hover:text-white transition">Alliances</a>
+        <a href="#" class="hover:text-white transition">Technology</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Become a Partner
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+        Global Strategic Alliances
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+        Strategic
+        <span class="gradient-text">Partnerships</span>
+      </h1>
+
+      <p class="text-slate-300 text-xl leading-9 max-w-4xl mx-auto mb-14">
+        Collaborating with leading technology providers,
+        enterprise platforms, and innovation partners
+        to deliver world-class digital solutions.
+      </p>
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-cyan-400 mb-3">
+            50+
+          </div>
+
+          <p class="text-slate-400">
+            Global Partners
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-pink-400 mb-3">
+            20+
+          </div>
+
+          <p class="text-slate-400">
+            Technology Alliances
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-violet-400 mb-3">
+            500+
+          </div>
+
+          <p class="text-slate-400">
+            Enterprise Clients
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-amber-400 mb-3">
+            98%
+          </div>
+
+          <p class="text-slate-400">
+            Client Satisfaction
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Featured Partners -->
+  <section class="py-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Technology Partners
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          Trusted Industry Collaborations
+        </h2>
+
+        <p class="text-slate-400 text-xl leading-9 max-w-3xl mx-auto">
+          Partnering with world-leading technology platforms
+          to create scalable, secure, and future-ready solutions.
+        </p>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Partner -->
+        <div class="partner-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">☁️</div>
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Cloud Partner
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            AWS Alliance
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Delivering secure cloud infrastructure,
+            scalable deployments, and enterprise cloud services.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            Amazon Web Services
+          </div>
+
+        </div>
+
+        <!-- Partner -->
+        <div class="partner-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">🚀</div>
+
+          <div class="text-pink-400 font-semibold mb-4">
+            Innovation Partner
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Microsoft Solutions
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Enterprise productivity, AI integration,
+            and cloud-native application development.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            Microsoft Partner Network
+          </div>
+
+        </div>
+
+        <!-- Partner -->
+        <div class="partner-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">🔒</div>
+
+          <div class="text-violet-400 font-semibold mb-4">
+            Security Partner
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Cybersecurity Alliance
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Advanced threat protection and enterprise-grade
+            security frameworks for digital systems.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            Global Security Network
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Partnership Journey -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6 relative">
+
+      <div class="timeline-line hidden md:block"></div>
+
+      <div class="text-center mb-20">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Partnership Journey
+        </div>
+
+        <h2 class="text-5xl font-bold">
+          Building Long-Term Alliances
+        </h2>
+
+      </div>
+
+      <div class="space-y-12 md:pl-20">
+
+        <!-- Timeline -->
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-cyan-400 font-semibold mb-3">
+            2026
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Enterprise Cloud Expansion
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Expanded cloud and infrastructure partnerships
+            to support enterprise-scale digital transformation.
+          </p>
+
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-pink-400 font-semibold mb-3">
+            2025
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            AI & Automation Collaboration
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Formed strategic alliances focused on AI-driven
+            automation and intelligent digital experiences.
+          </p>
+
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-violet-400 font-semibold mb-3">
+            2024
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Global Technology Network
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Strengthened partnerships with leading technology
+            providers across multiple industries worldwide.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Partnership Benefits -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16">
+
+        <div class="text-center mb-16">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Partnership Benefits
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            Why Collaborate with Us
+          </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+
+          <!-- Benefit -->
+          <div class="benefit-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">⚡</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Faster Innovation
+            </h3>
+
+            <p class="text-slate-400">
+              Accelerate digital transformation initiatives.
+            </p>
+
+          </div>
+
+          <!-- Benefit -->
+          <div class="benefit-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🔒</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Secure Solutions
+            </h3>
+
+            <p class="text-slate-400">
+              Enterprise-grade security and compliance.
+            </p>
+
+          </div>
+
+          <!-- Benefit -->
+          <div class="benefit-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🌎</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Global Reach
+            </h3>
+
+            <p class="text-slate-400">
+              Access worldwide technology ecosystems.
+            </p>
+
+          </div>
+
+          <!-- Benefit -->
+          <div class="benefit-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🤝</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Long-Term Growth
+            </h3>
+
+            <p class="text-slate-400">
+              Strategic partnerships for scalable success.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Industry Partnerships -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-2 gap-10">
+
+        <!-- Left -->
+        <div class="glass rounded-[36px] p-12">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Industry Partnerships
+          </div>
+
+          <h2 class="text-5xl font-bold mb-8">
+            Expertise Across Sectors
+          </h2>
+
+          <div class="space-y-6 text-slate-300 leading-8">
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Cloud-native enterprise application partnerships.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>AI-powered automation and analytics integrations.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Secure infrastructure and cybersecurity collaboration.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Global delivery and enterprise transformation support.</div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right -->
+        <div class="glass rounded-[36px] p-12">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Supported Industries
+          </div>
+
+          <h2 class="text-5xl font-bold mb-8">
+            Serving Diverse Markets
+          </h2>
+
+          <div class="grid grid-cols-2 gap-5">
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              SaaS
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              FinTech
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Healthcare
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              E-Commerce
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Logistics
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Manufacturing
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Let’s Build Together
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Become a Strategic Partner
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Collaborate with our global network of technology,
+            innovation, and enterprise solution partners.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Join Partnership Program
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Schedule Meeting
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Partner<span class="gradient-text">Sphere</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Building trusted technology partnerships and
+          enterprise collaborations worldwide.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 PartnerSphere. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

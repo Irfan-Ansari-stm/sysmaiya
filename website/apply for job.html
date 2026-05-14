@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply for Job | Career Portal</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .input-field{
+      background:#0f172a;
+      border:1px solid #334155;
+      transition:all 0.3s ease;
+    }
+
+    .input-field:focus{
+      outline:none;
+      border-color:#06b6d4;
+      box-shadow:0 0 0 3px rgba(6,182,212,0.15);
+    }
+
+    .step-card{
+      transition:all 0.35s ease;
+    }
+
+    .step-card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(6,182,212,0.35);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Career<span class="gradient-text">Portal</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Careers</a>
+        <a href="#" class="hover:text-white transition">Jobs</a>
+        <a href="#" class="hover:text-white transition">Benefits</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Open Positions
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-24">
+
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+        Application Form
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+        Apply for
+        <span class="gradient-text">Senior Frontend Developer</span>
+      </h1>
+
+      <p class="text-slate-300 text-xl leading-9 max-w-4xl mx-auto">
+        Join our global engineering team and help build scalable enterprise
+        applications, AI platforms, and cloud-native solutions.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Job Info -->
+  <section class="pb-16">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="glass rounded-3xl p-6 text-center">
+          <div class="text-cyan-400 text-sm mb-2">Location</div>
+          <div class="text-2xl font-bold">Hyderabad</div>
+        </div>
+
+        <div class="glass rounded-3xl p-6 text-center">
+          <div class="text-cyan-400 text-sm mb-2">Experience</div>
+          <div class="text-2xl font-bold">4+ Years</div>
+        </div>
+
+        <div class="glass rounded-3xl p-6 text-center">
+          <div class="text-cyan-400 text-sm mb-2">Job Type</div>
+          <div class="text-2xl font-bold">Full Time</div>
+        </div>
+
+        <div class="glass rounded-3xl p-6 text-center">
+          <div class="text-cyan-400 text-sm mb-2">Work Mode</div>
+          <div class="text-2xl font-bold">Remote</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Application Form -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-3 gap-10">
+
+        <!-- Left -->
+        <div class="lg:col-span-2">
+
+          <div class="glass rounded-[40px] p-10">
+
+            <div class="mb-10">
+
+              <div class="text-cyan-400 font-semibold mb-3">
+                Candidate Information
+              </div>
+
+              <h2 class="text-5xl font-bold">
+                Complete Your Application
+              </h2>
+
+            </div>
+
+            <form class="space-y-8">
+
+              <!-- Personal Info -->
+              <div>
+
+                <h3 class="text-2xl font-bold mb-6">
+                  Personal Details
+                </h3>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                  <div>
+                    <label class="block text-sm text-slate-400 mb-2">
+                      First Name
+                    </label>
+
+                    <input
+                      type="text"
+                      placeholder="Enter first name"
+                      class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                    >
+                  </div>
+
+                  <div>
+                    <label class="block text-sm text-slate-400 mb-2">
+                      Last Name
+                    </label>
+
+                    <input
+                      type="text"
+                      placeholder="Enter last name"
+                      class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                    >
+                  </div>
+
+                  <div>
+                    <label class="block text-sm text-slate-400 mb-2">
+                      Email Address
+                    </label>
+
+                    <input
+                      type="email"
+                      placeholder="Enter email address"
+                      class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                    >
+                  </div>
+
+                  <div>
+                    <label class="block text-sm text-slate-400 mb-2">
+                      Phone Number
+                    </label>
+
+                    <input
+                      type="tel"
+                      placeholder="Enter phone number"
+                      class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                    >
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- Professional Info -->
+              <div>
+
+                <h3 class="text-2xl font-bold mb-6">
+                  Professional Information
+                </h3>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                  <div>
+                    <label class="block text-sm text-slate-400 mb-2">
+                      Current Company
+                    </label>
+
+                    <input
+                      type="text"
+                      placeholder="Enter company name"
+                      class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                    >
+                  </div>
+
+                  <div>
+                    <label class="block text-sm text-slate-400 mb-2">
+                      Experience
+                    </label>
+
+                    <select
+                      class="input-field w-full rounded-2xl px-5 py-4 text-white"
+                    >
+                      <option>1-2 Years</option>
+                      <option>3-5 Years</option>
+                      <option>5-8 Years</option>
+                      <option>8+ Years</option>
+                    </select>
+                  </div>
+
+                  <div class="md:col-span-2">
+                    <label class="block text-sm text-slate-400 mb-2">
+                      Portfolio / LinkedIn URL
+                    </label>
+
+                    <input
+                      type="url"
+                      placeholder="https://linkedin.com/in/username"
+                      class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                    >
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- Resume -->
+              <div>
+
+                <h3 class="text-2xl font-bold mb-6">
+                  Upload Documents
+                </h3>
+
+                <div class="space-y-6">
+
+                  <div>
+                    <label class="block text-sm text-slate-400 mb-2">
+                      Upload Resume
+                    </label>
+
+                    <input
+                      type="file"
+                      class="input-field w-full rounded-2xl px-5 py-4 text-slate-400"
+                    >
+                  </div>
+
+                  <div>
+                    <label class="block text-sm text-slate-400 mb-2">
+                      Upload Cover Letter
+                    </label>
+
+                    <input
+                      type="file"
+                      class="input-field w-full rounded-2xl px-5 py-4 text-slate-400"
+                    >
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- Message -->
+              <div>
+
+                <label class="block text-sm text-slate-400 mb-2">
+                  Why do you want to join us?
+                </label>
+
+                <textarea
+                  rows="6"
+                  placeholder="Tell us about your experience, achievements, and motivation..."
+                  class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                ></textarea>
+
+              </div>
+
+              <!-- Checkbox -->
+              <div class="flex items-start gap-4">
+
+                <input type="checkbox" class="mt-1">
+
+                <p class="text-slate-400 leading-7">
+                  I agree to the privacy policy and consent to the processing
+                  of my personal data for recruitment purposes.
+                </p>
+
+              </div>
+
+              <!-- Submit -->
+              <button
+                type="submit"
+                class="bg-cyan-500 hover:bg-cyan-600 transition w-full py-5 rounded-2xl font-semibold text-lg"
+              >
+                Submit Application
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+
+          <!-- Hiring Process -->
+          <div class="glass rounded-[34px] p-8">
+
+            <div class="text-cyan-400 font-semibold mb-3">
+              Hiring Process
+            </div>
+
+            <h3 class="text-3xl font-bold mb-8">
+              What Happens Next?
+            </h3>
+
+            <div class="space-y-6">
+
+              <div class="step-card glass rounded-3xl p-6 border border-transparent">
+
+                <div class="text-cyan-400 text-3xl mb-4">1</div>
+
+                <h4 class="text-xl font-bold mb-3">
+                  Application Review
+                </h4>
+
+                <p class="text-slate-400 leading-7">
+                  Our hiring team reviews your profile and qualifications.
+                </p>
+
+              </div>
+
+              <div class="step-card glass rounded-3xl p-6 border border-transparent">
+
+                <div class="text-pink-400 text-3xl mb-4">2</div>
+
+                <h4 class="text-xl font-bold mb-3">
+                  Technical Interview
+                </h4>
+
+                <p class="text-slate-400 leading-7">
+                  Complete technical discussions and problem-solving rounds.
+                </p>
+
+              </div>
+
+              <div class="step-card glass rounded-3xl p-6 border border-transparent">
+
+                <div class="text-amber-400 text-3xl mb-4">3</div>
+
+                <h4 class="text-xl font-bold mb-3">
+                  Final Discussion
+                </h4>
+
+                <p class="text-slate-400 leading-7">
+                  Meet with leadership and discuss team collaboration.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Benefits -->
+          <div class="glass rounded-[34px] p-8">
+
+            <div class="text-cyan-400 font-semibold mb-3">
+              Employee Benefits
+            </div>
+
+            <h3 class="text-3xl font-bold mb-8">
+              Why Join Us?
+            </h3>
+
+            <div class="space-y-5">
+
+              <div class="flex items-center gap-4">
+                <div class="text-cyan-400 text-2xl">✓</div>
+                <div class="text-slate-300">
+                  Flexible remote work
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="text-cyan-400 text-2xl">✓</div>
+                <div class="text-slate-300">
+                  Health & wellness programs
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="text-cyan-400 text-2xl">✓</div>
+                <div class="text-slate-300">
+                  Learning & certification support
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="text-cyan-400 text-2xl">✓</div>
+                <div class="text-slate-300">
+                  Competitive salary packages
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Careers at CareerPortal
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Your Next Big Opportunity Starts Here
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Work with talented teams, build impactful products,
+            and grow your career in enterprise technology.
+          </p>
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+            Explore More Jobs
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Career<span class="gradient-text">Portal</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Enterprise hiring platform helping professionals
+          discover opportunities in technology, AI, cloud,
+          and digital innovation.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 CareerPortal. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certifications | Trust & Compliance</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .cert-card{
+      transition:all 0.35s ease;
+      background:linear-gradient(
+        135deg,
+        rgba(6,182,212,0.10),
+        rgba(139,92,246,0.10)
+      );
+    }
+
+    .cert-card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .badge-card{
+      transition:all 0.3s ease;
+    }
+
+    .badge-card:hover{
+      transform:scale(1.05);
+    }
+
+    .timeline-line{
+      position:absolute;
+      left:22px;
+      top:0;
+      bottom:0;
+      width:2px;
+      background:rgba(255,255,255,0.1);
+    }
+
+    .timeline-item{
+      position:relative;
+    }
+
+    .timeline-item::before{
+      content:'';
+      position:absolute;
+      left:-34px;
+      top:18px;
+      width:14px;
+      height:14px;
+      border-radius:50%;
+      background:#06b6d4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Certi<span class="gradient-text">Trust</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Certifications</a>
+        <a href="#" class="hover:text-white transition">Compliance</a>
+        <a href="#" class="hover:text-white transition">Security</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Contact Us
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+        Trusted Standards & Compliance
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+        Industry
+        <span class="gradient-text">Certifications</span>
+      </h1>
+
+      <p class="text-slate-300 text-xl leading-9 max-w-4xl mx-auto mb-14">
+        Demonstrating our commitment to security, quality,
+        innovation, compliance, and operational excellence
+        through globally recognized certifications and standards.
+      </p>
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-cyan-400 mb-3">
+            20+
+          </div>
+
+          <p class="text-slate-400">
+            Certifications
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-pink-400 mb-3">
+            ISO
+          </div>
+
+          <p class="text-slate-400">
+            Global Standards
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-violet-400 mb-3">
+            100%
+          </div>
+
+          <p class="text-slate-400">
+            Security Focused
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-amber-400 mb-3">
+            500+
+          </div>
+
+          <p class="text-slate-400">
+            Trusted Clients
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Certification Cards -->
+  <section class="py-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Featured Certifications
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          Recognized Industry Standards
+        </h2>
+
+        <p class="text-slate-400 text-xl leading-9 max-w-3xl mx-auto">
+          Our certifications reflect our dedication to
+          delivering secure, reliable, and high-quality solutions.
+        </p>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Certification -->
+        <div class="cert-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">🔒</div>
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Security Certification
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            ISO 27001
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Certified information security management systems
+            ensuring enterprise-grade data protection.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            International Security Standard
+          </div>
+
+        </div>
+
+        <!-- Certification -->
+        <div class="cert-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">🏆</div>
+
+          <div class="text-pink-400 font-semibold mb-4">
+            Quality Certification
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            ISO 9001
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Certified quality management processes
+            for consistent project delivery and excellence.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            Global Quality Standard
+          </div>
+
+        </div>
+
+        <!-- Certification -->
+        <div class="cert-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">☁️</div>
+
+          <div class="text-violet-400 font-semibold mb-4">
+            Cloud Certification
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            AWS Certified Partner
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Advanced cloud infrastructure expertise
+            for scalable and secure cloud solutions.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            Amazon Web Services
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Compliance Timeline -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6 relative">
+
+      <div class="timeline-line hidden md:block"></div>
+
+      <div class="text-center mb-20">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Compliance Journey
+        </div>
+
+        <h2 class="text-5xl font-bold">
+          Security & Quality Milestones
+        </h2>
+
+      </div>
+
+      <div class="space-y-12 md:pl-20">
+
+        <!-- Timeline -->
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-cyan-400 font-semibold mb-3">
+            2026
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Advanced Cybersecurity Compliance
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Achieved enhanced security compliance standards
+            for enterprise cloud infrastructure and data systems.
+          </p>
+
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-pink-400 font-semibold mb-3">
+            2025
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Global Quality Certification
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Expanded quality assurance frameworks
+            and operational excellence programs globally.
+          </p>
+
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-violet-400 font-semibold mb-3">
+            2024
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Cloud Infrastructure Certification
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Recognized for expertise in scalable,
+            secure, and enterprise-ready cloud solutions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Security & Compliance -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16">
+
+        <div class="text-center mb-16">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Security & Compliance
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            Built on Trust & Reliability
+          </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+
+          <!-- Item -->
+          <div class="badge-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🔐</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Data Security
+            </h3>
+
+            <p class="text-slate-400">
+              Enterprise-grade encryption and protection.
+            </p>
+
+          </div>
+
+          <!-- Item -->
+          <div class="badge-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">⚡</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Reliable Systems
+            </h3>
+
+            <p class="text-slate-400">
+              High-performance and scalable infrastructure.
+            </p>
+
+          </div>
+
+          <!-- Item -->
+          <div class="badge-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">📋</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Compliance Ready
+            </h3>
+
+            <p class="text-slate-400">
+              Industry-standard regulatory compliance.
+            </p>
+
+          </div>
+
+          <!-- Item -->
+          <div class="badge-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🤝</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Trusted Partner
+            </h3>
+
+            <p class="text-slate-400">
+              Long-term client partnerships worldwide.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Industry Coverage -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-2 gap-10">
+
+        <!-- Left -->
+        <div class="glass rounded-[36px] p-12">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Trusted Across Industries
+          </div>
+
+          <h2 class="text-5xl font-bold mb-8">
+            Compliance for Every Sector
+          </h2>
+
+          <div class="space-y-6 text-slate-300 leading-8">
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Healthcare security and patient data compliance.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Financial systems with enterprise-grade protection.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Cloud-native infrastructure with secure frameworks.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Global quality assurance and scalable operations.</div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right -->
+        <div class="glass rounded-[36px] p-12">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Industry Expertise
+          </div>
+
+          <h2 class="text-5xl font-bold mb-8">
+            Certified Across Multiple Domains
+          </h2>
+
+          <div class="grid grid-cols-2 gap-5">
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              SaaS
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              FinTech
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Healthcare
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              E-Commerce
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Logistics
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Manufacturing
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Secure & Certified Solutions
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Work with a Trusted Technology Partner
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Delivering secure, compliant, and enterprise-ready
+            digital solutions trusted by businesses worldwide.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Start Your Project
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Schedule Consultation
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Certi<span class="gradient-text">Trust</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Delivering secure, certified, and scalable digital solutions
+          for global businesses and enterprises.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 CertiTrust. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

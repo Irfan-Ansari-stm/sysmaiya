@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Agents | Autonomous AI Solutions</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .agent-card{
+      transition:all 0.35s ease;
+      background:linear-gradient(
+        135deg,
+        rgba(6,182,212,0.10),
+        rgba(139,92,246,0.10)
+      );
+    }
+
+    .agent-card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .feature-card{
+      transition:all 0.3s ease;
+    }
+
+    .feature-card:hover{
+      transform:scale(1.04);
+    }
+
+    .timeline-line{
+      position:absolute;
+      left:22px;
+      top:0;
+      bottom:0;
+      width:2px;
+      background:rgba(255,255,255,0.1);
+    }
+
+    .timeline-item{
+      position:relative;
+    }
+
+    .timeline-item::before{
+      content:'';
+      position:absolute;
+      left:-34px;
+      top:18px;
+      width:14px;
+      height:14px;
+      border-radius:50%;
+      background:#06b6d4;
+    }
+
+    .agent-ui{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Agent<span class="gradient-text">AI</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">AI Agents</a>
+        <a href="#" class="hover:text-white transition">Solutions</a>
+        <a href="#" class="hover:text-white transition">Industries</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Request Demo
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left -->
+      <div>
+
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+          Autonomous AI Systems
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+          Intelligent
+          <span class="gradient-text">AI Agents</span>
+        </h1>
+
+        <p class="text-slate-300 text-xl leading-9 mb-10">
+          Deploy autonomous AI agents that can reason, automate tasks,
+          interact with systems, and execute complex workflows intelligently.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4">
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Launch AI Agents
+          </button>
+
+          <button class="border border-slate-700 hover:border-cyan-500 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Explore Platform
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Right -->
+      <div class="glass rounded-[40px] p-8">
+
+        <div class="space-y-5">
+
+          <div class="agent-ui rounded-2xl p-5 flex justify-between items-center">
+            <div>
+              <div class="font-semibold text-cyan-400">
+                Customer Support Agent
+              </div>
+              <div class="text-sm text-slate-400 mt-1">
+                Resolving customer tickets automatically.
+              </div>
+            </div>
+
+            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+          </div>
+
+          <div class="agent-ui rounded-2xl p-5 flex justify-between items-center">
+            <div>
+              <div class="font-semibold text-pink-400">
+                Sales Automation Agent
+              </div>
+              <div class="text-sm text-slate-400 mt-1">
+                Qualifying leads and scheduling demos.
+              </div>
+            </div>
+
+            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+          </div>
+
+          <div class="agent-ui rounded-2xl p-5 flex justify-between items-center">
+            <div>
+              <div class="font-semibold text-violet-400">
+                Workflow AI Agent
+              </div>
+              <div class="text-sm text-slate-400 mt-1">
+                Managing enterprise automation tasks.
+              </div>
+            </div>
+
+            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+          </div>
+
+          <div class="agent-ui rounded-2xl p-5 flex justify-between items-center">
+            <div>
+              <div class="font-semibold text-amber-400">
+                Analytics AI Agent
+              </div>
+              <div class="text-sm text-slate-400 mt-1">
+                Generating reports and insights in real time.
+              </div>
+            </div>
+
+            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Stats -->
+  <section class="py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-cyan-400 mb-3">
+            500+
+          </div>
+
+          <p class="text-slate-400">
+            AI Agents Deployed
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-pink-400 mb-3">
+            90%
+          </div>
+
+          <p class="text-slate-400">
+            Task Automation
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-violet-400 mb-3">
+            24/7
+          </div>
+
+          <p class="text-slate-400">
+            Autonomous Operations
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-amber-400 mb-3">
+            99%
+          </div>
+
+          <p class="text-slate-400">
+            Workflow Accuracy
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- AI Agent Types -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          AI Agent Solutions
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          Autonomous AI Systems
+        </h2>
+
+        <p class="text-slate-400 text-xl leading-9 max-w-3xl mx-auto">
+          AI agents built to automate operations, improve efficiency,
+          and deliver intelligent business outcomes.
+        </p>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Agent -->
+        <div class="agent-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">🤖</div>
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Support AI Agents
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Customer Service Automation
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Autonomous support agents that resolve tickets,
+            answer questions, and improve customer satisfaction.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            NLP & Conversational AI
+          </div>
+
+        </div>
+
+        <!-- Agent -->
+        <div class="agent-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">📈</div>
+
+          <div class="text-pink-400 font-semibold mb-4">
+            Sales AI Agents
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Intelligent Sales Assistants
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            AI-powered sales agents that qualify leads,
+            automate outreach, and optimize conversions.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            Lead Generation Automation
+          </div>
+
+        </div>
+
+        <!-- Agent -->
+        <div class="agent-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">⚙️</div>
+
+          <div class="text-violet-400 font-semibold mb-4">
+            Workflow AI Agents
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Enterprise Process Automation
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Intelligent AI agents that manage workflows,
+            automate operations, and coordinate business systems.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            Enterprise AI Integration
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Timeline -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6 relative">
+
+      <div class="timeline-line hidden md:block"></div>
+
+      <div class="text-center mb-20">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          AI Evolution
+        </div>
+
+        <h2 class="text-5xl font-bold">
+          Growth of Autonomous AI
+        </h2>
+
+      </div>
+
+      <div class="space-y-12 md:pl-20">
+
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-cyan-400 font-semibold mb-3">
+            2026
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Multi-Agent Collaboration Systems
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Developed AI ecosystems where multiple agents
+            collaborate to complete complex enterprise tasks.
+          </p>
+
+        </div>
+
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-pink-400 font-semibold mb-3">
+            2025
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Autonomous Workflow Intelligence
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Introduced AI agents capable of reasoning,
+            planning, and executing operational workflows automatically.
+          </p>
+
+        </div>
+
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-violet-400 font-semibold mb-3">
+            2024
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Enterprise AI Agent Deployment
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Implemented scalable AI agents for support,
+            analytics, automation, and enterprise operations.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16">
+
+        <div class="text-center mb-16">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Core Features
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            AI Agent Capabilities
+          </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🧠</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Reasoning AI
+            </h3>
+
+            <p class="text-slate-400">
+              Intelligent decision-making and task execution.
+            </p>
+
+          </div>
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🔗</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              System Integrations
+            </h3>
+
+            <p class="text-slate-400">
+              Connect AI agents with enterprise platforms.
+            </p>
+
+          </div>
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">⚡</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Autonomous Actions
+            </h3>
+
+            <p class="text-slate-400">
+              Execute workflows and operations automatically.
+            </p>
+
+          </div>
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">📊</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              AI Analytics
+            </h3>
+
+            <p class="text-slate-400">
+              Real-time reporting and business intelligence.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Industries -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-2 gap-10">
+
+        <!-- Left -->
+        <div class="glass rounded-[36px] p-12">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Enterprise Applications
+          </div>
+
+          <h2 class="text-5xl font-bold mb-8">
+            AI Agents for Every Industry
+          </h2>
+
+          <div class="space-y-6 text-slate-300 leading-8">
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>AI customer service and ticket automation.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Sales automation and intelligent lead management.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Workflow orchestration and operational AI systems.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Analytics agents for reporting and forecasting.</div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right -->
+        <div class="glass rounded-[36px] p-12">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Industries Served
+          </div>
+
+          <h2 class="text-5xl font-bold mb-8">
+            AI Agent Solutions
+          </h2>
+
+          <div class="grid grid-cols-2 gap-5">
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              SaaS Platforms
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Healthcare
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              FinTech
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Logistics
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              E-Commerce
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Enterprise IT
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Ready for Autonomous AI?
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Deploy Intelligent AI Agents
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Build scalable AI agent systems that automate workflows,
+            optimize operations, and transform enterprise productivity.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Schedule AI Demo
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Contact AI Experts
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Agent<span class="gradient-text">AI</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Building intelligent autonomous AI agents
+          for enterprise automation and business transformation.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 AgentAI. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

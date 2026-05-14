@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documentation | Developer & Product Docs</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .doc-card{
+      transition:all 0.35s ease;
+      background:linear-gradient(
+        135deg,
+        rgba(6,182,212,0.08),
+        rgba(139,92,246,0.08)
+      );
+    }
+
+    .doc-card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .sidebar-link{
+      transition:all 0.3s ease;
+    }
+
+    .sidebar-link:hover{
+      background:rgba(6,182,212,0.12);
+      color:#fff;
+    }
+
+    .code-box{
+      background:#0f172a;
+      border:1px solid rgba(255,255,255,0.08);
+      font-family:monospace;
+    }
+
+    .feature-card{
+      transition:all 0.3s ease;
+    }
+
+    .feature-card:hover{
+      transform:scale(1.03);
+    }
+
+    .tag{
+      padding:6px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Dev<span class="gradient-text">Docs</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Documentation</a>
+        <a href="#" class="hover:text-white transition">API Reference</a>
+        <a href="#" class="hover:text-white transition">Tutorials</a>
+        <a href="#" class="hover:text-white transition">Support</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        API Access
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-8">
+
+        📘 Developer & Product Documentation
+
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+        Product
+        <span class="gradient-text">Documentation</span>
+      </h1>
+
+      <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-12">
+        Learn how to integrate APIs, configure products,
+        manage workflows, and build scalable solutions with detailed documentation.
+      </p>
+
+      <div class="max-w-3xl mx-auto relative">
+
+        <input
+          type="text"
+          placeholder="Search documentation, APIs, tutorials..."
+          class="w-full bg-white/5 border border-slate-700 px-7 py-5 rounded-2xl outline-none focus:border-cyan-500 text-lg"
+        >
+
+        <button class="absolute right-3 top-3 bg-cyan-500 hover:bg-cyan-600 transition px-6 py-2 rounded-xl font-semibold">
+          Search
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Documentation Layout -->
+  <section class="py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-4 gap-10">
+
+        <!-- Sidebar -->
+        <aside class="glass rounded-[32px] p-8 h-fit">
+
+          <h3 class="text-2xl font-bold mb-8">
+            Documentation
+          </h3>
+
+          <div class="space-y-3">
+
+            <a href="#" class="sidebar-link block px-5 py-4 rounded-2xl text-slate-300">
+              Getting Started
+            </a>
+
+            <a href="#" class="sidebar-link block px-5 py-4 rounded-2xl text-slate-300">
+              Authentication
+            </a>
+
+            <a href="#" class="sidebar-link block px-5 py-4 rounded-2xl text-slate-300">
+              API Reference
+            </a>
+
+            <a href="#" class="sidebar-link block px-5 py-4 rounded-2xl text-slate-300">
+              SDKs & Libraries
+            </a>
+
+            <a href="#" class="sidebar-link block px-5 py-4 rounded-2xl text-slate-300">
+              Integrations
+            </a>
+
+            <a href="#" class="sidebar-link block px-5 py-4 rounded-2xl text-slate-300">
+              Webhooks
+            </a>
+
+            <a href="#" class="sidebar-link block px-5 py-4 rounded-2xl text-slate-300">
+              Deployment
+            </a>
+
+            <a href="#" class="sidebar-link block px-5 py-4 rounded-2xl text-slate-300">
+              Troubleshooting
+            </a>
+
+          </div>
+
+        </aside>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-3 space-y-10">
+
+          <!-- Intro -->
+          <div class="glass rounded-[36px] p-10">
+
+            <div class="flex flex-wrap gap-3 mb-6">
+
+              <span class="tag bg-cyan-500/10 text-cyan-300">
+                Getting Started
+              </span>
+
+              <span class="tag bg-violet-500/10 text-violet-300">
+                Beginner Friendly
+              </span>
+
+            </div>
+
+            <h2 class="text-4xl font-bold mb-6">
+              Quick Start Guide
+            </h2>
+
+            <p class="text-slate-400 leading-8 text-lg mb-8">
+              Set up your account, generate API keys,
+              configure authentication, and integrate services
+              within minutes using our quick-start documentation.
+            </p>
+
+            <div class="code-box rounded-3xl p-8 overflow-auto">
+
+<pre class="text-green-400 text-sm">
+curl --request GET \
+--url https://api.example.com/v1/projects \
+--header 'Authorization: Bearer YOUR_API_KEY'
+</pre>
+
+            </div>
+
+          </div>
+
+          <!-- Documentation Cards -->
+          <div class="grid md:grid-cols-2 gap-8">
+
+            <div class="doc-card glass rounded-3xl p-8 border border-transparent">
+
+              <div class="text-5xl mb-6">
+                🔑
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">
+                Authentication
+              </h3>
+
+              <p class="text-slate-400 leading-8 mb-6">
+                Learn how to generate API keys,
+                manage tokens, and secure API requests.
+              </p>
+
+              <button class="text-cyan-400 font-semibold">
+                Read Docs →
+              </button>
+
+            </div>
+
+            <div class="doc-card glass rounded-3xl p-8 border border-transparent">
+
+              <div class="text-5xl mb-6">
+                ⚡
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">
+                API Reference
+              </h3>
+
+              <p class="text-slate-400 leading-8 mb-6">
+                Explore endpoints, parameters,
+                request examples, and API responses.
+              </p>
+
+              <button class="text-cyan-400 font-semibold">
+                Explore APIs →
+              </button>
+
+            </div>
+
+            <div class="doc-card glass rounded-3xl p-8 border border-transparent">
+
+              <div class="text-5xl mb-6">
+                🔗
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">
+                Integrations
+              </h3>
+
+              <p class="text-slate-400 leading-8 mb-6">
+                Connect with CRM systems,
+                cloud services, and external platforms.
+              </p>
+
+              <button class="text-cyan-400 font-semibold">
+                View Integrations →
+              </button>
+
+            </div>
+
+            <div class="doc-card glass rounded-3xl p-8 border border-transparent">
+
+              <div class="text-5xl mb-6">
+                🚀
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">
+                Deployment
+              </h3>
+
+              <p class="text-slate-400 leading-8 mb-6">
+                Configure production environments,
+                CI/CD workflows, and deployments.
+              </p>
+
+              <button class="text-cyan-400 font-semibold">
+                Deployment Guide →
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Tutorials -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Learning Resources
+        </div>
+
+        <h2 class="text-5xl font-bold">
+          Tutorials & Guides
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="feature-card glass rounded-3xl p-8">
+
+          <div class="text-5xl mb-6">
+            🎥
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Video Tutorials
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Watch guided walkthroughs and
+            implementation tutorials.
+          </p>
+
+          <button class="text-cyan-400 font-semibold">
+            Watch Videos →
+          </button>
+
+        </div>
+
+        <div class="feature-card glass rounded-3xl p-8">
+
+          <div class="text-5xl mb-6">
+            📗
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Step-by-Step Guides
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Learn integrations, workflows,
+            and advanced product configurations.
+          </p>
+
+          <button class="text-cyan-400 font-semibold">
+            Open Guides →
+          </button>
+
+        </div>
+
+        <div class="feature-card glass rounded-3xl p-8">
+
+          <div class="text-5xl mb-6">
+            🛠️
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Developer Tools
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Access SDKs, API explorers,
+            and testing environments.
+          </p>
+
+          <button class="text-cyan-400 font-semibold">
+            Open Tools →
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- API Example -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-10 md:p-16">
+
+        <div class="text-center mb-14">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            API Example
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            Sample Request
+          </h2>
+
+        </div>
+
+        <div class="code-box rounded-3xl p-8 overflow-auto">
+
+<pre class="text-cyan-300 text-sm">
+POST /v1/users HTTP/1.1
+Host: api.example.com
+Authorization: Bearer YOUR_API_KEY
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "role": "admin"
+}
+</pre>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FAQ -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-10 md:p-16">
+
+        <div class="text-center mb-16">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Frequently Asked Questions
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            Documentation FAQ
+          </h2>
+
+        </div>
+
+        <div class="space-y-6">
+
+          <div class="border border-slate-800 rounded-3xl p-8">
+
+            <h3 class="text-2xl font-bold mb-4">
+              How do I generate API keys?
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              API keys can be generated from your developer dashboard
+              under account settings and security preferences.
+            </p>
+
+          </div>
+
+          <div class="border border-slate-800 rounded-3xl p-8">
+
+            <h3 class="text-2xl font-bold mb-4">
+              Are SDKs available?
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Yes, SDKs are available for JavaScript, Python,
+              PHP, Java, and other major programming languages.
+            </p>
+
+          </div>
+
+          <div class="border border-slate-800 rounded-3xl p-8">
+
+            <h3 class="text-2xl font-bold mb-4">
+              Can I test APIs in sandbox mode?
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Absolutely. Sandbox environments are available
+              for testing integrations before production deployment.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Need Technical Assistance?
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Talk to Our Developer Support Team
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Get help with integrations, APIs, troubleshooting,
+            deployments, and advanced configurations.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Contact Support
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Join Developer Community
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Dev<span class="gradient-text">Docs</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Comprehensive product documentation,
+          API references, and developer learning resources.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 DevDocs. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

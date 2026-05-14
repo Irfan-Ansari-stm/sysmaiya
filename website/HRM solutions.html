@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HRM Solutions | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:120px 0;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      margin-bottom:25px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      font-size:18px;
+      margin-bottom:35px;
+      max-width:620px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn-outline{
+      border:1px solid #475569;
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      border-color:#8b5cf6;
+      color:#8b5cf6;
+    }
+
+    .hero-image{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:28px;
+      padding:40px;
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:450px;
+    }
+
+    /* Sections */
+
+    .section{
+      padding:90px 0;
+    }
+
+    .dark-section{
+      background:#111827;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      max-width:720px;
+      margin:auto;
+    }
+
+    /* Grid */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:22px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:#8b5cf6;
+    }
+
+    .icon{
+      width:70px;
+      height:70px;
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      margin-bottom:25px;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#8b5cf6;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .card ul{
+      padding-left:20px;
+      color:#cbd5e1;
+    }
+
+    .card ul li{
+      margin-bottom:10px;
+    }
+
+    /* CTA */
+
+    .cta-box{
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      padding:70px 40px;
+      border-radius:28px;
+      text-align:center;
+    }
+
+    .cta-box h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .cta-box p{
+      max-width:750px;
+      margin:auto auto 30px;
+      font-size:18px;
+    }
+
+    .cta-box .btn{
+      background:white;
+      color:#111827;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          HRM Solutions For Workforce Management
+        </h1>
+
+        <p>
+          Streamline human resource operations with intelligent
+          HRM systems for recruitment, payroll, attendance,
+          employee management, and workforce automation.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#" class="btn">
+            Request Demo
+          </a>
+
+          <a href="#" class="btn btn-outline">
+            Book Consultation
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png" 
+          alt="HRM Solutions"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- HRM Features -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>HRM System Features</h2>
+
+        <p>
+          Smart HR management systems designed to
+          improve employee productivity and HR efficiency.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">👥</div>
+
+          <h3>Employee Management</h3>
+
+          <p>
+            Centralized employee data management
+            with role-based access and workflows.
+          </p>
+
+          <ul>
+            <li>Employee Profiles</li>
+            <li>Department Management</li>
+            <li>Document Management</li>
+            <li>Employee Self-Service</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">💰</div>
+
+          <h3>Payroll & Benefits</h3>
+
+          <p>
+            Automate payroll processing,
+            compensation, and employee benefits.
+          </p>
+
+          <ul>
+            <li>Salary Management</li>
+            <li>Tax Calculations</li>
+            <li>Bonus & Incentives</li>
+            <li>Payslip Generation</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">⏱️</div>
+
+          <h3>Attendance & Leave</h3>
+
+          <p>
+            Monitor attendance, work hours,
+            and leave management efficiently.
+          </p>
+
+          <ul>
+            <li>Attendance Tracking</li>
+            <li>Shift Scheduling</li>
+            <li>Leave Requests</li>
+            <li>Holiday Management</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Benefits -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Why Choose Our HRM Solutions?</h2>
+
+        <p>
+          Scalable HR systems designed for automation,
+          employee engagement, and operational efficiency.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">⚡</div>
+
+          <h3>HR Automation</h3>
+
+          <p>
+            Automate repetitive HR processes
+            and reduce administrative workload.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📈</div>
+
+          <h3>Improve Productivity</h3>
+
+          <p>
+            Streamline HR workflows and
+            enhance workforce performance.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🤖</div>
+
+          <h3>AI-Powered Insights</h3>
+
+          <p>
+            Smart analytics and workforce
+            insights for better decision-making.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🔒</div>
+
+          <h3>Secure Cloud Infrastructure</h3>
+
+          <p>
+            Enterprise-grade security for
+            employee data and HR operations.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Modules -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>HRM Modules We Offer</h2>
+
+        <p>
+          Comprehensive HR management tools tailored
+          for businesses of all sizes and industries.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Recruitment Management</h3>
+          <p>Job postings, applicant tracking, and hiring workflows.</p>
+        </div>
+
+        <div class="card">
+          <h3>Performance Management</h3>
+          <p>Employee evaluations, KPIs, and performance tracking systems.</p>
+        </div>
+
+        <div class="card">
+          <h3>Training & Development</h3>
+          <p>Employee learning, onboarding, and training management.</p>
+        </div>
+
+        <div class="card">
+          <h3>Employee Communication</h3>
+          <p>Internal messaging, announcements, and collaboration tools.</p>
+        </div>
+
+        <div class="card">
+          <h3>Expense Management</h3>
+          <p>Expense claims, reimbursements, and approval workflows.</p>
+        </div>
+
+        <div class="card">
+          <h3>HR Analytics</h3>
+          <p>Advanced workforce reporting and business intelligence dashboards.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Business Benefits -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Business Benefits</h2>
+
+        <p>
+          Improve employee experience, reduce HR workload,
+          and streamline workforce operations efficiently.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">🌍</div>
+
+          <h3>Remote Workforce Support</h3>
+
+          <p>
+            Manage hybrid and remote teams
+            through cloud-based HR systems.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">💰</div>
+
+          <h3>Reduce Operational Costs</h3>
+
+          <p>
+            Save time and resources through
+            automated HR workflows.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📊</div>
+
+          <h3>Data-Driven HR Decisions</h3>
+
+          <p>
+            Gain workforce insights with
+            real-time HR analytics dashboards.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🚀</div>
+
+          <h3>Scalable HR Infrastructure</h3>
+
+          <p>
+            Flexible HR systems designed to
+            grow with your organization.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>Ready To Modernize Your HR Operations?</h2>
+
+        <p>
+          Partner with TechNova Solutions to build scalable,
+          AI-powered HRM systems for modern workforce management.
+        </p>
+
+        <a href="#" class="btn">
+          Schedule Free Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            HRM platforms, automation systems, and scalable digital solutions.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Solutions</h3>
+
+          <ul>
+            <li>HRM Solutions</li>
+            <li>ERP Solutions</li>
+            <li>CRM Solutions</li>
+            <li>LMS Solutions</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maintenance & Support Services | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:120px 0;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      margin-bottom:25px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      font-size:18px;
+      margin-bottom:35px;
+      max-width:620px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn-outline{
+      border:1px solid #475569;
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      border-color:#8b5cf6;
+      color:#8b5cf6;
+    }
+
+    .hero-image{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:28px;
+      padding:40px;
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:450px;
+    }
+
+    /* Services */
+
+    .services{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      max-width:720px;
+      margin:auto;
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .service-card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:22px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-6px);
+      border-color:#8b5cf6;
+    }
+
+    .service-icon{
+      width:70px;
+      height:70px;
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      margin-bottom:25px;
+    }
+
+    .service-card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#8b5cf6;
+    }
+
+    .service-card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .service-card ul{
+      padding-left:20px;
+      color:#cbd5e1;
+    }
+
+    .service-card ul li{
+      margin-bottom:10px;
+    }
+
+    /* Features */
+
+    .features{
+      padding:90px 0;
+      background:#111827;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:25px;
+      margin-top:50px;
+    }
+
+    .feature-card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:20px;
+      border:1px solid #334155;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .feature-card:hover{
+      border-color:#8b5cf6;
+      transform:translateY(-5px);
+    }
+
+    .feature-icon{
+      font-size:40px;
+      margin-bottom:20px;
+    }
+
+    .feature-card h3{
+      margin-bottom:15px;
+      font-size:24px;
+      color:#8b5cf6;
+    }
+
+    .feature-card p{
+      color:#cbd5e1;
+    }
+
+    /* Plans */
+
+    .plans{
+      padding:90px 0;
+    }
+
+    .plan-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      margin-top:50px;
+    }
+
+    .plan-card{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:22px;
+      padding:40px 30px;
+      transition:0.3s;
+      text-align:center;
+    }
+
+    .plan-card:hover{
+      border-color:#8b5cf6;
+      transform:translateY(-5px);
+    }
+
+    .plan-card h3{
+      color:#8b5cf6;
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .plan-card h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .plan-card ul{
+      list-style:none;
+      margin-bottom:30px;
+      color:#cbd5e1;
+    }
+
+    .plan-card ul li{
+      margin-bottom:12px;
+    }
+
+    /* Process */
+
+    .process{
+      padding:90px 0;
+      background:#111827;
+    }
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:25px;
+      margin-top:50px;
+    }
+
+    .process-card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:20px;
+      border:1px solid #334155;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .process-card:hover{
+      border-color:#8b5cf6;
+      transform:translateY(-5px);
+    }
+
+    .step{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background:#8b5cf6;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:24px;
+      font-weight:bold;
+      margin:auto auto 20px;
+    }
+
+    .process-card h3{
+      margin-bottom:15px;
+      color:#8b5cf6;
+      font-size:24px;
+    }
+
+    .process-card p{
+      color:#cbd5e1;
+    }
+
+    /* CTA */
+
+    .cta{
+      padding:100px 0;
+    }
+
+    .cta-box{
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      padding:70px 40px;
+      border-radius:28px;
+      text-align:center;
+    }
+
+    .cta-box h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .cta-box p{
+      max-width:750px;
+      margin:auto auto 30px;
+      font-size:18px;
+    }
+
+    .cta-box .btn{
+      background:white;
+      color:#111827;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    /* Responsive */
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          Maintenance & Support Services
+        </h1>
+
+        <p>
+          Keep your websites, applications, and digital systems
+          running smoothly with reliable maintenance, updates,
+          security monitoring, and technical support solutions.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#" class="btn">
+            Request Quote
+          </a>
+
+          <a href="#" class="btn btn-outline">
+            Contact Support
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" 
+          alt="Maintenance and Support"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Services -->
+
+  <section class="services">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Support Services We Offer</h2>
+
+        <p>
+          End-to-end maintenance and technical support
+          solutions for websites, apps, and enterprise systems.
+        </p>
+
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+
+          <div class="service-icon">🛠️</div>
+
+          <h3>System Maintenance</h3>
+
+          <p>
+            Regular maintenance to keep systems
+            secure, optimized, and fully operational.
+          </p>
+
+          <ul>
+            <li>Software Updates</li>
+            <li>Bug Fixes</li>
+            <li>Performance Optimization</li>
+            <li>Database Maintenance</li>
+          </ul>
+
+        </div>
+
+        <div class="service-card">
+
+          <div class="service-icon">🔒</div>
+
+          <h3>Security Monitoring</h3>
+
+          <p>
+            Advanced monitoring and protection
+            against vulnerabilities and threats.
+          </p>
+
+          <ul>
+            <li>Security Audits</li>
+            <li>Malware Protection</li>
+            <li>Backup Solutions</li>
+            <li>Firewall Monitoring</li>
+          </ul>
+
+        </div>
+
+        <div class="service-card">
+
+          <div class="service-icon">📞</div>
+
+          <h3>Technical Support</h3>
+
+          <p>
+            Dedicated support team available
+            for troubleshooting and assistance.
+          </p>
+
+          <ul>
+            <li>24/7 Monitoring</li>
+            <li>Issue Resolution</li>
+            <li>Technical Consultation</li>
+            <li>Emergency Support</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features -->
+
+  <section class="features">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Why Choose Our Support Team?</h2>
+
+        <p>
+          Reliable maintenance and support services focused
+          on uptime, security, and long-term stability.
+        </p>
+
+      </div>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+
+          <div class="feature-icon">⚡</div>
+
+          <h3>Fast Issue Resolution</h3>
+
+          <p>
+            Quick troubleshooting and problem-solving
+            to minimize downtime and disruptions.
+          </p>
+
+        </div>
+
+        <div class="feature-card">
+
+          <div class="feature-icon">🕒</div>
+
+          <h3>24/7 Monitoring</h3>
+
+          <p>
+            Continuous monitoring to ensure
+            systems remain stable and secure.
+          </p>
+
+        </div>
+
+        <div class="feature-card">
+
+          <div class="feature-icon">📈</div>
+
+          <h3>Performance Optimization</h3>
+
+          <p>
+            Regular optimization improving
+            speed, reliability, and scalability.
+          </p>
+
+        </div>
+
+        <div class="feature-card">
+
+          <div class="feature-icon">🔐</div>
+
+          <h3>Security Protection</h3>
+
+          <p>
+            Proactive security updates and
+            monitoring against cyber threats.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Plans -->
+
+  <section class="plans">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Support Plans</h2>
+
+        <p>
+          Flexible maintenance packages tailored
+          to different business requirements.
+        </p>
+
+      </div>
+
+      <div class="plan-grid">
+
+        <div class="plan-card">
+
+          <h3>Basic</h3>
+
+          <h2>$99/mo</h2>
+
+          <ul>
+            <li>Monthly Updates</li>
+            <li>Basic Security Monitoring</li>
+            <li>Email Support</li>
+            <li>Bug Fixes</li>
+          </ul>
+
+          <a href="#" class="btn">Choose Plan</a>
+
+        </div>
+
+        <div class="plan-card">
+
+          <h3>Professional</h3>
+
+          <h2>$299/mo</h2>
+
+          <ul>
+            <li>Weekly Maintenance</li>
+            <li>Advanced Security</li>
+            <li>Priority Support</li>
+            <li>Performance Optimization</li>
+          </ul>
+
+          <a href="#" class="btn">Choose Plan</a>
+
+        </div>
+
+        <div class="plan-card">
+
+          <h3>Enterprise</h3>
+
+          <h2>Custom</h2>
+
+          <ul>
+            <li>24/7 Monitoring</li>
+            <li>Dedicated Support Team</li>
+            <li>Cloud Infrastructure Support</li>
+            <li>Emergency Assistance</li>
+          </ul>
+
+          <a href="#" class="btn">Contact Us</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Process -->
+
+  <section class="process">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Our Maintenance Process</h2>
+
+        <p>
+          A proactive support process designed to ensure
+          reliability, performance, and security.
+        </p>
+
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-card">
+
+          <div class="step">1</div>
+
+          <h3>System Audit</h3>
+
+          <p>
+            Evaluating infrastructure, applications,
+            and current system performance.
+          </p>
+
+        </div>
+
+        <div class="process-card">
+
+          <div class="step">2</div>
+
+          <h3>Monitoring Setup</h3>
+
+          <p>
+            Implementing monitoring tools and
+            automated maintenance systems.
+          </p>
+
+        </div>
+
+        <div class="process-card">
+
+          <div class="step">3</div>
+
+          <h3>Issue Resolution</h3>
+
+          <p>
+            Rapid troubleshooting and fixing
+            technical issues and vulnerabilities.
+          </p>
+
+        </div>
+
+        <div class="process-card">
+
+          <div class="step">4</div>
+
+          <h3>Continuous Optimization</h3>
+
+          <p>
+            Regular updates, optimization,
+            reporting, and long-term support.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>Need Reliable Technical Support?</h2>
+
+        <p>
+          Partner with TechNova Solutions for proactive
+          maintenance, security monitoring, and expert support.
+        </p>
+
+        <a href="#" class="btn">
+          Schedule Free Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            automation systems, and scalable digital platforms.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Services</h3>
+
+          <ul>
+            <li>Maintenance & Support</li>
+            <li>Cloud Infrastructure</li>
+            <li>DevOps Services</li>
+            <li>Custom Software</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

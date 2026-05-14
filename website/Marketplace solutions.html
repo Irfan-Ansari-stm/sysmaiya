@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marketplace Solutions | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:120px 0;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      margin-bottom:25px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      font-size:18px;
+      margin-bottom:35px;
+      max-width:620px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn-outline{
+      border:1px solid #475569;
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      border-color:#8b5cf6;
+      color:#8b5cf6;
+    }
+
+    .hero-image{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:28px;
+      padding:40px;
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:450px;
+    }
+
+    /* Sections */
+
+    .section{
+      padding:90px 0;
+    }
+
+    .dark-section{
+      background:#111827;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      max-width:720px;
+      margin:auto;
+    }
+
+    /* Grid */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:22px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:#8b5cf6;
+    }
+
+    .icon{
+      width:70px;
+      height:70px;
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      margin-bottom:25px;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#8b5cf6;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .card ul{
+      padding-left:20px;
+      color:#cbd5e1;
+    }
+
+    .card ul li{
+      margin-bottom:10px;
+    }
+
+    /* CTA */
+
+    .cta-box{
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      padding:70px 40px;
+      border-radius:28px;
+      text-align:center;
+    }
+
+    .cta-box h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .cta-box p{
+      max-width:750px;
+      margin:auto auto 30px;
+      font-size:18px;
+    }
+
+    .cta-box .btn{
+      background:white;
+      color:#111827;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          Marketplace Solutions For Digital Commerce
+        </h1>
+
+        <p>
+          Build scalable multi-vendor marketplace platforms
+          with secure payments, vendor management,
+          product listings, and advanced e-commerce features.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#" class="btn">
+            Request Demo
+          </a>
+
+          <a href="#" class="btn btn-outline">
+            Book Consultation
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" 
+          alt="Marketplace Solutions"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Marketplace Features -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Marketplace Platform Features</h2>
+
+        <p>
+          Powerful marketplace solutions designed to
+          connect buyers, sellers, and service providers.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">🛒</div>
+
+          <h3>Multi-Vendor Marketplace</h3>
+
+          <p>
+            Enable multiple vendors to manage
+            products, orders, and storefronts.
+          </p>
+
+          <ul>
+            <li>Vendor Registration</li>
+            <li>Product Management</li>
+            <li>Order Tracking</li>
+            <li>Commission Management</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">💳</div>
+
+          <h3>Secure Payment Systems</h3>
+
+          <p>
+            Integrated payment gateways with
+            secure transactions and settlements.
+          </p>
+
+          <ul>
+            <li>Multiple Payment Methods</li>
+            <li>Wallet Integration</li>
+            <li>Subscription Billing</li>
+            <li>Escrow Payments</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📦</div>
+
+          <h3>Inventory & Logistics</h3>
+
+          <p>
+            Streamline product inventory and
+            shipping management operations.
+          </p>
+
+          <ul>
+            <li>Inventory Tracking</li>
+            <li>Shipping Integration</li>
+            <li>Warehouse Management</li>
+            <li>Delivery Tracking</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Benefits -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Why Choose Our Marketplace Solutions?</h2>
+
+        <p>
+          Scalable marketplace platforms designed for
+          growth, automation, and seamless user experiences.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">⚡</div>
+
+          <h3>Business Automation</h3>
+
+          <p>
+            Automate vendor onboarding,
+            transactions, and order processing.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📈</div>
+
+          <h3>Revenue Growth</h3>
+
+          <p>
+            Expand your digital business with
+            scalable marketplace ecosystems.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🤖</div>
+
+          <h3>AI-Powered Recommendations</h3>
+
+          <p>
+            Personalized product suggestions
+            and smart marketplace analytics.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🔒</div>
+
+          <h3>Secure & Scalable</h3>
+
+          <p>
+            Enterprise-grade cloud infrastructure
+            with advanced security systems.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Marketplace Types -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Marketplace Types We Build</h2>
+
+        <p>
+          Customized marketplace platforms tailored
+          for various industries and business models.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>B2B Marketplaces</h3>
+          <p>Business-to-business trading and wholesale platforms.</p>
+        </div>
+
+        <div class="card">
+          <h3>B2C Marketplaces</h3>
+          <p>Consumer-focused e-commerce marketplace platforms.</p>
+        </div>
+
+        <div class="card">
+          <h3>Service Marketplaces</h3>
+          <p>Platforms connecting customers with service providers.</p>
+        </div>
+
+        <div class="card">
+          <h3>Rental Marketplaces</h3>
+          <p>Property, vehicle, and equipment rental marketplace systems.</p>
+        </div>
+
+        <div class="card">
+          <h3>Digital Product Marketplaces</h3>
+          <p>Platforms for selling software, templates, and digital assets.</p>
+        </div>
+
+        <div class="card">
+          <h3>On-Demand Platforms</h3>
+          <p>Real-time delivery and booking marketplace applications.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Business Benefits -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Business Benefits</h2>
+
+        <p>
+          Increase revenue opportunities, improve user engagement,
+          and scale your online marketplace business.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">🌍</div>
+
+          <h3>Global Reach</h3>
+
+          <p>
+            Connect buyers and sellers
+            across multiple regions and markets.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">💰</div>
+
+          <h3>Multiple Revenue Streams</h3>
+
+          <p>
+            Earn through commissions,
+            subscriptions, and premium listings.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📊</div>
+
+          <h3>Advanced Analytics</h3>
+
+          <p>
+            Monitor sales, vendor performance,
+            and customer behavior in real time.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🚀</div>
+
+          <h3>Scalable Marketplace Platform</h3>
+
+          <p>
+            Flexible architecture built to
+            support rapid business growth.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>Ready To Launch Your Marketplace Platform?</h2>
+
+        <p>
+          Partner with TechNova Solutions to build scalable,
+          AI-powered marketplace platforms for digital commerce success.
+        </p>
+
+        <a href="#" class="btn">
+          Schedule Free Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            marketplace platforms, automation systems, and scalable digital solutions.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Solutions</h3>
+
+          <ul>
+            <li>Marketplace Solutions</li>
+            <li>LMS Solutions</li>
+            <li>ERP Solutions</li>
+            <li>CRM Solutions</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

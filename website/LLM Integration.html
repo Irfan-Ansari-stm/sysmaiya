@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LLM Integration Services | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:120px 0;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      margin-bottom:25px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      font-size:18px;
+      margin-bottom:35px;
+      max-width:620px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn-outline{
+      border:1px solid #475569;
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      border-color:#8b5cf6;
+      color:#8b5cf6;
+    }
+
+    .hero-image{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:28px;
+      padding:40px;
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:450px;
+    }
+
+    /* Sections */
+
+    .section{
+      padding:90px 0;
+    }
+
+    .dark-section{
+      background:#111827;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      max-width:720px;
+      margin:auto;
+    }
+
+    /* Grid */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:22px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:#8b5cf6;
+    }
+
+    .icon{
+      width:70px;
+      height:70px;
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      margin-bottom:25px;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#8b5cf6;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .card ul{
+      padding-left:20px;
+      color:#cbd5e1;
+    }
+
+    .card ul li{
+      margin-bottom:10px;
+    }
+
+    /* Process */
+
+    .step{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background:#8b5cf6;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:24px;
+      font-weight:bold;
+      margin-bottom:20px;
+    }
+
+    /* CTA */
+
+    .cta-box{
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      padding:70px 40px;
+      border-radius:28px;
+      text-align:center;
+    }
+
+    .cta-box h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .cta-box p{
+      max-width:750px;
+      margin:auto auto 30px;
+      font-size:18px;
+    }
+
+    .cta-box .btn{
+      background:white;
+      color:#111827;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    /* Responsive */
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          LLM Integration Services
+        </h1>
+
+        <p>
+          Integrate powerful Large Language Models (LLMs) into your
+          applications, websites, and business systems to enable
+          intelligent automation, AI assistants, and smart workflows.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#" class="btn">
+            Request Quote
+          </a>
+
+          <a href="#" class="btn btn-outline">
+            Explore AI Solutions
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/2103/2103832.png" 
+          alt="LLM Integration"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Services -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>LLM Integration Solutions</h2>
+
+        <p>
+          Intelligent AI integration services powered by advanced
+          large language models and generative AI systems.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">🤖</div>
+
+          <h3>AI Chatbot Integration</h3>
+
+          <p>
+            Integrate conversational AI chatbots into
+            websites, mobile apps, and business platforms.
+          </p>
+
+          <ul>
+            <li>Customer Support Bots</li>
+            <li>AI Virtual Assistants</li>
+            <li>Multi-language Chatbots</li>
+            <li>Voice AI Integration</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🧠</div>
+
+          <h3>Custom AI Applications</h3>
+
+          <p>
+            Build intelligent AI-powered applications
+            using modern LLM technologies.
+          </p>
+
+          <ul>
+            <li>Content Generation</li>
+            <li>AI Search Systems</li>
+            <li>Recommendation Engines</li>
+            <li>Document Intelligence</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">⚡</div>
+
+          <h3>Workflow Automation</h3>
+
+          <p>
+            Automate business operations and repetitive
+            tasks using AI-powered workflows.
+          </p>
+
+          <ul>
+            <li>Smart Automation</li>
+            <li>Email AI Automation</li>
+            <li>AI Data Processing</li>
+            <li>CRM AI Integration</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Why Choose Our LLM Solutions?</h2>
+
+        <p>
+          Scalable and intelligent AI systems built for
+          automation, performance, and business growth.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">🚀</div>
+
+          <h3>Advanced AI Models</h3>
+
+          <p>
+            Integrate modern large language models
+            with enterprise-grade AI capabilities.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📈</div>
+
+          <h3>Business Automation</h3>
+
+          <p>
+            Improve productivity and reduce manual
+            work using AI-driven automation systems.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🔒</div>
+
+          <h3>Secure AI Infrastructure</h3>
+
+          <p>
+            Secure, scalable, and cloud-ready AI
+            architectures for enterprise applications.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">⚙️</div>
+
+          <h3>Custom Integrations</h3>
+
+          <p>
+            Tailored LLM integrations designed
+            for your business workflows and goals.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Technologies -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>LLM Technologies We Integrate</h2>
+
+        <p>
+          Modern AI and LLM technologies for intelligent
+          business applications and automation.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>OpenAI Integration</h3>
+          <p>ChatGPT and GPT-powered AI applications.</p>
+        </div>
+
+        <div class="card">
+          <h3>Claude AI</h3>
+          <p>Advanced conversational AI and automation systems.</p>
+        </div>
+
+        <div class="card">
+          <h3>Gemini AI</h3>
+          <p>Google AI integrations and intelligent workflows.</p>
+        </div>
+
+        <div class="card">
+          <h3>LangChain</h3>
+          <p>AI orchestration and workflow development frameworks.</p>
+        </div>
+
+        <div class="card">
+          <h3>Vector Databases</h3>
+          <p>AI-powered semantic search and data retrieval systems.</p>
+        </div>
+
+        <div class="card">
+          <h3>RAG Systems</h3>
+          <p>Retrieval-Augmented Generation AI applications.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Process -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Our LLM Integration Process</h2>
+
+        <p>
+          End-to-end AI implementation workflow focused
+          on scalability, intelligence, and performance.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="step">1</div>
+
+          <h3>Business Analysis</h3>
+
+          <p>
+            Understanding business goals and identifying
+            AI integration opportunities.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="step">2</div>
+
+          <h3>AI Strategy Planning</h3>
+
+          <p>
+            Selecting the right LLM models and
+            integration architecture.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="step">3</div>
+
+          <h3>Development & Integration</h3>
+
+          <p>
+            Building and integrating intelligent
+            AI-powered systems and APIs.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="step">4</div>
+
+          <h3>Optimization & Support</h3>
+
+          <p>
+            Continuous monitoring, optimization,
+            updates, and AI model improvements.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>Ready To Build AI-Powered Applications?</h2>
+
+        <p>
+          Partner with TechNova Solutions to integrate advanced
+          LLM technologies into your business systems and applications.
+        </p>
+
+        <a href="#" class="btn">
+          Schedule Free Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            automation systems, and scalable digital platforms.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Services</h3>
+
+          <ul>
+            <li>LLM Integration</li>
+            <li>AI Chatbots</li>
+            <li>Workflow Automation</li>
+            <li>Custom AI Solutions</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

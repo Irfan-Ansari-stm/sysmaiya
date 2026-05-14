@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Workflow Automation | AI & Automation</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .automation-card{
+      transition:all 0.35s ease;
+      background:linear-gradient(
+        135deg,
+        rgba(6,182,212,0.10),
+        rgba(139,92,246,0.10)
+      );
+    }
+
+    .automation-card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .feature-card{
+      transition:all 0.3s ease;
+    }
+
+    .feature-card:hover{
+      transform:scale(1.04);
+    }
+
+    .workflow-step{
+      position:relative;
+    }
+
+    .workflow-step::after{
+      content:'';
+      position:absolute;
+      top:50%;
+      right:-20px;
+      width:40px;
+      height:2px;
+      background:rgba(255,255,255,0.1);
+    }
+
+    .workflow-step:last-child::after{
+      display:none;
+    }
+
+    .timeline-line{
+      position:absolute;
+      left:22px;
+      top:0;
+      bottom:0;
+      width:2px;
+      background:rgba(255,255,255,0.1);
+    }
+
+    .timeline-item{
+      position:relative;
+    }
+
+    .timeline-item::before{
+      content:'';
+      position:absolute;
+      left:-34px;
+      top:18px;
+      width:14px;
+      height:14px;
+      border-radius:50%;
+      background:#06b6d4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Auto<span class="gradient-text">Flow AI</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Automation</a>
+        <a href="#" class="hover:text-white transition">AI Workflows</a>
+        <a href="#" class="hover:text-white transition">Solutions</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Schedule Demo
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left -->
+      <div>
+
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+          Intelligent Process Automation
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+          AI Workflow
+          <span class="gradient-text">Automation</span>
+        </h1>
+
+        <p class="text-slate-300 text-xl leading-9 mb-10">
+          Automate repetitive operations, optimize workflows,
+          and streamline enterprise processes using AI-powered automation systems.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4">
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Start Automation
+          </button>
+
+          <button class="border border-slate-700 hover:border-cyan-500 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            View Solutions
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Right -->
+      <div class="glass rounded-[40px] p-10">
+
+        <div class="grid grid-cols-2 gap-6">
+
+          <div class="bg-slate-900 rounded-3xl p-8 text-center">
+
+            <div class="text-5xl mb-4">⚙️</div>
+
+            <h3 class="text-xl font-bold mb-2">
+              Smart Automation
+            </h3>
+
+            <p class="text-slate-400 text-sm">
+              Intelligent AI-driven workflows.
+            </p>
+
+          </div>
+
+          <div class="bg-slate-900 rounded-3xl p-8 text-center">
+
+            <div class="text-5xl mb-4">📊</div>
+
+            <h3 class="text-xl font-bold mb-2">
+              Analytics
+            </h3>
+
+            <p class="text-slate-400 text-sm">
+              Real-time business insights.
+            </p>
+
+          </div>
+
+          <div class="bg-slate-900 rounded-3xl p-8 text-center">
+
+            <div class="text-5xl mb-4">🤖</div>
+
+            <h3 class="text-xl font-bold mb-2">
+              AI Bots
+            </h3>
+
+            <p class="text-slate-400 text-sm">
+              Automated operational assistants.
+            </p>
+
+          </div>
+
+          <div class="bg-slate-900 rounded-3xl p-8 text-center">
+
+            <div class="text-5xl mb-4">🔗</div>
+
+            <h3 class="text-xl font-bold mb-2">
+              Integrations
+            </h3>
+
+            <p class="text-slate-400 text-sm">
+              Connect systems seamlessly.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Stats -->
+  <section class="py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-cyan-400 mb-3">
+            85%
+          </div>
+
+          <p class="text-slate-400">
+            Productivity Increase
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-pink-400 mb-3">
+            70%
+          </div>
+
+          <p class="text-slate-400">
+            Cost Reduction
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-violet-400 mb-3">
+            24/7
+          </div>
+
+          <p class="text-slate-400">
+            Automated Operations
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-amber-400 mb-3">
+            500+
+          </div>
+
+          <p class="text-slate-400">
+            Workflows Automated
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Workflow Process -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Workflow Process
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          How AI Automation Works
+        </h2>
+
+        <p class="text-slate-400 text-xl leading-9 max-w-3xl mx-auto">
+          Build intelligent workflows that automate tasks,
+          optimize operations, and improve business efficiency.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="workflow-step glass rounded-3xl p-8 text-center">
+
+          <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+            1
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Capture Data
+          </h3>
+
+          <p class="text-slate-400">
+            Collect operational and workflow data automatically.
+          </p>
+
+        </div>
+
+        <div class="workflow-step glass rounded-3xl p-8 text-center">
+
+          <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+            2
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            AI Analysis
+          </h3>
+
+          <p class="text-slate-400">
+            AI models analyze and optimize workflow decisions.
+          </p>
+
+        </div>
+
+        <div class="workflow-step glass rounded-3xl p-8 text-center">
+
+          <div class="w-16 h-16 bg-violet-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+            3
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Automate Tasks
+          </h3>
+
+          <p class="text-slate-400">
+            Trigger intelligent automated workflow actions.
+          </p>
+
+        </div>
+
+        <div class="workflow-step glass rounded-3xl p-8 text-center">
+
+          <div class="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+            4
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Optimize Results
+          </h3>
+
+          <p class="text-slate-400">
+            Improve workflows continuously using AI insights.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Automation Services -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Service -->
+        <div class="automation-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">🤖</div>
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            AI Operations
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Intelligent Process Automation
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Automate repetitive operational tasks
+            using machine learning and AI decision-making systems.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            Enterprise AI Workflows
+          </div>
+
+        </div>
+
+        <!-- Service -->
+        <div class="automation-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">📈</div>
+
+          <div class="text-pink-400 font-semibold mb-4">
+            Analytics Automation
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Smart Business Intelligence
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Generate automated reports, predictive analytics,
+            and AI-powered business insights in real time.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            AI Reporting Systems
+          </div>
+
+        </div>
+
+        <!-- Service -->
+        <div class="automation-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">🔗</div>
+
+          <div class="text-violet-400 font-semibold mb-4">
+            Enterprise Integration
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Connected AI Ecosystems
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Integrate AI workflows across CRM, ERP,
+            HR systems, and cloud infrastructure platforms.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            Unified Automation Systems
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Timeline -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6 relative">
+
+      <div class="timeline-line hidden md:block"></div>
+
+      <div class="text-center mb-20">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Automation Evolution
+        </div>
+
+        <h2 class="text-5xl font-bold">
+          AI Workflow Innovation
+        </h2>
+
+      </div>
+
+      <div class="space-y-12 md:pl-20">
+
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-cyan-400 font-semibold mb-3">
+            2026
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            AI Autonomous Operations
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Built self-learning automation systems
+            capable of optimizing enterprise workflows automatically.
+          </p>
+
+        </div>
+
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-pink-400 font-semibold mb-3">
+            2025
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Cross-Platform Workflow Integration
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Connected enterprise applications and cloud systems
+            through intelligent automation frameworks.
+          </p>
+
+        </div>
+
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-violet-400 font-semibold mb-3">
+            2024
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Smart Automation Framework
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Introduced scalable workflow automation systems
+            powered by machine learning and predictive AI.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16">
+
+        <div class="text-center mb-16">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Platform Features
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            Automation Capabilities
+          </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">⚡</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Real-Time Automation
+            </h3>
+
+            <p class="text-slate-400">
+              Trigger workflows instantly with AI actions.
+            </p>
+
+          </div>
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🧠</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Machine Learning
+            </h3>
+
+            <p class="text-slate-400">
+              AI systems learn and improve continuously.
+            </p>
+
+          </div>
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">☁️</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Cloud Integrations
+            </h3>
+
+            <p class="text-slate-400">
+              Connect workflows across cloud platforms.
+            </p>
+
+          </div>
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🔒</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Enterprise Security
+            </h3>
+
+            <p class="text-slate-400">
+              Secure and compliant automation systems.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Ready to Automate?
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Build Intelligent AI Workflows
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Transform operations with scalable AI automation,
+            smart workflows, and intelligent enterprise systems.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Book Automation Demo
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Talk to Experts
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Auto<span class="gradient-text">Flow AI</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Delivering intelligent workflow automation
+          and AI-powered enterprise transformation solutions.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 AutoFlow AI. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

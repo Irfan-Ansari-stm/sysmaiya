@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workflow Automation Services | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:120px 0;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      margin-bottom:25px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      font-size:18px;
+      margin-bottom:35px;
+      max-width:620px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn-outline{
+      border:1px solid #475569;
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      border-color:#8b5cf6;
+      color:#8b5cf6;
+    }
+
+    .hero-image{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:28px;
+      padding:40px;
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:450px;
+    }
+
+    /* Sections */
+
+    .section{
+      padding:90px 0;
+    }
+
+    .dark-section{
+      background:#111827;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      max-width:720px;
+      margin:auto;
+    }
+
+    /* Grid */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:22px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:#8b5cf6;
+    }
+
+    .icon{
+      width:70px;
+      height:70px;
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      margin-bottom:25px;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#8b5cf6;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .card ul{
+      padding-left:20px;
+      color:#cbd5e1;
+    }
+
+    .card ul li{
+      margin-bottom:10px;
+    }
+
+    /* Process */
+
+    .step{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background:#8b5cf6;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:24px;
+      font-weight:bold;
+      margin-bottom:20px;
+    }
+
+    /* CTA */
+
+    .cta-box{
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      padding:70px 40px;
+      border-radius:28px;
+      text-align:center;
+    }
+
+    .cta-box h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .cta-box p{
+      max-width:750px;
+      margin:auto auto 30px;
+      font-size:18px;
+    }
+
+    .cta-box .btn{
+      background:white;
+      color:#111827;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    /* Responsive */
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          Workflow Automation Services
+        </h1>
+
+        <p>
+          Automate repetitive business processes, streamline operations,
+          improve productivity, and reduce manual work with intelligent
+          workflow automation solutions.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#" class="btn">
+            Request Quote
+          </a>
+
+          <a href="#" class="btn btn-outline">
+            Book Consultation
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/4149/4149686.png" 
+          alt="Workflow Automation"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Services -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Automation Solutions We Offer</h2>
+
+        <p>
+          Smart workflow automation services designed
+          to improve efficiency and business performance.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">⚙️</div>
+
+          <h3>Business Process Automation</h3>
+
+          <p>
+            Automate repetitive workflows and reduce
+            manual operational tasks.
+          </p>
+
+          <ul>
+            <li>Approval Workflows</li>
+            <li>Task Automation</li>
+            <li>Document Processing</li>
+            <li>Employee Workflows</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📧</div>
+
+          <h3>Email & Notification Automation</h3>
+
+          <p>
+            Automated communication systems for
+            alerts, reminders, and notifications.
+          </p>
+
+          <ul>
+            <li>Email Automation</li>
+            <li>SMS Notifications</li>
+            <li>Push Notifications</li>
+            <li>CRM Follow-Ups</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🤖</div>
+
+          <h3>AI Workflow Automation</h3>
+
+          <p>
+            AI-powered intelligent systems that
+            optimize and automate operations.
+          </p>
+
+          <ul>
+            <li>AI Task Automation</li>
+            <li>Smart Data Processing</li>
+            <li>AI Recommendations</li>
+            <li>Predictive Workflows</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Benefits Of Workflow Automation</h2>
+
+        <p>
+          Improve productivity, reduce operational costs,
+          and scale business processes efficiently.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">⚡</div>
+
+          <h3>Increased Productivity</h3>
+
+          <p>
+            Save time by automating repetitive
+            and time-consuming tasks.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">💰</div>
+
+          <h3>Reduced Costs</h3>
+
+          <p>
+            Lower operational costs by minimizing
+            manual work and errors.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📈</div>
+
+          <h3>Better Efficiency</h3>
+
+          <p>
+            Streamlined workflows improve
+            business operations and performance.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🔒</div>
+
+          <h3>Reliable Processes</h3>
+
+          <p>
+            Consistent automated systems with
+            improved accuracy and security.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Technologies -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Technologies & Platforms</h2>
+
+        <p>
+          Modern workflow automation tools and integrations
+          for scalable business systems.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Zapier Automation</h3>
+          <p>Connect apps and automate repetitive workflows.</p>
+        </div>
+
+        <div class="card">
+          <h3>CRM Automation</h3>
+          <p>Automate customer management and sales pipelines.</p>
+        </div>
+
+        <div class="card">
+          <h3>ERP Integration</h3>
+          <p>Enterprise workflow automation and optimization.</p>
+        </div>
+
+        <div class="card">
+          <h3>AI Automation</h3>
+          <p>AI-powered business process optimization systems.</p>
+        </div>
+
+        <div class="card">
+          <h3>Cloud Workflows</h3>
+          <p>Scalable cloud-based automation infrastructure.</p>
+        </div>
+
+        <div class="card">
+          <h3>API Integration</h3>
+          <p>Automated data synchronization across platforms.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Process -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Our Automation Process</h2>
+
+        <p>
+          Structured workflow automation process designed
+          for scalability, efficiency, and performance.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="step">1</div>
+
+          <h3>Process Analysis</h3>
+
+          <p>
+            Identifying repetitive tasks and
+            workflow automation opportunities.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="step">2</div>
+
+          <h3>Automation Strategy</h3>
+
+          <p>
+            Designing custom automation workflows
+            aligned with business goals.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="step">3</div>
+
+          <h3>Integration & Development</h3>
+
+          <p>
+            Building automation systems and
+            integrating third-party platforms.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="step">4</div>
+
+          <h3>Testing & Optimization</h3>
+
+          <p>
+            Monitoring workflows and optimizing
+            automation performance continuously.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>Ready To Automate Your Business?</h2>
+
+        <p>
+          Partner with TechNova Solutions to streamline operations,
+          improve productivity, and build scalable automation systems.
+        </p>
+
+        <a href="#" class="btn">
+          Schedule Free Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            automation systems, and scalable digital platforms.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Services</h3>
+
+          <ul>
+            <li>Workflow Automation</li>
+            <li>AI Integration</li>
+            <li>CRM Automation</li>
+            <li>Business Automation</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

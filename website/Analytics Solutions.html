@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analytics Solutions | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:120px 0;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      margin-bottom:25px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      font-size:18px;
+      margin-bottom:35px;
+      max-width:620px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn-outline{
+      border:1px solid #475569;
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      border-color:#8b5cf6;
+      color:#8b5cf6;
+    }
+
+    .hero-image{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:28px;
+      padding:40px;
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:450px;
+    }
+
+    /* Sections */
+
+    .section{
+      padding:90px 0;
+    }
+
+    .dark-section{
+      background:#111827;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      max-width:720px;
+      margin:auto;
+    }
+
+    /* Grid */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:22px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:#8b5cf6;
+    }
+
+    .icon{
+      width:70px;
+      height:70px;
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      margin-bottom:25px;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#8b5cf6;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .card ul{
+      padding-left:20px;
+      color:#cbd5e1;
+    }
+
+    .card ul li{
+      margin-bottom:10px;
+    }
+
+    /* CTA */
+
+    .cta-box{
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      padding:70px 40px;
+      border-radius:28px;
+      text-align:center;
+    }
+
+    .cta-box h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .cta-box p{
+      max-width:750px;
+      margin:auto auto 30px;
+      font-size:18px;
+    }
+
+    .cta-box .btn{
+      background:white;
+      color:#111827;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          Analytics Solutions For Data-Driven Businesses
+        </h1>
+
+        <p>
+          Transform business data into actionable insights
+          with advanced analytics platforms, real-time dashboards,
+          reporting systems, and AI-powered business intelligence.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#" class="btn">
+            Request Demo
+          </a>
+
+          <a href="#" class="btn btn-outline">
+            Book Consultation
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/4149/4149647.png" 
+          alt="Analytics Solutions"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Analytics Features -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Analytics Platform Features</h2>
+
+        <p>
+          Smart analytics systems designed for business intelligence,
+          reporting, forecasting, and data visualization.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">📊</div>
+
+          <h3>Business Dashboards</h3>
+
+          <p>
+            Real-time dashboards for monitoring
+            KPIs, metrics, and business performance.
+          </p>
+
+          <ul>
+            <li>Interactive Dashboards</li>
+            <li>Custom Reports</li>
+            <li>Data Visualization</li>
+            <li>Performance Tracking</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🤖</div>
+
+          <h3>AI & Predictive Analytics</h3>
+
+          <p>
+            Leverage AI-driven insights and
+            predictive forecasting models.
+          </p>
+
+          <ul>
+            <li>Predictive Modeling</li>
+            <li>Trend Analysis</li>
+            <li>Forecasting Tools</li>
+            <li>AI Recommendations</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🔗</div>
+
+          <h3>Data Integration</h3>
+
+          <p>
+            Connect multiple systems and
+            consolidate business data sources.
+          </p>
+
+          <ul>
+            <li>API Integrations</li>
+            <li>Cloud Data Sync</li>
+            <li>Third-Party Connectors</li>
+            <li>Centralized Data Warehouse</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Benefits -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Why Choose Our Analytics Solutions?</h2>
+
+        <p>
+          Scalable analytics systems built for intelligent
+          decision-making, automation, and business growth.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">⚡</div>
+
+          <h3>Real-Time Insights</h3>
+
+          <p>
+            Access business data instantly
+            with real-time analytics dashboards.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📈</div>
+
+          <h3>Smarter Decision-Making</h3>
+
+          <p>
+            Make informed business decisions
+            using accurate analytics and forecasts.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🧠</div>
+
+          <h3>AI-Powered Intelligence</h3>
+
+          <p>
+            Advanced machine learning models
+            for automated business insights.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🔒</div>
+
+          <h3>Enterprise Security</h3>
+
+          <p>
+            Secure cloud infrastructure with
+            encrypted business data management.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Analytics Types -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Analytics Solutions We Build</h2>
+
+        <p>
+          Customized analytics platforms designed
+          for multiple industries and business operations.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Business Intelligence Platforms</h3>
+          <p>Enterprise BI systems for performance monitoring and reporting.</p>
+        </div>
+
+        <div class="card">
+          <h3>Sales Analytics</h3>
+          <p>Track revenue, sales performance, and customer conversions.</p>
+        </div>
+
+        <div class="card">
+          <h3>Marketing Analytics</h3>
+          <p>Measure campaigns, traffic, engagement, and marketing ROI.</p>
+        </div>
+
+        <div class="card">
+          <h3>Financial Analytics</h3>
+          <p>Monitor expenses, profitability, forecasting, and budgeting.</p>
+        </div>
+
+        <div class="card">
+          <h3>Customer Analytics</h3>
+          <p>Analyze customer behavior, retention, and engagement trends.</p>
+        </div>
+
+        <div class="card">
+          <h3>Operational Analytics</h3>
+          <p>Improve workflows, productivity, and operational efficiency.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Business Benefits -->
+
+  <section class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Business Benefits</h2>
+
+        <p>
+          Improve operational efficiency, increase profitability,
+          and unlock the power of data-driven strategies.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">🌍</div>
+
+          <h3>Centralized Data Access</h3>
+
+          <p>
+            Access business insights from
+            multiple systems in one platform.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">💰</div>
+
+          <h3>Increase Revenue Growth</h3>
+
+          <p>
+            Identify growth opportunities
+            using advanced business intelligence.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📊</div>
+
+          <h3>Performance Monitoring</h3>
+
+          <p>
+            Track business KPIs and optimize
+            operations with real-time analytics.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🚀</div>
+
+          <h3>Scalable Analytics Infrastructure</h3>
+
+          <p>
+            Flexible cloud-based analytics
+            platforms built for business expansion.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>Ready To Transform Your Business With Analytics?</h2>
+
+        <p>
+          Partner with TechNova Solutions to build scalable,
+          AI-powered analytics platforms for smarter business decisions.
+        </p>
+
+        <a href="#" class="btn">
+          Schedule Free Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            analytics platforms, automation systems, and scalable digital solutions.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Solutions</h3>
+
+          <ul>
+            <li>Analytics Solutions</li>
+            <li>CRM Solutions</li>
+            <li>ERP Solutions</li>
+            <li>Marketplace Solutions</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

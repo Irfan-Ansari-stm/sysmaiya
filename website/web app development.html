@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web App Development Services | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:120px 0;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      margin-bottom:25px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      font-size:18px;
+      margin-bottom:35px;
+      max-width:600px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn-outline{
+      border:1px solid #475569;
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      border-color:#8b5cf6;
+      color:#8b5cf6;
+    }
+
+    .hero-image{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:28px;
+      padding:40px;
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:480px;
+    }
+
+    /* Features */
+
+    .features{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      max-width:720px;
+      margin:auto;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .feature-card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:22px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-6px);
+      border-color:#8b5cf6;
+    }
+
+    .feature-icon{
+      width:70px;
+      height:70px;
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      margin-bottom:25px;
+    }
+
+    .feature-card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#8b5cf6;
+    }
+
+    .feature-card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .feature-card ul{
+      padding-left:20px;
+      color:#cbd5e1;
+    }
+
+    .feature-card ul li{
+      margin-bottom:10px;
+    }
+
+    /* Technologies */
+
+    .tech-section{
+      padding:90px 0;
+      background:#111827;
+    }
+
+    .tech-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:20px;
+      margin-top:50px;
+    }
+
+    .tech-card{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:18px;
+      padding:30px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .tech-card:hover{
+      border-color:#8b5cf6;
+      transform:translateY(-5px);
+    }
+
+    .tech-card h3{
+      color:#8b5cf6;
+      font-size:24px;
+      margin-bottom:10px;
+    }
+
+    .tech-card p{
+      color:#cbd5e1;
+      font-size:15px;
+    }
+
+    /* Benefits */
+
+    .benefits{
+      padding:90px 0;
+    }
+
+    .benefit-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+      margin-top:50px;
+    }
+
+    .benefit-card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:20px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .benefit-card:hover{
+      border-color:#8b5cf6;
+      transform:translateY(-5px);
+    }
+
+    .benefit-card h3{
+      margin-bottom:15px;
+      color:#8b5cf6;
+      font-size:26px;
+    }
+
+    .benefit-card p{
+      color:#cbd5e1;
+    }
+
+    /* CTA */
+
+    .cta{
+      padding:100px 0;
+    }
+
+    .cta-box{
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      padding:70px 40px;
+      border-radius:28px;
+      text-align:center;
+    }
+
+    .cta-box h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .cta-box p{
+      max-width:750px;
+      margin:auto auto 30px;
+      font-size:18px;
+    }
+
+    .cta-box .btn{
+      background:white;
+      color:#111827;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    /* Responsive */
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          Custom Web App Development Services
+        </h1>
+
+        <p>
+          Build scalable, secure, and high-performance web applications
+          tailored to streamline business operations and enhance user experience.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#" class="btn">
+            Request Quote
+          </a>
+
+          <a href="#" class="btn btn-outline">
+            View Case Studies
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" 
+          alt="Web App Development"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features -->
+
+  <section class="features">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Our Web App Solutions</h2>
+
+        <p>
+          We develop robust web applications designed for performance,
+          scalability, automation, and business growth.
+        </p>
+
+      </div>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+
+          <div class="feature-icon">📊</div>
+
+          <h3>Business Dashboards</h3>
+
+          <p>
+            Interactive dashboards for analytics, reporting,
+            and operational management.
+          </p>
+
+          <ul>
+            <li>Real-Time Analytics</li>
+            <li>Data Visualization</li>
+            <li>User Access Management</li>
+            <li>Advanced Reports</li>
+          </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+          <div class="feature-icon">⚡</div>
+
+          <h3>Automation Platforms</h3>
+
+          <p>
+            Web-based systems that automate workflows
+            and improve operational efficiency.
+          </p>
+
+          <ul>
+            <li>Workflow Automation</li>
+            <li>Task Scheduling</li>
+            <li>API Integrations</li>
+            <li>Notification Systems</li>
+          </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+          <div class="feature-icon">🔐</div>
+
+          <h3>Enterprise Applications</h3>
+
+          <p>
+            Secure enterprise-grade applications with
+            scalable architecture and cloud deployment.
+          </p>
+
+          <ul>
+            <li>Role-Based Access</li>
+            <li>Cloud Infrastructure</li>
+            <li>Database Management</li>
+            <li>Security Optimization</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Technologies -->
+
+  <section class="tech-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Technology Stack</h2>
+
+        <p>
+          We use modern frameworks and cloud technologies
+          to build reliable and scalable web applications.
+        </p>
+
+      </div>
+
+      <div class="tech-grid">
+
+        <div class="tech-card">
+          <h3>React</h3>
+          <p>Dynamic frontend interfaces</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>Vue.js</h3>
+          <p>Lightweight frontend framework</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>Node.js</h3>
+          <p>Backend APIs & services</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>Express</h3>
+          <p>Fast server-side development</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>MongoDB</h3>
+          <p>NoSQL scalable databases</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>AWS</h3>
+          <p>Cloud hosting & deployment</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Benefits -->
+
+  <section class="benefits">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Why Choose Our Web Apps?</h2>
+
+        <p>
+          We focus on delivering scalable digital solutions
+          that improve productivity and customer engagement.
+        </p>
+
+      </div>
+
+      <div class="benefit-grid">
+
+        <div class="benefit-card">
+
+          <h3>Scalable Architecture</h3>
+
+          <p>
+            Applications built to handle growing business
+            requirements and user traffic.
+          </p>
+
+        </div>
+
+        <div class="benefit-card">
+
+          <h3>Secure Systems</h3>
+
+          <p>
+            Advanced security practices to protect
+            business data and user information.
+          </p>
+
+        </div>
+
+        <div class="benefit-card">
+
+          <h3>Cloud Integration</h3>
+
+          <p>
+            Seamless cloud deployment for reliability,
+            flexibility, and global accessibility.
+          </p>
+
+        </div>
+
+        <div class="benefit-card">
+
+          <h3>Modern UI/UX</h3>
+
+          <p>
+            Intuitive user interfaces designed for
+            better engagement and productivity.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>Need A Powerful Web Application?</h2>
+
+        <p>
+          Let TechNova Solutions build scalable web applications
+          that automate workflows and accelerate business growth.
+        </p>
+
+        <a href="#" class="btn">
+          Schedule Free Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            automation systems, and scalable digital platforms.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Services</h3>
+
+          <ul>
+            <li>Web Development</li>
+            <li>Web Applications</li>
+            <li>Cloud Services</li>
+            <li>AI Solutions</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

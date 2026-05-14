@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enterprise Inquiry | Enterprise Solutions</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .input-field{
+      background:#0f172a;
+      border:1px solid #334155;
+      transition:all 0.3s ease;
+    }
+
+    .input-field:focus{
+      outline:none;
+      border-color:#06b6d4;
+      box-shadow:0 0 0 3px rgba(6,182,212,0.15);
+    }
+
+    .feature-card{
+      transition:all 0.35s ease;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .enterprise-card{
+      background:linear-gradient(
+        135deg,
+        rgba(6,182,212,0.15),
+        rgba(139,92,246,0.15)
+      );
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Enterprise<span class="gradient-text">Hub</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Solutions</a>
+        <a href="#" class="hover:text-white transition">Industries</a>
+        <a href="#" class="hover:text-white transition">Case Studies</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Contact Sales
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left -->
+        <div>
+
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+            Enterprise Solutions & Consulting
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+            Enterprise
+            <span class="gradient-text">Inquiry</span>
+          </h1>
+
+          <p class="text-slate-300 text-xl leading-9 mb-10">
+            Connect with our enterprise specialists to discuss
+            scalable solutions, digital transformation,
+            cloud infrastructure, AI automation, and enterprise growth strategies.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+
+            <!-- Card -->
+            <div class="glass rounded-3xl p-6">
+
+              <div class="text-cyan-400 text-4xl mb-4">🏢</div>
+
+              <h3 class="text-2xl font-bold mb-3">
+                Enterprise Scale
+              </h3>
+
+              <p class="text-slate-400 leading-7">
+                Custom enterprise solutions built for global operations.
+              </p>
+
+            </div>
+
+            <!-- Card -->
+            <div class="glass rounded-3xl p-6">
+
+              <div class="text-pink-400 text-4xl mb-4">🔒</div>
+
+              <h3 class="text-2xl font-bold mb-3">
+                Secure Infrastructure
+              </h3>
+
+              <p class="text-slate-400 leading-7">
+                Enterprise-grade security, compliance, and reliability.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Inquiry Form -->
+        <div>
+
+          <div class="glass rounded-[40px] p-10">
+
+            <div class="mb-8">
+
+              <div class="text-cyan-400 font-semibold mb-3">
+                Enterprise Contact Form
+              </div>
+
+              <h2 class="text-4xl font-bold">
+                Request Enterprise Consultation
+              </h2>
+
+            </div>
+
+            <form class="space-y-6">
+
+              <div class="grid md:grid-cols-2 gap-5">
+
+                <div>
+                  <label class="block text-sm text-slate-400 mb-2">
+                    Full Name
+                  </label>
+
+                  <input
+                    type="text"
+                    placeholder="Enter full name"
+                    class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                  >
+                </div>
+
+                <div>
+                  <label class="block text-sm text-slate-400 mb-2">
+                    Business Email
+                  </label>
+
+                  <input
+                    type="email"
+                    placeholder="Enter business email"
+                    class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                  >
+                </div>
+
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-5">
+
+                <div>
+                  <label class="block text-sm text-slate-400 mb-2">
+                    Company Name
+                  </label>
+
+                  <input
+                    type="text"
+                    placeholder="Enter company name"
+                    class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                  >
+                </div>
+
+                <div>
+                  <label class="block text-sm text-slate-400 mb-2">
+                    Company Size
+                  </label>
+
+                  <select class="input-field w-full rounded-2xl px-5 py-4 text-white">
+                    <option>1 - 50 Employees</option>
+                    <option>51 - 200 Employees</option>
+                    <option>201 - 1000 Employees</option>
+                    <option>1000+ Employees</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Enterprise Solutions Interested In
+                </label>
+
+                <select class="input-field w-full rounded-2xl px-5 py-4 text-white">
+                  <option>Cloud Infrastructure</option>
+                  <option>AI & Automation</option>
+                  <option>Enterprise Software Development</option>
+                  <option>Cybersecurity Solutions</option>
+                  <option>Data Analytics & BI</option>
+                  <option>Digital Transformation</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Project Budget
+                </label>
+
+                <select class="input-field w-full rounded-2xl px-5 py-4 text-white">
+                  <option>$10,000 - $50,000</option>
+                  <option>$50,000 - $100,000</option>
+                  <option>$100,000 - $500,000</option>
+                  <option>$500,000+</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Enterprise Requirements
+                </label>
+
+                <textarea
+                  rows="5"
+                  placeholder="Describe your enterprise requirements, goals, and technical challenges..."
+                  class="input-field w-full rounded-2xl px-5 py-4 text-white placeholder-slate-500"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="bg-cyan-500 hover:bg-cyan-600 transition w-full py-5 rounded-2xl font-semibold text-lg"
+              >
+                Submit Enterprise Inquiry
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Enterprise Benefits -->
+  <section class="py-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Enterprise Benefits
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          Built for Modern Enterprises
+        </h2>
+
+        <p class="text-slate-400 text-xl leading-9 max-w-3xl mx-auto">
+          Enterprise-grade technology solutions designed to
+          improve scalability, performance, security, and innovation.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Card -->
+        <div class="feature-card enterprise-card rounded-[32px] p-8 border border-transparent text-center">
+
+          <div class="text-6xl mb-6">☁️</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Cloud Solutions
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Scalable cloud infrastructure and enterprise deployments.
+          </p>
+
+        </div>
+
+        <!-- Card -->
+        <div class="feature-card enterprise-card rounded-[32px] p-8 border border-transparent text-center">
+
+          <div class="text-6xl mb-6">🤖</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            AI Automation
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Automate enterprise operations with intelligent workflows.
+          </p>
+
+        </div>
+
+        <!-- Card -->
+        <div class="feature-card enterprise-card rounded-[32px] p-8 border border-transparent text-center">
+
+          <div class="text-6xl mb-6">🔐</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Security & Compliance
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Enterprise-level compliance and data protection systems.
+          </p>
+
+        </div>
+
+        <!-- Card -->
+        <div class="feature-card enterprise-card rounded-[32px] p-8 border border-transparent text-center">
+
+          <div class="text-6xl mb-6">📈</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Business Growth
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Accelerate enterprise innovation and digital transformation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Process -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16">
+
+        <div class="text-center mb-16">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Enterprise Process
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            How We Work
+          </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-10">
+
+          <!-- Step -->
+          <div class="text-center">
+
+            <div class="w-20 h-20 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+              1
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Inquiry Submission
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Share your enterprise goals and requirements.
+            </p>
+
+          </div>
+
+          <!-- Step -->
+          <div class="text-center">
+
+            <div class="w-20 h-20 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+              2
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Strategy Consultation
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Meet with our enterprise technology specialists.
+            </p>
+
+          </div>
+
+          <!-- Step -->
+          <div class="text-center">
+
+            <div class="w-20 h-20 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+              3
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Solution Planning
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Receive customized enterprise architecture and roadmap.
+            </p>
+
+          </div>
+
+          <!-- Step -->
+          <div class="text-center">
+
+            <div class="w-20 h-20 rounded-full bg-violet-500/20 text-violet-400 flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+              4
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Implementation
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Launch enterprise-grade solutions with expert support.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Enterprise Ready
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Let’s Build the Future of Your Enterprise
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Partner with our enterprise experts to transform
+            operations, improve efficiency, and drive innovation.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Contact Enterprise Team
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Schedule Consultation
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Enterprise<span class="gradient-text">Hub</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Delivering scalable enterprise technology solutions
+          for innovation, security, and digital transformation.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 EnterpriseHub. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

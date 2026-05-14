@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Testimonials | Trust & Authority</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .testimonial-card{
+      transition:all 0.35s ease;
+      background:linear-gradient(
+        135deg,
+        rgba(6,182,212,0.10),
+        rgba(139,92,246,0.10)
+      );
+    }
+
+    .testimonial-card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .video-card{
+      transition:all 0.35s ease;
+    }
+
+    .video-card:hover{
+      transform:scale(1.02);
+    }
+
+    .rating-box{
+      background:linear-gradient(
+        135deg,
+        rgba(6,182,212,0.15),
+        rgba(139,92,246,0.15)
+      );
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Client<span class="gradient-text">Voices</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Testimonials</a>
+        <a href="#" class="hover:text-white transition">Reviews</a>
+        <a href="#" class="hover:text-white transition">Case Studies</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Work With Us
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+        Trusted by Startups & Enterprises
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+        Real Client
+        <span class="gradient-text">Success Stories</span>
+      </h1>
+
+      <p class="text-slate-300 text-xl leading-9 max-w-4xl mx-auto mb-14">
+        Discover how businesses worldwide trust our expertise,
+        technology solutions, and strategic partnerships
+        to achieve measurable growth and long-term success.
+      </p>
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-cyan-400 mb-3">
+            500+
+          </div>
+
+          <p class="text-slate-400">
+            Happy Clients
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-pink-400 mb-3">
+            4.9/5
+          </div>
+
+          <p class="text-slate-400">
+            Average Rating
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-violet-400 mb-3">
+            98%
+          </div>
+
+          <p class="text-slate-400">
+            Client Retention
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+
+          <div class="text-5xl font-extrabold text-amber-400 mb-3">
+            1200+
+          </div>
+
+          <p class="text-slate-400">
+            Projects Completed
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Featured Testimonials -->
+  <section class="py-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Featured Testimonials
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          What Our Clients Say
+        </h2>
+
+        <p class="text-slate-400 text-xl leading-9 max-w-3xl mx-auto">
+          Hear directly from founders, executives,
+          and teams that experienced measurable success.
+        </p>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Testimonial -->
+        <div class="testimonial-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="flex items-center gap-1 text-amber-400 text-2xl mb-6">
+            ★★★★★
+          </div>
+
+          <p class="text-slate-300 leading-8 mb-8">
+            “Their team transformed our platform with scalable technology
+            and helped us improve operational efficiency significantly.”
+          </p>
+
+          <div class="flex items-center gap-4">
+
+            <div class="w-14 h-14 rounded-full bg-cyan-500/20 flex items-center justify-center text-xl font-bold">
+              SJ
+            </div>
+
+            <div>
+
+              <div class="font-bold text-lg">
+                Sarah Johnson
+              </div>
+
+              <div class="text-slate-400 text-sm">
+                CEO, TechNova
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Testimonial -->
+        <div class="testimonial-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="flex items-center gap-1 text-amber-400 text-2xl mb-6">
+            ★★★★★
+          </div>
+
+          <p class="text-slate-300 leading-8 mb-8">
+            “Exceptional professionalism, modern design,
+            and strategic execution that exceeded expectations.”
+          </p>
+
+          <div class="flex items-center gap-4">
+
+            <div class="w-14 h-14 rounded-full bg-pink-500/20 flex items-center justify-center text-xl font-bold">
+              ML
+            </div>
+
+            <div>
+
+              <div class="font-bold text-lg">
+                Michael Lee
+              </div>
+
+              <div class="text-slate-400 text-sm">
+                Founder, FinCore
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Testimonial -->
+        <div class="testimonial-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="flex items-center gap-1 text-amber-400 text-2xl mb-6">
+            ★★★★★
+          </div>
+
+          <p class="text-slate-300 leading-8 mb-8">
+            “Their expertise in automation and cloud systems
+            helped us scale faster while reducing operational costs.”
+          </p>
+
+          <div class="flex items-center gap-4">
+
+            <div class="w-14 h-14 rounded-full bg-violet-500/20 flex items-center justify-center text-xl font-bold">
+              EC
+            </div>
+
+            <div>
+
+              <div class="font-bold text-lg">
+                Emily Carter
+              </div>
+
+              <div class="text-slate-400 text-sm">
+                Director, Medilink
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Video Testimonials -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Video Testimonials
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          Client Experiences in Their Own Words
+        </h2>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Video -->
+        <div class="video-card glass rounded-[36px] overflow-hidden">
+
+          <div class="h-64 bg-slate-800 flex items-center justify-center text-7xl">
+            ▶
+          </div>
+
+          <div class="p-8">
+
+            <h3 class="text-2xl font-bold mb-3">
+              SaaS Growth Success
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-5">
+              Learn how our solutions helped a SaaS company
+              increase conversions and scale operations.
+            </p>
+
+            <div class="text-cyan-400 font-semibold">
+              Watch Story →
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Video -->
+        <div class="video-card glass rounded-[36px] overflow-hidden">
+
+          <div class="h-64 bg-slate-800 flex items-center justify-center text-7xl">
+            ▶
+          </div>
+
+          <div class="p-8">
+
+            <h3 class="text-2xl font-bold mb-3">
+              FinTech Transformation
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-5">
+              See how digital transformation improved financial
+              workflows and automation efficiency.
+            </p>
+
+            <div class="text-cyan-400 font-semibold">
+              Watch Story →
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Video -->
+        <div class="video-card glass rounded-[36px] overflow-hidden">
+
+          <div class="h-64 bg-slate-800 flex items-center justify-center text-7xl">
+            ▶
+          </div>
+
+          <div class="p-8">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Healthcare Innovation
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-5">
+              Discover how modern healthcare systems improved
+              patient experience and operational workflows.
+            </p>
+
+            <div class="text-cyan-400 font-semibold">
+              Watch Story →
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Ratings & Reviews -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16">
+
+        <div class="text-center mb-16">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Ratings & Reviews
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            Recognized for Excellence
+          </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+
+          <!-- Rating -->
+          <div class="rating-box rounded-3xl p-8 text-center">
+
+            <div class="text-5xl mb-4">⭐</div>
+
+            <div class="text-4xl font-extrabold mb-3">
+              4.9/5
+            </div>
+
+            <p class="text-slate-400">
+              Average Client Rating
+            </p>
+
+          </div>
+
+          <!-- Rating -->
+          <div class="rating-box rounded-3xl p-8 text-center">
+
+            <div class="text-5xl mb-4">🏆</div>
+
+            <div class="text-4xl font-extrabold mb-3">
+              15+
+            </div>
+
+            <p class="text-slate-400">
+              Industry Awards
+            </p>
+
+          </div>
+
+          <!-- Rating -->
+          <div class="rating-box rounded-3xl p-8 text-center">
+
+            <div class="text-5xl mb-4">🤝</div>
+
+            <div class="text-4xl font-extrabold mb-3">
+              98%
+            </div>
+
+            <p class="text-slate-400">
+              Long-Term Partnerships
+            </p>
+
+          </div>
+
+          <!-- Rating -->
+          <div class="rating-box rounded-3xl p-8 text-center">
+
+            <div class="text-5xl mb-4">🚀</div>
+
+            <div class="text-4xl font-extrabold mb-3">
+              1200+
+            </div>
+
+            <p class="text-slate-400">
+              Successful Deliveries
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Trust Section -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-2 gap-10">
+
+        <!-- Left -->
+        <div class="glass rounded-[36px] p-12">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Why Clients Trust Us
+          </div>
+
+          <h2 class="text-5xl font-bold mb-8">
+            Building Long-Term Relationships
+          </h2>
+
+          <div class="space-y-6 text-slate-300 leading-8">
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Transparent communication and collaboration.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Modern technology solutions with measurable impact.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Dedicated support and long-term partnerships.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Scalable systems designed for future growth.</div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right -->
+        <div class="glass rounded-[36px] p-12">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Client Industries
+          </div>
+
+          <h2 class="text-5xl font-bold mb-8">
+            Trusted Across Industries
+          </h2>
+
+          <div class="grid grid-cols-2 gap-5">
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              SaaS
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              FinTech
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Healthcare
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              E-Commerce
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Logistics
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Education
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Ready to Get Started?
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Join Hundreds of Successful Clients
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Work with a trusted digital partner focused on innovation,
+            measurable growth, and long-term business success.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Start Your Project
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Schedule Consultation
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Client<span class="gradient-text">Voices</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Helping businesses grow with trusted digital solutions,
+          innovation, and long-term partnerships.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 ClientVoices. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

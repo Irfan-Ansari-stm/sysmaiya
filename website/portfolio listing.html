@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio & Case Studies | Enterprise Digital Solutions</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #020617;
+      color: #f8fafc;
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #06b6d4, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg {
+      background-image:
+        radial-gradient(circle at top left, rgba(6,182,212,0.25), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(139,92,246,0.25), transparent 30%);
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Digital<span class="gradient-text">Studio</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#portfolio" class="hover:text-white transition">Portfolio</a>
+        <a href="#case-studies" class="hover:text-white transition">Case Studies</a>
+        <a href="#industries" class="hover:text-white transition">Industries</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Start Project
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg relative overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 py-28 relative z-10 text-center">
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+        Enterprise Portfolio & Success Stories
+      </div>
+
+      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 max-w-5xl mx-auto">
+        Our Work, Results &
+        <span class="gradient-text">Digital Transformations</span>
+      </h1>
+
+      <p class="text-slate-300 text-lg leading-8 max-w-3xl mx-auto mb-10">
+        Explore our portfolio of enterprise solutions, SaaS platforms, AI products,
+        mobile applications, and digital transformation projects across industries.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-5">
+        <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+          View Portfolio
+        </button>
+
+        <button class="border border-slate-700 hover:border-cyan-500 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+          Explore Case Studies
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Portfolio Filters -->
+  <section class="py-12 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="flex flex-wrap justify-center gap-4">
+
+        <button class="bg-cyan-500 text-white px-6 py-3 rounded-xl font-semibold">
+          All Projects
+        </button>
+
+        <button class="glass hover:border-cyan-500 transition px-6 py-3 rounded-xl">
+          SaaS Platforms
+        </button>
+
+        <button class="glass hover:border-cyan-500 transition px-6 py-3 rounded-xl">
+          Mobile Apps
+        </button>
+
+        <button class="glass hover:border-cyan-500 transition px-6 py-3 rounded-xl">
+          AI Solutions
+        </button>
+
+        <button class="glass hover:border-cyan-500 transition px-6 py-3 rounded-xl">
+          Enterprise Software
+        </button>
+
+        <button class="glass hover:border-cyan-500 transition px-6 py-3 rounded-xl">
+          E-Commerce
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Portfolio Listing -->
+  <section id="portfolio" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="flex items-center justify-between mb-16 flex-wrap gap-6">
+
+        <div>
+          <div class="text-cyan-400 font-semibold mb-3">Featured Portfolio</div>
+          <h2 class="text-4xl font-bold">Selected Client Projects</h2>
+        </div>
+
+        <div class="text-slate-400">
+          120+ Successful Digital Projects Delivered
+        </div>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+        <!-- Card -->
+        <div class="portfolio-card glass rounded-[28px] overflow-hidden transition duration-300">
+
+          <div class="h-64 bg-gradient-to-br from-cyan-500/30 to-violet-500/20 flex items-center justify-center text-7xl">
+            🚚
+          </div>
+
+          <div class="p-8">
+
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-cyan-400 text-sm font-semibold">Logistics</span>
+              <span class="text-slate-400 text-sm">Enterprise SaaS</span>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Smart Logistics Management Platform
+            </h3>
+
+            <p class="text-slate-400 leading-7 mb-6">
+              Built a scalable logistics ecosystem with AI-powered shipment tracking,
+              warehouse management, and real-time fleet analytics.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 mb-6 text-center">
+
+              <div>
+                <div class="text-2xl font-bold gradient-text">45%</div>
+                <div class="text-xs text-slate-400 mt-1">Efficiency</div>
+              </div>
+
+              <div>
+                <div class="text-2xl font-bold gradient-text">2M+</div>
+                <div class="text-xs text-slate-400 mt-1">Shipments</div>
+              </div>
+
+              <div>
+                <div class="text-2xl font-bold gradient-text">99.9%</div>
+                <div class="text-xs text-slate-400 mt-1">Uptime</div>
+              </div>
+
+            </div>
+
+            <button class="w-full bg-cyan-500 hover:bg-cyan-600 transition py-4 rounded-2xl font-semibold">
+              View Case Study
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Card -->
+        <div class="portfolio-card glass rounded-[28px] overflow-hidden transition duration-300">
+
+          <div class="h-64 bg-gradient-to-br from-pink-500/30 to-violet-500/20 flex items-center justify-center text-7xl">
+            🎬
+          </div>
+
+          <div class="p-8">
+
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-pink-400 text-sm font-semibold">Media</span>
+              <span class="text-slate-400 text-sm">OTT Platform</span>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Global OTT Streaming Platform
+            </h3>
+
+            <p class="text-slate-400 leading-7 mb-6">
+              Developed a high-performance media streaming ecosystem with subscriptions,
+              AI recommendations, and multi-device playback.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 mb-6 text-center">
+
+              <div>
+                <div class="text-2xl font-bold gradient-text">50M+</div>
+                <div class="text-xs text-slate-400 mt-1">Streams</div>
+              </div>
+
+              <div>
+                <div class="text-2xl font-bold gradient-text">4x</div>
+                <div class="text-xs text-slate-400 mt-1">Growth</div>
+              </div>
+
+              <div>
+                <div class="text-2xl font-bold gradient-text">98%</div>
+                <div class="text-xs text-slate-400 mt-1">Retention</div>
+              </div>
+
+            </div>
+
+            <button class="w-full bg-pink-500 hover:bg-pink-600 transition py-4 rounded-2xl font-semibold">
+              View Case Study
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Card -->
+        <div class="portfolio-card glass rounded-[28px] overflow-hidden transition duration-300">
+
+          <div class="h-64 bg-gradient-to-br from-amber-500/30 to-red-500/20 flex items-center justify-center text-7xl">
+            🏭
+          </div>
+
+          <div class="p-8">
+
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-amber-400 text-sm font-semibold">Manufacturing</span>
+              <span class="text-slate-400 text-sm">Industry 4.0</span>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">
+              Smart Factory Automation System
+            </h3>
+
+            <p class="text-slate-400 leading-7 mb-6">
+              Engineered an AI-powered manufacturing intelligence platform with predictive maintenance,
+              IoT monitoring, and ERP automation.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 mb-6 text-center">
+
+              <div>
+                <div class="text-2xl font-bold gradient-text">52%</div>
+                <div class="text-xs text-slate-400 mt-1">Downtime ↓</div>
+              </div>
+
+              <div>
+                <div class="text-2xl font-bold gradient-text">31%</div>
+                <div class="text-xs text-slate-400 mt-1">Efficiency</div>
+              </div>
+
+              <div>
+                <div class="text-2xl font-bold gradient-text">120+</div>
+                <div class="text-xs text-slate-400 mt-1">Machines</div>
+              </div>
+
+            </div>
+
+            <button class="w-full bg-amber-500 hover:bg-amber-600 transition py-4 rounded-2xl font-semibold text-slate-950">
+              View Case Study
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="case-studies" class="py-24 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <div class="text-cyan-400 font-semibold mb-4">Case Studies</div>
+        <h2 class="text-4xl font-bold mb-6">Business Outcomes That Matter</h2>
+        <p class="text-slate-400 text-lg max-w-3xl mx-auto leading-8">
+          We help enterprises accelerate growth, improve operational efficiency,
+          and create scalable digital ecosystems.
+        </p>
+      </div>
+
+      <div class="space-y-10">
+
+        <!-- Study -->
+        <div class="glass rounded-[32px] overflow-hidden">
+
+          <div class="grid lg:grid-cols-2">
+
+            <div class="p-12">
+
+              <div class="text-cyan-400 font-semibold mb-4">Travel Technology</div>
+
+              <h3 class="text-4xl font-bold mb-6">
+                AI-Based Global Travel Booking Platform
+              </h3>
+
+              <p class="text-slate-400 leading-8 mb-8">
+                Designed and developed a scalable travel marketplace supporting global bookings,
+                dynamic pricing, multilingual support, and AI-driven recommendations.
+              </p>
+
+              <div class="grid grid-cols-2 gap-6 mb-8">
+
+                <div>
+                  <div class="text-4xl font-bold gradient-text">45%</div>
+                  <div class="text-slate-400 mt-2">Increase in conversions</div>
+                </div>
+
+                <div>
+                  <div class="text-4xl font-bold gradient-text">3x</div>
+                  <div class="text-slate-400 mt-2">Faster booking flow</div>
+                </div>
+
+              </div>
+
+              <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold">
+                Read Full Case Study
+              </button>
+
+            </div>
+
+            <div class="bg-gradient-to-br from-cyan-500/20 to-violet-500/10 flex items-center justify-center p-12 text-center">
+              <div>
+                <div class="text-8xl mb-6">✈️</div>
+                <div class="text-2xl font-bold">Travel Booking Ecosystem</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Study -->
+        <div class="glass rounded-[32px] overflow-hidden">
+
+          <div class="grid lg:grid-cols-2">
+
+            <div class="bg-gradient-to-br from-pink-500/20 to-violet-500/10 flex items-center justify-center p-12 text-center order-2 lg:order-1">
+              <div>
+                <div class="text-8xl mb-6">📺</div>
+                <div class="text-2xl font-bold">OTT Media Platform</div>
+              </div>
+            </div>
+
+            <div class="p-12 order-1 lg:order-2">
+
+              <div class="text-pink-400 font-semibold mb-4">Media & Entertainment</div>
+
+              <h3 class="text-4xl font-bold mb-6">
+                Enterprise Streaming Infrastructure
+              </h3>
+
+              <p class="text-slate-400 leading-8 mb-8">
+                Created a next-generation streaming platform supporting live content,
+                AI personalization, subscription billing, and real-time analytics.
+              </p>
+
+              <div class="grid grid-cols-2 gap-6 mb-8">
+
+                <div>
+                  <div class="text-4xl font-bold gradient-text">65%</div>
+                  <div class="text-slate-400 mt-2">Audience engagement</div>
+                </div>
+
+                <div>
+                  <div class="text-4xl font-bold gradient-text">4x</div>
+                  <div class="text-slate-400 mt-2">Subscriber growth</div>
+                </div>
+
+              </div>
+
+              <button class="bg-pink-500 hover:bg-pink-600 transition px-8 py-4 rounded-2xl font-semibold">
+                Read Full Case Study
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section id="industries" class="py-24">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <div class="text-cyan-400 font-semibold mb-4">Industries Served</div>
+      <h2 class="text-4xl font-bold mb-16">Digital Solutions Across Industries</h2>
+
+      <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+        <div class="glass rounded-3xl p-8">
+          <div class="text-5xl mb-4">🚚</div>
+          <div class="font-semibold">Logistics</div>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <div class="text-5xl mb-4">✈️</div>
+          <div class="font-semibold">Travel</div>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <div class="text-5xl mb-4">🎬</div>
+          <div class="font-semibold">Media</div>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <div class="text-5xl mb-4">🏭</div>
+          <div class="font-semibold">Manufacturing</div>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <div class="text-5xl mb-4">💳</div>
+          <div class="font-semibold">Fintech</div>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <div class="text-5xl mb-4">🛒</div>
+          <div class="font-semibold">E-Commerce</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="py-24 bg-slate-950">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <div class="glass rounded-[32px] p-14">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Build Your Next Success Story
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6 leading-tight">
+          Let’s Create Scalable Digital Products Together
+        </h2>
+
+        <p class="text-slate-400 text-lg leading-8 mb-10 max-w-3xl mx-auto">
+          From enterprise platforms to AI-powered ecosystems, we help businesses transform,
+          innovate, and scale with modern technology.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-5">
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Start Your Project
+          </button>
+
+          <button class="border border-slate-700 hover:border-cyan-500 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Schedule Consultation
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+        <div class="text-2xl font-bold mb-3">
+          Digital<span class="gradient-text">Studio</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Enterprise digital transformation, product engineering,
+          AI platforms, and scalable software solutions.
+        </p>
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 DigitalStudio Technologies. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

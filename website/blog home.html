@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog System | Modern Blog Homepage</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #020617;
+      color: #f8fafc;
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #06b6d4, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg {
+      background-image:
+        radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .blog-card {
+      transition: all 0.35s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(6,182,212,0.4);
+    }
+
+    .category-pill {
+      transition: all 0.3s ease;
+    }
+
+    .category-pill:hover {
+      background: rgba(6,182,212,0.15);
+      border-color: rgba(6,182,212,0.4);
+      color: #67e8f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Blog<span class="gradient-text">System</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#home" class="hover:text-white transition">Home</a>
+        <a href="#categories" class="hover:text-white transition">Categories</a>
+        <a href="#featured" class="hover:text-white transition">Featured</a>
+        <a href="#latest" class="hover:text-white transition">Latest</a>
+        <a href="#newsletter" class="hover:text-white transition">Newsletter</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button class="hidden md:block border border-slate-700 hover:border-cyan-500 transition px-5 py-2 rounded-xl font-semibold">
+          Login
+        </button>
+
+        <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+          Subscribe
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+      <div>
+
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+          Enterprise Blog & Content Platform
+        </div>
+
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+          Insights, Trends &
+          <span class="gradient-text">Digital Innovation</span>
+        </h1>
+
+        <p class="text-slate-300 text-lg leading-8 mb-10 max-w-2xl">
+          Discover expert insights on technology, AI, SaaS, cloud engineering,
+          digital transformation, product design, and enterprise innovation.
+        </p>
+
+        <div class="flex flex-wrap gap-5 mb-12">
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Explore Articles
+          </button>
+
+          <button class="border border-slate-700 hover:border-cyan-500 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Start Reading
+          </button>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6">
+
+          <div>
+            <div class="text-4xl font-bold gradient-text">1K+</div>
+            <div class="text-slate-400 mt-2">Published Articles</div>
+          </div>
+
+          <div>
+            <div class="text-4xl font-bold gradient-text">500K+</div>
+            <div class="text-slate-400 mt-2">Monthly Readers</div>
+          </div>
+
+          <div>
+            <div class="text-4xl font-bold gradient-text">50+</div>
+            <div class="text-slate-400 mt-2">Expert Authors</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Featured Hero Article -->
+      <div class="glass rounded-[36px] overflow-hidden">
+
+        <div class="h-80 bg-gradient-to-br from-cyan-500/30 to-violet-500/20 flex items-center justify-center text-8xl">
+          🚀
+        </div>
+
+        <div class="p-10">
+
+          <div class="flex items-center gap-4 mb-5">
+            <span class="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full text-sm font-semibold">
+              Featured Article
+            </span>
+
+            <span class="text-slate-400 text-sm">May 2026</span>
+          </div>
+
+          <h2 class="text-4xl font-bold leading-tight mb-5">
+            The Future of AI-Powered Enterprise Platforms
+          </h2>
+
+          <p class="text-slate-400 leading-8 mb-8">
+            Explore how AI, automation, and cloud-native systems are transforming
+            enterprise operations and driving digital innovation.
+          </p>
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Read Article
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Categories -->
+  <section id="categories" class="py-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <div class="text-cyan-400 font-semibold mb-4">Blog Categories</div>
+        <h2 class="text-4xl font-bold mb-6">Explore Topics & Industries</h2>
+        <p class="text-slate-400 text-lg max-w-3xl mx-auto leading-8">
+          Stay updated with the latest trends in technology, AI, SaaS,
+          cloud infrastructure, product development, and digital business.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4">
+
+        <button class="category-pill glass px-6 py-4 rounded-2xl font-semibold text-slate-300">
+          Artificial Intelligence
+        </button>
+
+        <button class="category-pill glass px-6 py-4 rounded-2xl font-semibold text-slate-300">
+          SaaS Platforms
+        </button>
+
+        <button class="category-pill glass px-6 py-4 rounded-2xl font-semibold text-slate-300">
+          Cloud Engineering
+        </button>
+
+        <button class="category-pill glass px-6 py-4 rounded-2xl font-semibold text-slate-300">
+          DevOps & Infrastructure
+        </button>
+
+        <button class="category-pill glass px-6 py-4 rounded-2xl font-semibold text-slate-300">
+          UI/UX Design
+        </button>
+
+        <button class="category-pill glass px-6 py-4 rounded-2xl font-semibold text-slate-300">
+          Product Engineering
+        </button>
+
+        <button class="category-pill glass px-6 py-4 rounded-2xl font-semibold text-slate-300">
+          Mobile Apps
+        </button>
+
+        <button class="category-pill glass px-6 py-4 rounded-2xl font-semibold text-slate-300">
+          Startup Growth
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Featured Blogs -->
+  <section id="featured" class="py-24 bg-slate-950">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+
+        <div>
+          <div class="text-cyan-400 font-semibold mb-4">Featured Blogs</div>
+          <h2 class="text-4xl font-bold">Trending Insights & Articles</h2>
+        </div>
+
+        <button class="border border-slate-700 hover:border-cyan-500 transition px-6 py-3 rounded-2xl font-semibold">
+          View All Articles
+        </button>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Blog Card -->
+        <article class="blog-card glass rounded-[32px] overflow-hidden">
+
+          <div class="h-64 bg-gradient-to-br from-cyan-500/30 to-violet-500/20 flex items-center justify-center text-7xl">
+            🤖
+          </div>
+
+          <div class="p-8">
+
+            <div class="flex items-center justify-between mb-5 text-sm">
+              <span class="text-cyan-400 font-semibold">Artificial Intelligence</span>
+              <span class="text-slate-400">8 min read</span>
+            </div>
+
+            <h3 class="text-3xl font-bold mb-5 leading-tight">
+              AI Automation Strategies for Modern Enterprises
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-8">
+              Learn how AI-driven automation systems improve operational efficiency,
+              customer engagement, and business scalability.
+            </p>
+
+            <div class="flex items-center justify-between">
+
+              <div>
+                <div class="font-semibold">Sarah Johnson</div>
+                <div class="text-slate-400 text-sm mt-1">AI & Cloud Architect</div>
+              </div>
+
+              <button class="text-cyan-400 font-semibold hover:text-cyan-300 transition">
+                Read More →
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- Blog Card -->
+        <article class="blog-card glass rounded-[32px] overflow-hidden">
+
+          <div class="h-64 bg-gradient-to-br from-pink-500/30 to-violet-500/20 flex items-center justify-center text-7xl">
+            ☁️
+          </div>
+
+          <div class="p-8">
+
+            <div class="flex items-center justify-between mb-5 text-sm">
+              <span class="text-pink-400 font-semibold">Cloud Engineering</span>
+              <span class="text-slate-400">10 min read</span>
+            </div>
+
+            <h3 class="text-3xl font-bold mb-5 leading-tight">
+              Building Scalable Cloud-Native Applications
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-8">
+              Explore Kubernetes, DevOps automation, and multi-cloud architectures
+              powering next-generation enterprise ecosystems.
+            </p>
+
+            <div class="flex items-center justify-between">
+
+              <div>
+                <div class="font-semibold">David Williams</div>
+                <div class="text-slate-400 text-sm mt-1">DevOps Engineer</div>
+              </div>
+
+              <button class="text-pink-400 font-semibold hover:text-pink-300 transition">
+                Read More →
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- Blog Card -->
+        <article class="blog-card glass rounded-[32px] overflow-hidden">
+
+          <div class="h-64 bg-gradient-to-br from-amber-500/30 to-red-500/20 flex items-center justify-center text-7xl">
+            📱
+          </div>
+
+          <div class="p-8">
+
+            <div class="flex items-center justify-between mb-5 text-sm">
+              <span class="text-amber-400 font-semibold">Mobile Development</span>
+              <span class="text-slate-400">7 min read</span>
+            </div>
+
+            <h3 class="text-3xl font-bold mb-5 leading-tight">
+              Future Trends in Cross-Platform Mobile Apps
+            </h3>
+
+            <p class="text-slate-400 leading-8 mb-8">
+              Discover how Flutter and React Native are transforming mobile product
+              engineering and user experiences.
+            </p>
+
+            <div class="flex items-center justify-between">
+
+              <div>
+                <div class="font-semibold">Emma Brown</div>
+                <div class="text-slate-400 text-sm mt-1">Mobile Product Lead</div>
+              </div>
+
+              <button class="text-amber-400 font-semibold hover:text-amber-300 transition">
+                Read More →
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Latest Posts -->
+  <section id="latest" class="py-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <div class="text-cyan-400 font-semibold mb-4">Latest Articles</div>
+        <h2 class="text-4xl font-bold mb-6">Fresh Insights & News</h2>
+      </div>
+
+      <div class="space-y-8">
+
+        <div class="glass rounded-[28px] p-8 flex flex-col lg:flex-row gap-8 lg:items-center justify-between">
+
+          <div class="flex gap-6 items-start">
+
+            <div class="w-24 h-24 rounded-3xl bg-gradient-to-br from-cyan-500/30 to-violet-500/20 flex items-center justify-center text-4xl shrink-0">
+              ⚡
+            </div>
+
+            <div>
+              <div class="text-cyan-400 font-semibold mb-3">SaaS Platforms</div>
+
+              <h3 class="text-3xl font-bold mb-4">
+                Scaling SaaS Infrastructure for Millions of Users
+              </h3>
+
+              <p class="text-slate-400 leading-8 max-w-3xl">
+                Learn the architecture strategies behind highly scalable SaaS ecosystems,
+                performance optimization, and cloud deployment.
+              </p>
+
+            </div>
+
+          </div>
+
+          <button class="border border-slate-700 hover:border-cyan-500 transition px-6 py-3 rounded-2xl font-semibold shrink-0">
+            Read Article
+          </button>
+
+        </div>
+
+        <div class="glass rounded-[28px] p-8 flex flex-col lg:flex-row gap-8 lg:items-center justify-between">
+
+          <div class="flex gap-6 items-start">
+
+            <div class="w-24 h-24 rounded-3xl bg-gradient-to-br from-pink-500/30 to-violet-500/20 flex items-center justify-center text-4xl shrink-0">
+              🎨
+            </div>
+
+            <div>
+              <div class="text-pink-400 font-semibold mb-3">UI/UX Design</div>
+
+              <h3 class="text-3xl font-bold mb-4">
+                Designing Premium Enterprise User Experiences
+              </h3>
+
+              <p class="text-slate-400 leading-8 max-w-3xl">
+                Explore modern UI trends, design systems, accessibility strategies,
+                and enterprise product experiences.
+              </p>
+
+            </div>
+
+          </div>
+
+          <button class="border border-slate-700 hover:border-cyan-500 transition px-6 py-3 rounded-2xl font-semibold shrink-0">
+            Read Article
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="py-24 bg-slate-950">
+
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <div class="glass rounded-[36px] p-14">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Join Our Newsletter
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6 leading-tight">
+          Stay Updated with Technology Insights
+        </h2>
+
+        <p class="text-slate-400 text-lg leading-8 mb-10 max-w-3xl mx-auto">
+          Get the latest articles, industry trends, AI innovations,
+          SaaS strategies, and engineering insights delivered weekly.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-5 max-w-3xl mx-auto">
+
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            class="flex-1 bg-slate-900 border border-slate-700 rounded-2xl px-6 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+          />
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Subscribe Now
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+        <div class="text-2xl font-bold mb-3">
+          Blog<span class="gradient-text">System</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Enterprise blogging platform for publishing technology insights,
+          industry trends, and digital innovation stories.
+        </p>
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 BlogSystem Media. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

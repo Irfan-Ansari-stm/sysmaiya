@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit Ticket | Customer Support</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .ticket-card{
+      transition:all 0.3s ease;
+    }
+
+    .ticket-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .form-input{
+      width:100%;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      color:#fff;
+      padding:16px 18px;
+      border-radius:16px;
+      outline:none;
+      transition:all 0.3s ease;
+    }
+
+    .form-input:focus{
+      border-color:#06b6d4;
+      box-shadow:0 0 0 3px rgba(6,182,212,0.15);
+    }
+
+    .form-input::placeholder{
+      color:#64748b;
+    }
+
+    .priority-card{
+      transition:all 0.3s ease;
+      cursor:pointer;
+    }
+
+    .priority-card:hover{
+      border-color:#06b6d4;
+      transform:scale(1.03);
+    }
+
+    .faq-item{
+      transition:all 0.3s ease;
+    }
+
+    .faq-item:hover{
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .status-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      display:inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Support<span class="gradient-text">Desk</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Support Center</a>
+        <a href="#" class="hover:text-white transition">Submit Ticket</a>
+        <a href="#" class="hover:text-white transition">Knowledge Base</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Live Chat
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-24 overflow-hidden">
+
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-8">
+        24/7 Technical Assistance
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+        Submit a
+        <span class="gradient-text">Support Ticket</span>
+      </h1>
+
+      <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto">
+        Need help? Submit your issue or request and our support team
+        will get back to you as quickly as possible.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Ticket Options -->
+  <section class="pb-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="ticket-card glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl mb-5">🛠️</div>
+
+          <h3 class="text-2xl font-bold mb-3">
+            Technical Issue
+          </h3>
+
+          <p class="text-slate-400">
+            Report bugs, platform errors, or system problems.
+          </p>
+
+        </div>
+
+        <div class="ticket-card glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl mb-5">💳</div>
+
+          <h3 class="text-2xl font-bold mb-3">
+            Billing Support
+          </h3>
+
+          <p class="text-slate-400">
+            Questions about invoices, plans, or payments.
+          </p>
+
+        </div>
+
+        <div class="ticket-card glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl mb-5">🔗</div>
+
+          <h3 class="text-2xl font-bold mb-3">
+            Integrations
+          </h3>
+
+          <p class="text-slate-400">
+            API, CRM, and integration assistance requests.
+          </p>
+
+        </div>
+
+        <div class="ticket-card glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl mb-5">👤</div>
+
+          <h3 class="text-2xl font-bold mb-3">
+            Account Help
+          </h3>
+
+          <p class="text-slate-400">
+            User accounts, permissions, and access issues.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Ticket Form -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-3 gap-10">
+
+        <!-- Form -->
+        <div class="lg:col-span-2">
+
+          <div class="glass rounded-[40px] p-10 md:p-14">
+
+            <div class="mb-10">
+
+              <div class="text-cyan-400 font-semibold mb-3">
+                Support Request Form
+              </div>
+
+              <h2 class="text-5xl font-bold">
+                Create a Ticket
+              </h2>
+
+            </div>
+
+            <form class="space-y-8">
+
+              <!-- Name -->
+              <div class="grid md:grid-cols-2 gap-6">
+
+                <div>
+                  <label class="block mb-3 text-sm font-medium text-slate-300">
+                    First Name
+                  </label>
+
+                  <input
+                    type="text"
+                    placeholder="Enter first name"
+                    class="form-input"
+                  >
+                </div>
+
+                <div>
+                  <label class="block mb-3 text-sm font-medium text-slate-300">
+                    Last Name
+                  </label>
+
+                  <input
+                    type="text"
+                    placeholder="Enter last name"
+                    class="form-input"
+                  >
+                </div>
+
+              </div>
+
+              <!-- Email -->
+              <div class="grid md:grid-cols-2 gap-6">
+
+                <div>
+                  <label class="block mb-3 text-sm font-medium text-slate-300">
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    placeholder="name@example.com"
+                    class="form-input"
+                  >
+                </div>
+
+                <div>
+                  <label class="block mb-3 text-sm font-medium text-slate-300">
+                    Company Name
+                  </label>
+
+                  <input
+                    type="text"
+                    placeholder="Your company"
+                    class="form-input"
+                  >
+                </div>
+
+              </div>
+
+              <!-- Ticket Type -->
+              <div>
+
+                <label class="block mb-3 text-sm font-medium text-slate-300">
+                  Ticket Category
+                </label>
+
+                <select class="form-input">
+
+                  <option>Select category</option>
+                  <option>Technical Issue</option>
+                  <option>Billing Support</option>
+                  <option>API & Integration</option>
+                  <option>Account Assistance</option>
+                  <option>Security Concern</option>
+                  <option>General Inquiry</option>
+
+                </select>
+
+              </div>
+
+              <!-- Subject -->
+              <div>
+
+                <label class="block mb-3 text-sm font-medium text-slate-300">
+                  Subject
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Briefly describe your issue"
+                  class="form-input"
+                >
+
+              </div>
+
+              <!-- Description -->
+              <div>
+
+                <label class="block mb-3 text-sm font-medium text-slate-300">
+                  Detailed Description
+                </label>
+
+                <textarea
+                  rows="7"
+                  placeholder="Explain your issue in detail..."
+                  class="form-input resize-none"
+                ></textarea>
+
+              </div>
+
+              <!-- Attachment -->
+              <div>
+
+                <label class="block mb-3 text-sm font-medium text-slate-300">
+                  Upload Attachment
+                </label>
+
+                <div class="border-2 border-dashed border-slate-700 rounded-3xl p-10 text-center">
+
+                  <div class="text-5xl mb-4">📁</div>
+
+                  <h3 class="text-2xl font-bold mb-3">
+                    Drag & Drop Files
+                  </h3>
+
+                  <p class="text-slate-400 mb-6">
+                    Upload screenshots, logs, or documents.
+                  </p>
+
+                  <button
+                    type="button"
+                    class="bg-cyan-500 hover:bg-cyan-600 transition px-6 py-3 rounded-xl font-semibold"
+                  >
+                    Browse Files
+                  </button>
+
+                </div>
+
+              </div>
+
+              <!-- Submit -->
+              <div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-cyan-500 hover:bg-cyan-600 transition px-8 py-5 rounded-2xl font-semibold text-lg"
+                >
+                  Submit Support Ticket
+                </button>
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+
+          <!-- Priority -->
+          <div class="glass rounded-[36px] p-8">
+
+            <div class="text-cyan-400 font-semibold mb-4">
+              Ticket Priority
+            </div>
+
+            <h3 class="text-3xl font-bold mb-8">
+              Select Priority
+            </h3>
+
+            <div class="space-y-5">
+
+              <div class="priority-card border border-slate-800 rounded-2xl p-5">
+
+                <div class="flex items-center justify-between mb-3">
+
+                  <div class="font-semibold text-green-400">
+                    Low Priority
+                  </div>
+
+                  <span class="status-dot bg-green-400"></span>
+
+                </div>
+
+                <p class="text-slate-400 text-sm">
+                  General questions or non-urgent issues.
+                </p>
+
+              </div>
+
+              <div class="priority-card border border-slate-800 rounded-2xl p-5">
+
+                <div class="flex items-center justify-between mb-3">
+
+                  <div class="font-semibold text-yellow-400">
+                    Medium Priority
+                  </div>
+
+                  <span class="status-dot bg-yellow-400"></span>
+
+                </div>
+
+                <p class="text-slate-400 text-sm">
+                  Platform issues affecting workflows.
+                </p>
+
+              </div>
+
+              <div class="priority-card border border-slate-800 rounded-2xl p-5">
+
+                <div class="flex items-center justify-between mb-3">
+
+                  <div class="font-semibold text-red-400">
+                    High Priority
+                  </div>
+
+                  <span class="status-dot bg-red-400"></span>
+
+                </div>
+
+                <p class="text-slate-400 text-sm">
+                  Critical outages or urgent business impact.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Response Times -->
+          <div class="glass rounded-[36px] p-8">
+
+            <div class="text-cyan-400 font-semibold mb-4">
+              Response Times
+            </div>
+
+            <h3 class="text-3xl font-bold mb-8">
+              Support SLA
+            </h3>
+
+            <div class="space-y-6">
+
+              <div class="flex justify-between items-center">
+
+                <div>
+                  <div class="font-semibold">
+                    Standard Support
+                  </div>
+
+                  <div class="text-sm text-slate-400">
+                    Email & Ticket Support
+                  </div>
+                </div>
+
+                <div class="text-cyan-400 font-bold">
+                  24 hrs
+                </div>
+
+              </div>
+
+              <div class="flex justify-between items-center">
+
+                <div>
+                  <div class="font-semibold">
+                    Priority Support
+                  </div>
+
+                  <div class="text-sm text-slate-400">
+                    Business Priority
+                  </div>
+                </div>
+
+                <div class="text-pink-400 font-bold">
+                  4 hrs
+                </div>
+
+              </div>
+
+              <div class="flex justify-between items-center">
+
+                <div>
+                  <div class="font-semibold">
+                    Enterprise Support
+                  </div>
+
+                  <div class="text-sm text-slate-400">
+                    Critical Assistance
+                  </div>
+                </div>
+
+                <div class="text-violet-400 font-bold">
+                  1 hr
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- FAQ -->
+          <div class="glass rounded-[36px] p-8">
+
+            <div class="text-cyan-400 font-semibold mb-4">
+              FAQs
+            </div>
+
+            <h3 class="text-3xl font-bold mb-8">
+              Common Questions
+            </h3>
+
+            <div class="space-y-5">
+
+              <div class="faq-item border border-slate-800 rounded-2xl p-5">
+
+                <h4 class="font-semibold mb-3">
+                  How do I track my ticket?
+                </h4>
+
+                <p class="text-slate-400 text-sm leading-7">
+                  You’ll receive an email with a tracking ID
+                  and ticket status updates.
+                </p>
+
+              </div>
+
+              <div class="faq-item border border-slate-800 rounded-2xl p-5">
+
+                <h4 class="font-semibold mb-3">
+                  Can I upload screenshots?
+                </h4>
+
+                <p class="text-slate-400 text-sm leading-7">
+                  Yes, attachments such as screenshots,
+                  logs, and documents are supported.
+                </p>
+
+              </div>
+
+              <div class="faq-item border border-slate-800 rounded-2xl p-5">
+
+                <h4 class="font-semibold mb-3">
+                  Is live chat available?
+                </h4>
+
+                <p class="text-slate-400 text-sm leading-7">
+                  Live chat support is available 24/7
+                  for premium and enterprise customers.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Need Immediate Assistance?
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Connect With Our Support Team
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Our experts are available around the clock
+            to resolve issues and support your business.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Start Live Chat
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Contact Support
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Support<span class="gradient-text">Desk</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Delivering enterprise-grade customer support,
+          technical assistance, and issue resolution services.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 SupportDesk. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

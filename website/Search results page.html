@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Results | Blog System</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #020617;
+      color: #f8fafc;
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #06b6d4, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg {
+      background-image:
+        radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .search-card {
+      transition: all 0.35s ease;
+    }
+
+    .search-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(6,182,212,0.4);
+    }
+
+    .filter-pill {
+      transition: all 0.3s ease;
+    }
+
+    .filter-pill:hover {
+      background: rgba(6,182,212,0.15);
+      border-color: rgba(6,182,212,0.4);
+      color: #67e8f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Blog<span class="gradient-text">System</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Categories</a>
+        <a href="#" class="hover:text-white transition">Articles</a>
+        <a href="#" class="hover:text-white transition">Authors</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Subscribe
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-24 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center max-w-4xl mx-auto">
+
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+          Blog Search System
+        </div>
+
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-8">
+          Search Results for
+          <span class="gradient-text">"AI Automation"</span>
+        </h1>
+
+        <p class="text-slate-300 text-xl leading-9 mb-12">
+          Discover articles, tutorials, enterprise insights, and technology guides
+          related to AI automation systems and intelligent business workflows.
+        </p>
+
+        <!-- Search Box -->
+        <div class="glass rounded-[32px] p-4 max-w-4xl mx-auto">
+
+          <div class="flex flex-col md:flex-row gap-4">
+
+            <input
+              type="text"
+              value="AI Automation"
+              class="flex-1 bg-slate-900 border border-slate-700 rounded-2xl px-6 py-5 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 text-lg"
+            />
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Search
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="text-slate-400 mt-8 text-lg">
+          Found <span class="text-cyan-400 font-semibold">248</span> articles matching your search.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Filters -->
+  <section class="py-14 border-y border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="flex flex-wrap justify-center gap-4">
+
+        <button class="filter-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          All Results
+        </button>
+
+        <button class="filter-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          Articles
+        </button>
+
+        <button class="filter-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          Tutorials
+        </button>
+
+        <button class="filter-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          AI Automation
+        </button>
+
+        <button class="filter-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          Cloud Engineering
+        </button>
+
+        <button class="filter-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          Machine Learning
+        </button>
+
+        <button class="filter-pill glass px-5 py-3 rounded-2xl font-semibold text-slate-300">
+          Enterprise AI
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-24">
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-12">
+
+      <!-- Results -->
+      <div class="lg:col-span-2">
+
+        <div class="flex items-center justify-between mb-12">
+
+          <div>
+            <div class="text-cyan-400 font-semibold mb-2">Search Results</div>
+            <h2 class="text-4xl font-bold">Related Articles</h2>
+          </div>
+
+          <select class="bg-slate-900 border border-slate-700 rounded-2xl px-5 py-3 text-white focus:outline-none focus:border-cyan-500">
+            <option>Most Relevant</option>
+            <option>Latest</option>
+            <option>Most Popular</option>
+          </select>
+
+        </div>
+
+        <div class="space-y-10">
+
+          <!-- Result Card -->
+          <article class="search-card glass rounded-[36px] overflow-hidden">
+
+            <div class="grid md:grid-cols-3">
+
+              <div class="h-full min-h-[280px] bg-gradient-to-br from-cyan-500/30 to-violet-500/20 flex items-center justify-center text-7xl">
+                🤖
+              </div>
+
+              <div class="md:col-span-2 p-10">
+
+                <div class="flex flex-wrap items-center gap-4 text-sm mb-5">
+                  <span class="text-cyan-400 font-semibold">AI Automation</span>
+                  <span class="text-slate-500">•</span>
+                  <span class="text-slate-400">May 2026</span>
+                  <span class="text-slate-500">•</span>
+                  <span class="text-slate-400">12 min read</span>
+                </div>
+
+                <h3 class="text-4xl font-bold leading-tight mb-5">
+                  Enterprise AI Automation Strategies for Business Growth
+                </h3>
+
+                <p class="text-slate-400 leading-8 mb-8">
+                  Learn how enterprise organizations are implementing intelligent automation,
+                  predictive analytics, and scalable AI infrastructure systems.
+                </p>
+
+                <div class="flex items-center justify-between">
+
+                  <div>
+                    <div class="font-semibold">Sarah Johnson</div>
+                    <div class="text-slate-400 text-sm mt-1">Enterprise AI Architect</div>
+                  </div>
+
+                  <button class="bg-cyan-500 hover:bg-cyan-600 transition px-6 py-3 rounded-2xl font-semibold">
+                    Read Article
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- Result Card -->
+          <article class="search-card glass rounded-[36px] overflow-hidden">
+
+            <div class="grid md:grid-cols-3">
+
+              <div class="h-full min-h-[280px] bg-gradient-to-br from-pink-500/30 to-violet-500/20 flex items-center justify-center text-7xl">
+                ⚡
+              </div>
+
+              <div class="md:col-span-2 p-10">
+
+                <div class="flex flex-wrap items-center gap-4 text-sm mb-5">
+                  <span class="text-pink-400 font-semibold">Cloud Engineering</span>
+                  <span class="text-slate-500">•</span>
+                  <span class="text-slate-400">April 2026</span>
+                  <span class="text-slate-500">•</span>
+                  <span class="text-slate-400">9 min read</span>
+                </div>
+
+                <h3 class="text-4xl font-bold leading-tight mb-5">
+                  Building Scalable Cloud Infrastructure for AI Systems
+                </h3>
+
+                <p class="text-slate-400 leading-8 mb-8">
+                  Explore Kubernetes, cloud-native architecture, and enterprise DevOps systems
+                  designed for scalable AI automation platforms.
+                </p>
+
+                <div class="flex items-center justify-between">
+
+                  <div>
+                    <div class="font-semibold">David Williams</div>
+                    <div class="text-slate-400 text-sm mt-1">Cloud Engineer</div>
+                  </div>
+
+                  <button class="bg-pink-500 hover:bg-pink-600 transition px-6 py-3 rounded-2xl font-semibold">
+                    Read Article
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- Result Card -->
+          <article class="search-card glass rounded-[36px] overflow-hidden">
+
+            <div class="grid md:grid-cols-3">
+
+              <div class="h-full min-h-[280px] bg-gradient-to-br from-amber-500/30 to-red-500/20 flex items-center justify-center text-7xl">
+                📊
+              </div>
+
+              <div class="md:col-span-2 p-10">
+
+                <div class="flex flex-wrap items-center gap-4 text-sm mb-5">
+                  <span class="text-amber-400 font-semibold">Machine Learning</span>
+                  <span class="text-slate-500">•</span>
+                  <span class="text-slate-400">March 2026</span>
+                  <span class="text-slate-500">•</span>
+                  <span class="text-slate-400">11 min read</span>
+                </div>
+
+                <h3 class="text-4xl font-bold leading-tight mb-5">
+                  Predictive Analytics & Intelligent AI Systems
+                </h3>
+
+                <p class="text-slate-400 leading-8 mb-8">
+                  Discover how predictive analytics and machine learning improve business intelligence,
+                  automation, and enterprise operational efficiency.
+                </p>
+
+                <div class="flex items-center justify-between">
+
+                  <div>
+                    <div class="font-semibold">Emma Brown</div>
+                    <div class="text-slate-400 text-sm mt-1">Data Scientist</div>
+                  </div>
+
+                  <button class="bg-amber-500 hover:bg-amber-600 transition px-6 py-3 rounded-2xl font-semibold text-slate-950">
+                    Read Article
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex items-center justify-center gap-4 mt-16">
+
+          <button class="glass px-5 py-3 rounded-2xl font-semibold text-slate-300 hover:border-cyan-500 transition">
+            Previous
+          </button>
+
+          <button class="bg-cyan-500 px-5 py-3 rounded-2xl font-semibold">
+            1
+          </button>
+
+          <button class="glass px-5 py-3 rounded-2xl font-semibold text-slate-300 hover:border-cyan-500 transition">
+            2
+          </button>
+
+          <button class="glass px-5 py-3 rounded-2xl font-semibold text-slate-300 hover:border-cyan-500 transition">
+            3
+          </button>
+
+          <button class="glass px-5 py-3 rounded-2xl font-semibold text-slate-300 hover:border-cyan-500 transition">
+            Next
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="space-y-8">
+
+        <!-- Search Filters -->
+        <div class="glass rounded-[32px] p-8">
+
+          <h3 class="text-2xl font-bold mb-8">Search Filters</h3>
+
+          <div class="space-y-6">
+
+            <div>
+              <label class="block text-slate-400 mb-3">Category</label>
+              <select class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-cyan-500">
+                <option>All Categories</option>
+                <option>Artificial Intelligence</option>
+                <option>Cloud Engineering</option>
+                <option>Machine Learning</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-slate-400 mb-3">Reading Time</label>
+              <select class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-cyan-500">
+                <option>Any Length</option>
+                <option>Under 5 Minutes</option>
+                <option>5-10 Minutes</option>
+                <option>10+ Minutes</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-slate-400 mb-3">Author</label>
+              <select class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-cyan-500">
+                <option>All Authors</option>
+                <option>Sarah Johnson</option>
+                <option>David Williams</option>
+                <option>Emma Brown</option>
+              </select>
+            </div>
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition py-4 rounded-2xl font-semibold w-full">
+              Apply Filters
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Trending Searches -->
+        <div class="glass rounded-[32px] p-8">
+
+          <h3 class="text-2xl font-bold mb-8">Trending Searches</h3>
+
+          <div class="flex flex-wrap gap-4">
+
+            <button class="filter-pill border border-slate-700 px-4 py-2 rounded-xl text-sm text-slate-300">
+              AI Agents
+            </button>
+
+            <button class="filter-pill border border-slate-700 px-4 py-2 rounded-xl text-sm text-slate-300">
+              Kubernetes
+            </button>
+
+            <button class="filter-pill border border-slate-700 px-4 py-2 rounded-xl text-sm text-slate-300">
+              DevOps
+            </button>
+
+            <button class="filter-pill border border-slate-700 px-4 py-2 rounded-xl text-sm text-slate-300">
+              SaaS
+            </button>
+
+            <button class="filter-pill border border-slate-700 px-4 py-2 rounded-xl text-sm text-slate-300">
+              Predictive AI
+            </button>
+
+            <button class="filter-pill border border-slate-700 px-4 py-2 rounded-xl text-sm text-slate-300">
+              Cloud Infrastructure
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Newsletter -->
+        <div class="glass rounded-[32px] p-8">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Newsletter
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Weekly Technology Insights
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-8">
+            Subscribe for AI trends, enterprise automation updates,
+            and cloud engineering insights.
+          </p>
+
+          <div class="flex flex-col gap-4">
+
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="bg-slate-900 border border-slate-700 rounded-2xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+            />
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition py-4 rounded-2xl font-semibold">
+              Subscribe Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Blog<span class="gradient-text">System</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Enterprise blogging platform for AI, SaaS,
+          cloud engineering, and digital transformation content.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 BlogSystem Media. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Onboarding Help | Getting Started</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .step-card{
+      transition:all 0.35s ease;
+      background:linear-gradient(
+        135deg,
+        rgba(6,182,212,0.08),
+        rgba(139,92,246,0.08)
+      );
+    }
+
+    .step-card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .resource-card{
+      transition:all 0.3s ease;
+    }
+
+    .resource-card:hover{
+      transform:scale(1.03);
+    }
+
+    .progress-line{
+      position:absolute;
+      left:36px;
+      top:90px;
+      width:2px;
+      height:calc(100% - 100px);
+      background:rgba(255,255,255,0.1);
+    }
+
+    .step-number{
+      width:72px;
+      height:72px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+      font-weight:700;
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      color:#fff;
+      box-shadow:0 0 25px rgba(6,182,212,0.35);
+    }
+
+    .faq-item{
+      transition:all 0.3s ease;
+    }
+
+    .faq-item:hover{
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .check-icon{
+      width:26px;
+      height:26px;
+      border-radius:50%;
+      background:#22c55e;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:14px;
+      font-weight:bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Start<span class="gradient-text">Guide</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Resources</a>
+        <a href="#" class="hover:text-white transition">Documentation</a>
+        <a href="#" class="hover:text-white transition">Onboarding Help</a>
+        <a href="#" class="hover:text-white transition">Support</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Book Demo
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-8">
+
+        🚀 Fast & Easy Setup
+
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+        Onboarding
+        <span class="gradient-text">Help Center</span>
+      </h1>
+
+      <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-12">
+        Learn how to set up your account, configure integrations,
+        invite your team, and launch successfully with guided onboarding.
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+        <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+          Start Setup
+        </button>
+
+        <button class="border border-slate-700 hover:border-cyan-500 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+          Watch Tutorial
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Quick Start -->
+  <section class="py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Getting Started
+        </div>
+
+        <h2 class="text-5xl font-bold">
+          Quick Setup Steps
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8">
+
+        <div class="step-card glass rounded-3xl p-8 border border-transparent">
+
+          <div class="text-5xl mb-6">
+            👤
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Create Account
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Register your account and verify your email address.
+          </p>
+
+        </div>
+
+        <div class="step-card glass rounded-3xl p-8 border border-transparent">
+
+          <div class="text-5xl mb-6">
+            ⚙️
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Configure Settings
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Customize workspace preferences and security settings.
+          </p>
+
+        </div>
+
+        <div class="step-card glass rounded-3xl p-8 border border-transparent">
+
+          <div class="text-5xl mb-6">
+            🔗
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Connect Integrations
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Link third-party tools and external platforms.
+          </p>
+
+        </div>
+
+        <div class="step-card glass rounded-3xl p-8 border border-transparent">
+
+          <div class="text-5xl mb-6">
+            🚀
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Launch Workspace
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Invite your team and begin using the platform.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Onboarding Timeline -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-10 md:p-16 relative overflow-hidden">
+
+        <div class="text-center mb-16">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Guided Process
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            Step-by-Step Onboarding
+          </h2>
+
+        </div>
+
+        <div class="relative">
+
+          <div class="progress-line hidden md:block"></div>
+
+          <div class="space-y-12">
+
+            <!-- Step -->
+            <div class="flex flex-col md:flex-row gap-8 items-start relative">
+
+              <div class="step-number">
+                1
+              </div>
+
+              <div class="glass rounded-3xl p-8 flex-1">
+
+                <div class="flex flex-wrap gap-3 mb-5">
+
+                  <span class="px-4 py-2 bg-cyan-500/10 text-cyan-300 rounded-full text-sm font-semibold">
+                    Account Setup
+                  </span>
+
+                </div>
+
+                <h3 class="text-3xl font-bold mb-4">
+                  Create Your Workspace
+                </h3>
+
+                <p class="text-slate-400 leading-8 mb-6">
+                  Set up your company profile, add branding,
+                  configure user permissions, and enable authentication.
+                </p>
+
+                <div class="flex flex-col gap-4">
+
+                  <div class="flex items-center gap-4">
+
+                    <div class="check-icon">
+                      ✓
+                    </div>
+
+                    <span>Email verification</span>
+
+                  </div>
+
+                  <div class="flex items-center gap-4">
+
+                    <div class="check-icon">
+                      ✓
+                    </div>
+
+                    <span>Workspace configuration</span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Step -->
+            <div class="flex flex-col md:flex-row gap-8 items-start relative">
+
+              <div class="step-number">
+                2
+              </div>
+
+              <div class="glass rounded-3xl p-8 flex-1">
+
+                <div class="flex flex-wrap gap-3 mb-5">
+
+                  <span class="px-4 py-2 bg-violet-500/10 text-violet-300 rounded-full text-sm font-semibold">
+                    Integrations
+                  </span>
+
+                </div>
+
+                <h3 class="text-3xl font-bold mb-4">
+                  Connect Your Tools
+                </h3>
+
+                <p class="text-slate-400 leading-8 mb-6">
+                  Integrate CRM systems, APIs, analytics tools,
+                  cloud platforms, and communication channels.
+                </p>
+
+                <div class="flex flex-col gap-4">
+
+                  <div class="flex items-center gap-4">
+
+                    <div class="check-icon">
+                      ✓
+                    </div>
+
+                    <span>API configuration</span>
+
+                  </div>
+
+                  <div class="flex items-center gap-4">
+
+                    <div class="check-icon">
+                      ✓
+                    </div>
+
+                    <span>Third-party integrations</span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Step -->
+            <div class="flex flex-col md:flex-row gap-8 items-start relative">
+
+              <div class="step-number">
+                3
+              </div>
+
+              <div class="glass rounded-3xl p-8 flex-1">
+
+                <div class="flex flex-wrap gap-3 mb-5">
+
+                  <span class="px-4 py-2 bg-pink-500/10 text-pink-300 rounded-full text-sm font-semibold">
+                    Team Setup
+                  </span>
+
+                </div>
+
+                <h3 class="text-3xl font-bold mb-4">
+                  Invite Your Team
+                </h3>
+
+                <p class="text-slate-400 leading-8 mb-6">
+                  Add users, assign roles, manage permissions,
+                  and provide onboarding access to team members.
+                </p>
+
+                <div class="flex flex-col gap-4">
+
+                  <div class="flex items-center gap-4">
+
+                    <div class="check-icon">
+                      ✓
+                    </div>
+
+                    <span>User role management</span>
+
+                  </div>
+
+                  <div class="flex items-center gap-4">
+
+                    <div class="check-icon">
+                      ✓
+                    </div>
+
+                    <span>Collaboration setup</span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Resources -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Learning Resources
+        </div>
+
+        <h2 class="text-5xl font-bold">
+          Helpful Materials
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="resource-card glass rounded-3xl p-8">
+
+          <div class="text-5xl mb-6">
+            🎥
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Video Tutorials
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Watch guided onboarding walkthroughs
+            and product tutorials.
+          </p>
+
+          <button class="text-cyan-400 font-semibold">
+            Watch Videos →
+          </button>
+
+        </div>
+
+        <div class="resource-card glass rounded-3xl p-8">
+
+          <div class="text-5xl mb-6">
+            📘
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Documentation
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Access setup guides, API docs,
+            and onboarding instructions.
+          </p>
+
+          <button class="text-cyan-400 font-semibold">
+            Read Docs →
+          </button>
+
+        </div>
+
+        <div class="resource-card glass rounded-3xl p-8">
+
+          <div class="text-5xl mb-6">
+            💬
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Live Assistance
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Connect with onboarding specialists
+            for personalized guidance.
+          </p>
+
+          <button class="text-cyan-400 font-semibold">
+            Contact Support →
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FAQ -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-10 md:p-16">
+
+        <div class="text-center mb-16">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Common Questions
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            Onboarding FAQ
+          </h2>
+
+        </div>
+
+        <div class="space-y-6">
+
+          <div class="faq-item border border-slate-800 rounded-3xl p-8">
+
+            <h3 class="text-2xl font-bold mb-4">
+              How long does onboarding take?
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Most teams complete onboarding within 1–3 days,
+              depending on integrations and workspace setup.
+            </p>
+
+          </div>
+
+          <div class="faq-item border border-slate-800 rounded-3xl p-8">
+
+            <h3 class="text-2xl font-bold mb-4">
+              Do you provide onboarding support?
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Yes, onboarding specialists are available for setup assistance,
+              migration support, and implementation guidance.
+            </p>
+
+          </div>
+
+          <div class="faq-item border border-slate-800 rounded-3xl p-8">
+
+            <h3 class="text-2xl font-bold mb-4">
+              Can we schedule onboarding sessions?
+            </h3>
+
+            <p class="text-slate-400 leading-8">
+              Absolutely. You can schedule live onboarding calls,
+              demos, and training sessions with our team.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Need Personalized Assistance?
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Speak With an Onboarding Specialist
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Our onboarding experts will guide your team
+            through setup, integrations, migration, and training.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Book Onboarding Call
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Contact Support
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Start<span class="gradient-text">Guide</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Helping teams launch faster with guided onboarding,
+          training, and implementation support.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 StartGuide. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

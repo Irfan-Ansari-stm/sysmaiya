@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SaaS Development Services | TechNova Solutions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      background:#111827;
+      border-bottom:1px solid #334155;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#8b5cf6;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8b5cf6;
+    }
+
+    .btn{
+      background:#8b5cf6;
+      padding:12px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#7c3aed;
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero{
+      padding:120px 0;
+      background:linear-gradient(to right,#111827,#1e293b);
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      margin-bottom:25px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      font-size:18px;
+      margin-bottom:35px;
+      max-width:620px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn-outline{
+      border:1px solid #475569;
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      border-color:#8b5cf6;
+      color:#8b5cf6;
+    }
+
+    .hero-image{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:28px;
+      padding:40px;
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:450px;
+    }
+
+    /* Services */
+
+    .services{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      max-width:720px;
+      margin:auto;
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .service-card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:22px;
+      border:1px solid #334155;
+      transition:0.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-6px);
+      border-color:#8b5cf6;
+    }
+
+    .service-icon{
+      width:70px;
+      height:70px;
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      margin-bottom:25px;
+    }
+
+    .service-card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#8b5cf6;
+    }
+
+    .service-card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    .service-card ul{
+      padding-left:20px;
+      color:#cbd5e1;
+    }
+
+    .service-card ul li{
+      margin-bottom:10px;
+    }
+
+    /* Features */
+
+    .features{
+      padding:90px 0;
+      background:#111827;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:25px;
+      margin-top:50px;
+    }
+
+    .feature-card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:20px;
+      border:1px solid #334155;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .feature-card:hover{
+      border-color:#8b5cf6;
+      transform:translateY(-5px);
+    }
+
+    .feature-icon{
+      font-size:40px;
+      margin-bottom:20px;
+    }
+
+    .feature-card h3{
+      margin-bottom:15px;
+      font-size:24px;
+      color:#8b5cf6;
+    }
+
+    .feature-card p{
+      color:#cbd5e1;
+    }
+
+    /* Technologies */
+
+    .technologies{
+      padding:90px 0;
+    }
+
+    .tech-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+      margin-top:50px;
+    }
+
+    .tech-card{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:18px;
+      padding:30px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .tech-card:hover{
+      border-color:#8b5cf6;
+      transform:translateY(-5px);
+    }
+
+    .tech-card h3{
+      color:#8b5cf6;
+      font-size:24px;
+      margin-bottom:10px;
+    }
+
+    .tech-card p{
+      color:#cbd5e1;
+      font-size:15px;
+    }
+
+    /* Pricing Models */
+
+    .pricing-models{
+      padding:90px 0;
+      background:#111827;
+    }
+
+    .pricing-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:50px;
+    }
+
+    .pricing-card{
+      background:#1e293b;
+      padding:35px;
+      border-radius:20px;
+      border:1px solid #334155;
+      transition:0.3s;
+      text-align:center;
+    }
+
+    .pricing-card:hover{
+      border-color:#8b5cf6;
+      transform:translateY(-5px);
+    }
+
+    .pricing-card h3{
+      color:#8b5cf6;
+      font-size:26px;
+      margin-bottom:15px;
+    }
+
+    .pricing-card p{
+      color:#cbd5e1;
+    }
+
+    /* CTA */
+
+    .cta{
+      padding:100px 0;
+    }
+
+    .cta-box{
+      background:linear-gradient(to right,#8b5cf6,#6366f1);
+      padding:70px 40px;
+      border-radius:28px;
+      text-align:center;
+    }
+
+    .cta-box h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .cta-box p{
+      max-width:750px;
+      margin:auto auto 30px;
+      font-size:18px;
+    }
+
+    .cta-box .btn{
+      background:white;
+      color:#111827;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111827;
+      padding:60px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-links ul{
+      list-style:none;
+    }
+
+    .footer-links li{
+      margin-bottom:10px;
+      color:#cbd5e1;
+    }
+
+    .copyright{
+      text-align:center;
+      border-top:1px solid #334155;
+      padding-top:20px;
+      color:#94a3b8;
+    }
+
+    /* Responsive */
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta-box h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">TechNova</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          SaaS Development Services
+        </h1>
+
+        <p>
+          We build scalable, cloud-based SaaS platforms designed
+          for subscription businesses, startups, and enterprises
+          looking to deliver software online efficiently.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#" class="btn">
+            Request Quote
+          </a>
+
+          <a href="#" class="btn btn-outline">
+            View Portfolio
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" 
+          alt="SaaS Development"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Services -->
+
+  <section class="services">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Our SaaS Solutions</h2>
+
+        <p>
+          End-to-end SaaS product development services
+          from idea validation to cloud deployment.
+        </p>
+
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+
+          <div class="service-icon">☁️</div>
+
+          <h3>Cloud SaaS Platforms</h3>
+
+          <p>
+            Secure cloud-based platforms accessible
+            anytime from anywhere.
+          </p>
+
+          <ul>
+            <li>Multi-Tenant Architecture</li>
+            <li>Cloud Infrastructure</li>
+            <li>Secure Authentication</li>
+            <li>Scalable Systems</li>
+          </ul>
+
+        </div>
+
+        <div class="service-card">
+
+          <div class="service-icon">💳</div>
+
+          <h3>Subscription Systems</h3>
+
+          <p>
+            Advanced subscription and billing systems
+            designed for recurring revenue businesses.
+          </p>
+
+          <ul>
+            <li>Recurring Payments</li>
+            <li>Stripe Integration</li>
+            <li>Usage-Based Billing</li>
+            <li>Customer Portals</li>
+          </ul>
+
+        </div>
+
+        <div class="service-card">
+
+          <div class="service-icon">📊</div>
+
+          <h3>Admin Dashboards</h3>
+
+          <p>
+            Powerful dashboards for analytics,
+            customer management, and operations.
+          </p>
+
+          <ul>
+            <li>User Management</li>
+            <li>Analytics Reports</li>
+            <li>Team Collaboration</li>
+            <li>Workflow Automation</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features -->
+
+  <section class="features">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Why Choose SaaS Solutions?</h2>
+
+        <p>
+          SaaS platforms offer scalability, accessibility,
+          and recurring business growth opportunities.
+        </p>
+
+      </div>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+
+          <div class="feature-icon">🚀</div>
+
+          <h3>Scalable Architecture</h3>
+
+          <p>
+            Infrastructure designed to support
+            rapid user and business growth.
+          </p>
+
+        </div>
+
+        <div class="feature-card">
+
+          <div class="feature-icon">🔒</div>
+
+          <h3>Enterprise Security</h3>
+
+          <p>
+            Secure authentication, encrypted data,
+            and advanced protection systems.
+          </p>
+
+        </div>
+
+        <div class="feature-card">
+
+          <div class="feature-icon">⚡</div>
+
+          <h3>High Performance</h3>
+
+          <p>
+            Optimized SaaS applications with fast
+            load speeds and smooth user experiences.
+          </p>
+
+        </div>
+
+        <div class="feature-card">
+
+          <div class="feature-icon">📈</div>
+
+          <h3>Analytics & Insights</h3>
+
+          <p>
+            Real-time analytics and reporting tools
+            for data-driven business decisions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Technologies -->
+
+  <section class="technologies">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Technologies We Use</h2>
+
+        <p>
+          Modern technologies used to build
+          scalable and secure SaaS applications.
+        </p>
+
+      </div>
+
+      <div class="tech-grid">
+
+        <div class="tech-card">
+          <h3>React</h3>
+          <p>Modern frontend interfaces</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>Node.js</h3>
+          <p>Scalable backend APIs</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>Python</h3>
+          <p>Automation & AI systems</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>MongoDB</h3>
+          <p>Flexible database management</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>Docker</h3>
+          <p>Containerized deployments</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>AWS Cloud</h3>
+          <p>Scalable cloud infrastructure</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Pricing Models -->
+
+  <section class="pricing-models">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>SaaS Business Models</h2>
+
+        <p>
+          Flexible monetization systems tailored
+          for subscription-based businesses.
+        </p>
+
+      </div>
+
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+
+          <h3>Monthly Subscription</h3>
+
+          <p>
+            Recurring monthly billing plans
+            for continuous platform access.
+          </p>
+
+        </div>
+
+        <div class="pricing-card">
+
+          <h3>Freemium Model</h3>
+
+          <p>
+            Offer free basic access with
+            premium paid feature upgrades.
+          </p>
+
+        </div>
+
+        <div class="pricing-card">
+
+          <h3>Usage-Based Pricing</h3>
+
+          <p>
+            Customers pay according to
+            platform usage and consumption.
+          </p>
+
+        </div>
+
+        <div class="pricing-card">
+
+          <h3>Enterprise Licensing</h3>
+
+          <p>
+            Custom enterprise solutions
+            with dedicated pricing models.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>Ready To Build Your SaaS Platform?</h2>
+
+        <p>
+          Partner with TechNova Solutions to launch scalable,
+          secure, and future-ready SaaS applications.
+        </p>
+
+        <a href="#" class="btn">
+          Schedule Free Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h2 style="margin-bottom:15px;">TechNova</h2>
+
+          <p>
+            Enterprise technology company delivering AI-powered software,
+            automation systems, and scalable digital platforms.
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Company</h3>
+
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Services</h3>
+
+          <ul>
+            <li>SaaS Development</li>
+            <li>Custom Software</li>
+            <li>Cloud Solutions</li>
+            <li>AI Solutions</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+          <h3 style="margin-bottom:15px;">Support</h3>
+
+          <ul>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>FAQ</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TechNova Solutions. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

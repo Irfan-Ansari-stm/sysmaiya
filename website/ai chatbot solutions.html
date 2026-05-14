@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot Solutions | AI & Automation</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+      radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .chatbot-card{
+      transition:all 0.35s ease;
+      background:linear-gradient(
+        135deg,
+        rgba(6,182,212,0.10),
+        rgba(139,92,246,0.10)
+      );
+    }
+
+    .chatbot-card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .feature-card{
+      transition:all 0.3s ease;
+    }
+
+    .feature-card:hover{
+      transform:scale(1.04);
+    }
+
+    .timeline-line{
+      position:absolute;
+      left:22px;
+      top:0;
+      bottom:0;
+      width:2px;
+      background:rgba(255,255,255,0.1);
+    }
+
+    .timeline-item{
+      position:relative;
+    }
+
+    .timeline-item::before{
+      content:'';
+      position:absolute;
+      left:-34px;
+      top:18px;
+      width:14px;
+      height:14px;
+      border-radius:50%;
+      background:#06b6d4;
+    }
+
+    .chat-bubble{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Chat<span class="gradient-text">AI</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">AI Chatbots</a>
+        <a href="#" class="hover:text-white transition">Automation</a>
+        <a href="#" class="hover:text-white transition">Industries</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Book Demo
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-28 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left -->
+      <div>
+
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+          Smart Conversational AI
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+          AI Chatbot
+          <span class="gradient-text">Solutions</span>
+        </h1>
+
+        <p class="text-slate-300 text-xl leading-9 mb-10">
+          Transform customer engagement with intelligent AI chatbots,
+          virtual assistants, and automated conversational experiences.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4">
+
+          <button class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Start Free Demo
+          </button>
+
+          <button class="border border-slate-700 hover:border-cyan-500 transition px-8 py-4 rounded-2xl font-semibold text-lg">
+            Explore Features
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Right Chat UI -->
+      <div class="glass rounded-[40px] p-8">
+
+        <div class="space-y-5">
+
+          <div class="chat-bubble rounded-2xl p-5 max-w-sm">
+            👋 Hello! How can I help you today?
+          </div>
+
+          <div class="chat-bubble rounded-2xl p-5 ml-auto max-w-sm bg-cyan-500/10">
+            I need help with my order status.
+          </div>
+
+          <div class="chat-bubble rounded-2xl p-5 max-w-md">
+            Sure! Please share your order ID and I’ll check it instantly.
+          </div>
+
+          <div class="chat-bubble rounded-2xl p-5 ml-auto max-w-sm bg-cyan-500/10">
+            Order #AI2026
+          </div>
+
+          <div class="chat-bubble rounded-2xl p-5 max-w-md">
+            ✅ Your order is currently out for delivery and will arrive today.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Stats -->
+  <section class="py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-cyan-400 mb-3">
+            24/7
+          </div>
+
+          <p class="text-slate-400">
+            Customer Support
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-pink-400 mb-3">
+            90%
+          </div>
+
+          <p class="text-slate-400">
+            Faster Responses
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-violet-400 mb-3">
+            1M+
+          </div>
+
+          <p class="text-slate-400">
+            Conversations Managed
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-8 text-center">
+
+          <div class="text-5xl font-extrabold text-amber-400 mb-3">
+            98%
+          </div>
+
+          <p class="text-slate-400">
+            Customer Satisfaction
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Chatbot Services -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          AI Chatbot Services
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          Intelligent Conversational Solutions
+        </h2>
+
+        <p class="text-slate-400 text-xl leading-9 max-w-3xl mx-auto">
+          AI-powered chatbot systems built to automate support,
+          improve engagement, and drive operational efficiency.
+        </p>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Service -->
+        <div class="chatbot-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">💬</div>
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Customer Support
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            AI Support Bots
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Automate customer interactions with intelligent,
+            human-like AI support assistants available 24/7.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            NLP-Powered Assistance
+          </div>
+
+        </div>
+
+        <!-- Service -->
+        <div class="chatbot-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">🛒</div>
+
+          <div class="text-pink-400 font-semibold mb-4">
+            Sales Automation
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Lead Generation Bots
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Capture leads, qualify prospects,
+            and guide customers through sales funnels automatically.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            Conversion Optimization
+          </div>
+
+        </div>
+
+        <!-- Service -->
+        <div class="chatbot-card glass rounded-[36px] p-10 border border-transparent">
+
+          <div class="text-6xl mb-6">⚙️</div>
+
+          <div class="text-violet-400 font-semibold mb-4">
+            Workflow Automation
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            AI Process Bots
+          </h3>
+
+          <p class="text-slate-400 leading-8 mb-6">
+            Integrate chatbots into enterprise systems
+            for intelligent automation and streamlined operations.
+          </p>
+
+          <div class="text-sm text-slate-500">
+            Enterprise Integration
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Timeline -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6 relative">
+
+      <div class="timeline-line hidden md:block"></div>
+
+      <div class="text-center mb-20">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          AI Innovation
+        </div>
+
+        <h2 class="text-5xl font-bold">
+          Evolution of Conversational AI
+        </h2>
+
+      </div>
+
+      <div class="space-y-12 md:pl-20">
+
+        <!-- Timeline -->
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-cyan-400 font-semibold mb-3">
+            2026
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Generative AI Integration
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Implemented advanced generative AI chatbots
+            capable of contextual and personalized conversations.
+          </p>
+
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-pink-400 font-semibold mb-3">
+            2025
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Multi-Platform Automation
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Expanded AI chatbot systems across websites,
+            mobile apps, messaging apps, and enterprise platforms.
+          </p>
+
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-item glass rounded-[32px] p-10">
+
+          <div class="text-violet-400 font-semibold mb-3">
+            2024
+          </div>
+
+          <h3 class="text-3xl font-bold mb-5">
+            Smart NLP Chatbots
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Developed natural language understanding systems
+            for intelligent conversational experiences.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16">
+
+        <div class="text-center mb-16">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Core Features
+          </div>
+
+          <h2 class="text-5xl font-bold">
+            Powerful AI Chatbot Capabilities
+          </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🧠</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Natural Language AI
+            </h3>
+
+            <p class="text-slate-400">
+              Human-like intelligent conversations.
+            </p>
+
+          </div>
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🌐</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Multi-Channel Support
+            </h3>
+
+            <p class="text-slate-400">
+              Deploy across web, mobile, and social apps.
+            </p>
+
+          </div>
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">📊</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              Analytics Dashboard
+            </h3>
+
+            <p class="text-slate-400">
+              Track chatbot performance and engagement.
+            </p>
+
+          </div>
+
+          <div class="feature-card bg-slate-900 rounded-3xl p-10 text-center">
+
+            <div class="text-6xl mb-5">🔗</div>
+
+            <h3 class="text-2xl font-bold mb-3">
+              System Integrations
+            </h3>
+
+            <p class="text-slate-400">
+              Connect with CRM, ERP, and enterprise tools.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Industries -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-2 gap-10">
+
+        <!-- Left -->
+        <div class="glass rounded-[36px] p-12">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Use Cases
+          </div>
+
+          <h2 class="text-5xl font-bold mb-8">
+            AI Chatbots Across Industries
+          </h2>
+
+          <div class="space-y-6 text-slate-300 leading-8">
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Customer support automation for enterprises.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>AI-driven lead generation and sales assistance.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Healthcare appointment and patient support bots.</div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-cyan-400 text-2xl">✓</div>
+              <div>Internal HR and workflow automation assistants.</div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right -->
+        <div class="glass rounded-[36px] p-12">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Industries Served
+          </div>
+
+          <h2 class="text-5xl font-bold mb-8">
+            Enterprise AI Applications
+          </h2>
+
+          <div class="grid grid-cols-2 gap-5">
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              E-Commerce
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Healthcare
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              FinTech
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              SaaS Platforms
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Logistics
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-5 text-center">
+              Education
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="glass rounded-[40px] p-16 text-center relative overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10"></div>
+
+        <div class="relative z-10">
+
+          <div class="text-cyan-400 font-semibold mb-4">
+            Ready to Automate Conversations?
+          </div>
+
+          <h2 class="text-5xl font-bold mb-6">
+            Launch Your AI Chatbot Solution
+          </h2>
+
+          <p class="text-slate-300 text-xl leading-9 max-w-3xl mx-auto mb-10">
+            Improve customer experiences and automate support
+            with scalable AI-powered chatbot systems.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+            <button class="bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Schedule Demo
+            </button>
+
+            <button class="border border-slate-700 hover:border-cyan-500 transition px-10 py-5 rounded-2xl font-semibold text-lg">
+              Talk to Experts
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Chat<span class="gradient-text">AI</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Building intelligent conversational AI systems
+          for modern businesses and enterprises.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 ChatAI. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

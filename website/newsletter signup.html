@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Newsletter Signup | Enterprise Insights</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+    }
+
+    .gradient-text{
+      background:linear-gradient(to right,#06b6d4,#8b5cf6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(16px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-bg{
+      background-image:
+        radial-gradient(circle at top left, rgba(6,182,212,0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%);
+    }
+
+    .feature-card{
+      transition:all 0.35s ease;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(6,182,212,0.35);
+    }
+
+    .newsletter-card{
+      background:
+        linear-gradient(
+          135deg,
+          rgba(6,182,212,0.15),
+          rgba(139,92,246,0.15)
+        );
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="text-2xl font-bold">
+        Insight<span class="gradient-text">Newsletter</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <a href="#" class="hover:text-white transition">Resources</a>
+        <a href="#" class="hover:text-white transition">Blog</a>
+        <a href="#" class="hover:text-white transition">Newsletter</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-2 rounded-xl font-semibold">
+        Subscribe
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-24 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+        Weekly Enterprise Insights
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+        Subscribe to Our
+        <span class="gradient-text">Newsletter</span>
+      </h1>
+
+      <p class="text-slate-300 text-xl leading-9 max-w-4xl mx-auto mb-12">
+        Get enterprise technology insights, AI trends, DevOps updates,
+        cloud engineering strategies, and industry news delivered weekly.
+      </p>
+
+      <!-- Newsletter Form -->
+      <div class="glass rounded-[34px] p-8 max-w-5xl mx-auto newsletter-card">
+
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+          <!-- Left -->
+          <div class="text-left">
+
+            <div class="text-cyan-400 font-semibold mb-4">
+              Join 120,000+ Subscribers
+            </div>
+
+            <h2 class="text-4xl font-bold mb-6 leading-tight">
+              Stay Updated with Enterprise Technology Trends
+            </h2>
+
+            <p class="text-slate-300 leading-8 mb-8">
+              Receive curated insights on AI automation, cybersecurity,
+              SaaS growth, digital transformation, and cloud infrastructure.
+            </p>
+
+            <div class="space-y-4">
+
+              <div class="flex items-center gap-4">
+                <div class="text-cyan-400 text-2xl">✓</div>
+                <div class="text-slate-300">Weekly industry insights</div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="text-cyan-400 text-2xl">✓</div>
+                <div class="text-slate-300">Exclusive enterprise resources</div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="text-cyan-400 text-2xl">✓</div>
+                <div class="text-slate-300">AI & cloud technology trends</div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="text-cyan-400 text-2xl">✓</div>
+                <div class="text-slate-300">Free tutorials & webinars</div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right -->
+          <div class="glass rounded-[30px] p-8">
+
+            <h3 class="text-3xl font-bold mb-6">
+              Sign Up Today
+            </h3>
+
+            <form class="space-y-5">
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Enter your full name"
+                  class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Company Name
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Enter your company"
+                  class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">
+                  Interested Topics
+                </label>
+
+                <select
+                  class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-cyan-500"
+                >
+                  <option>Artificial Intelligence</option>
+                  <option>Cloud Computing</option>
+                  <option>Cybersecurity</option>
+                  <option>DevOps</option>
+                  <option>Digital Transformation</option>
+                </select>
+              </div>
+
+              <button
+                type="submit"
+                class="bg-cyan-500 hover:bg-cyan-600 transition w-full py-4 rounded-2xl font-semibold text-lg"
+              >
+                Subscribe to Newsletter
+              </button>
+
+              <p class="text-slate-500 text-sm text-center leading-6">
+                By subscribing, you agree to receive weekly emails,
+                updates, and enterprise resource notifications.
+              </p>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-5xl mx-auto">
+
+        <div>
+          <div class="text-4xl font-bold gradient-text">120K+</div>
+          <div class="text-slate-400 mt-2">Subscribers</div>
+        </div>
+
+        <div>
+          <div class="text-4xl font-bold gradient-text">96%</div>
+          <div class="text-slate-400 mt-2">Open Rate</div>
+        </div>
+
+        <div>
+          <div class="text-4xl font-bold gradient-text">52+</div>
+          <div class="text-slate-400 mt-2">Issues Per Year</div>
+        </div>
+
+        <div>
+          <div class="text-4xl font-bold gradient-text">Global</div>
+          <div class="text-slate-400 mt-2">Enterprise Audience</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Benefits -->
+  <section class="py-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Newsletter Benefits
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          Why Subscribe?
+        </h2>
+
+        <p class="text-slate-400 text-xl leading-9 max-w-3xl mx-auto">
+          Access premium enterprise content, expert insights,
+          technology strategies, and downloadable resources.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Card -->
+        <div class="feature-card glass rounded-[30px] p-8 text-center">
+
+          <div class="text-7xl mb-6">🤖</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            AI Insights
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Learn about emerging AI technologies,
+            automation systems, and enterprise adoption.
+          </p>
+
+        </div>
+
+        <!-- Card -->
+        <div class="feature-card glass rounded-[30px] p-8 text-center">
+
+          <div class="text-7xl mb-6">☁️</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Cloud Trends
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Stay updated with cloud infrastructure,
+            Kubernetes, and scalable SaaS systems.
+          </p>
+
+        </div>
+
+        <!-- Card -->
+        <div class="feature-card glass rounded-[30px] p-8 text-center">
+
+          <div class="text-7xl mb-6">🔐</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Cybersecurity
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Discover enterprise security practices,
+            authentication systems, and threat prevention.
+          </p>
+
+        </div>
+
+        <!-- Card -->
+        <div class="feature-card glass rounded-[30px] p-8 text-center">
+
+          <div class="text-7xl mb-6">📈</div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Business Growth
+          </h3>
+
+          <p class="text-slate-400 leading-8">
+            Explore digital transformation strategies,
+            SaaS growth, and enterprise innovation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Testimonials -->
+  <section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+
+        <div class="text-cyan-400 font-semibold mb-4">
+          Subscriber Reviews
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6">
+          Trusted by Enterprise Teams
+        </h2>
+
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Testimonial -->
+        <div class="glass rounded-[30px] p-10">
+
+          <div class="text-cyan-400 text-5xl mb-6">“</div>
+
+          <p class="text-slate-300 leading-8 mb-8">
+            One of the best enterprise technology newsletters.
+            The AI and cloud engineering insights are extremely valuable.
+          </p>
+
+          <div>
+            <div class="font-bold text-xl">
+              Sarah Mitchell
+            </div>
+
+            <div class="text-slate-400 mt-2">
+              CTO, CloudScale Systems
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Testimonial -->
+        <div class="glass rounded-[30px] p-10">
+
+          <div class="text-pink-400 text-5xl mb-6">“</div>
+
+          <p class="text-slate-300 leading-8 mb-8">
+            We use these insights to guide our digital transformation
+            and enterprise AI adoption strategies.
+          </p>
+
+          <div>
+            <div class="font-bold text-xl">
+              Michael Roberts
+            </div>
+
+            <div class="text-slate-400 mt-2">
+              Director of Engineering
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Testimonial -->
+        <div class="glass rounded-[30px] p-10">
+
+          <div class="text-amber-400 text-5xl mb-6">“</div>
+
+          <p class="text-slate-300 leading-8 mb-8">
+            Excellent DevOps and cybersecurity content.
+            Every issue contains actionable enterprise strategies.
+          </p>
+
+          <div>
+            <div class="font-bold text-xl">
+              Priya Nair
+            </div>
+
+            <div class="text-slate-400 mt-2">
+              Infrastructure Lead
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10">
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+
+      <div>
+
+        <div class="text-2xl font-bold mb-3">
+          Insight<span class="gradient-text">Newsletter</span>
+        </div>
+
+        <p class="text-slate-400 max-w-md leading-7">
+          Enterprise newsletter platform delivering AI insights,
+          cloud trends, DevOps strategies, and business innovation updates.
+        </p>
+
+      </div>
+
+      <div class="text-slate-400 text-sm">
+        © 2026 InsightNewsletter Platform. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
